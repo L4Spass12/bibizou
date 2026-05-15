@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Icon from '../../components/Icon.astro';
+import ProductBenefits from '../../components/ProductBenefits.astro';
 import FabricationSection from '../../components/FabricationSection.astro';
 import { getCollection } from 'astro:content';
 import siteConfig from '../../../site.config.mjs';
@@ -24,7 +25,7 @@ const { product } = Astro.props;
 const { Content } = await product.render();
 const {
   name, price, compareAtPrice, priceRange, image, imageAlt, gallery,
-  categories, shortDescription, stock, sku, attributes, variations,
+  categories, shortDescription, stock, sku, attributes, variations, benefits,
 } = product.data;
 
 const allProducts = await getCollection('products');
@@ -486,6 +487,9 @@ const breadcrumbSchema = {
             })}
           </div>
         )}
+
+        <!-- Bénéfices produit (boost conversion) -->
+        {benefits && benefits.length > 0 && <ProductBenefits benefits={benefits} />}
 
         <!-- Bouton d'achat (Atelier) -->
         <button

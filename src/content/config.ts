@@ -83,6 +83,12 @@ const products = defineCollection({
     // ─── Variantes ───
     attributes: z.array(attribute).default([]),
     variations: z.array(variation).default([]),
+    // ─── Bénéfices produit (conversion) ───
+    benefits: z.array(z.object({
+      icon: z.string(),
+      title: z.string(),
+      desc: z.string(),
+    })).default([]),
   }),
 });
 

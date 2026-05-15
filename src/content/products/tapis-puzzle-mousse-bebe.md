@@ -20,6 +20,20 @@ sku: "TAPIS-PUZZLE-MOUSSE"
 featured: false
 pubDate: 2026-05-15
 
+benefits:
+  - icon: "cushion"
+    title: "Épais & doux"
+    desc: "Mousse EPE haute densité pour une protection fiable et un confort exceptionnel."
+  - icon: "puzzle"
+    title: "Assemblage sans accroc"
+    desc: "Dalles emboîtables faciles à monter, libres à configurer selon votre espace."
+  - icon: "thermo"
+    title: "Isolation thermique"
+    desc: "Protège du froid en hiver et de la chaleur en été pour le confort de bébé."
+  - icon: "grip"
+    title: "Surface antidérapante"
+    desc: "Texture spéciale qui garantit une bonne adhérence et plus de sécurité."
+
 attributes:
   - name: "Couleur"
     values:

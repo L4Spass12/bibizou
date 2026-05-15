@@ -1,0 +1,78 @@
+---
+/**
+ * Bénéfices produit affichés juste avant le bouton d'achat — booste la conversion
+ * en rassurant le visiteur sur les points clés du produit.
+ *
+ * Props :
+ *   benefits: Array<{ icon: string; title: string; desc: string }>
+ *
+ * Icônes supportées : cushion, puzzle, thermo, grip, leaf, sparkle, shield, water
+ */
+interface Benefit { icon: string; title: string; desc: string }
+interface Props { benefits: Benefit[] }
+const { benefits } = Astro.props as Props;
+---
+
+{benefits && benefits.length > 0 && (
+  <div class="space-y-3 mb-6 mt-2">
+    {benefits.map(b => (
+      <div class="flex items-start gap-3 p-3 rounded-xl bg-panel border border-cream/[0.10]">
+        <div class="w-10 h-10 rounded-full bg-terracotta/10 border border-terracotta/20 flex items-center justify-center shrink-0">
+          <svg class="w-5 h-5 text-terracotta" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            {b.icon === 'cushion' && (
+              <>
+                <path d="M5 7c0-1.5 1.2-3 3-3h8c1.8 0 3 1.5 3 3v10c0 1.5-1.2 3-3 3H8c-1.8 0-3-1.5-3-3V7z"/>
+                <path d="M7 6c1.5 1 3 1.5 5 1.5S15.5 7 17 6"/>
+                <path d="M7 18c1.5-1 3-1.5 5-1.5s3.5.5 5 1.5"/>
+              </>
+            )}
+            {b.icon === 'puzzle' && (
+              <>
+                <path d="M10 3.5a2 2 0 0 1 4 0v1H17a2 2 0 0 1 2 2v3h-1a2 2 0 0 0 0 4h1v3a2 2 0 0 1-2 2h-3v-1a2 2 0 0 0-4 0v1H7a2 2 0 0 1-2-2v-3h1a2 2 0 0 0 0-4H5v-3a2 2 0 0 1 2-2h3v-1z"/>
+              </>
+            )}
+            {b.icon === 'thermo' && (
+              <>
+                <path d="M12 14a2 2 0 1 0 2 2 2 2 0 0 0-2-2v0z"/>
+                <path d="M12 14V4a2 2 0 0 1 4 0v10"/>
+                <path d="M10 4a4 4 0 0 0-4 4M6 12v2a6 6 0 1 0 12 0"/>
+              </>
+            )}
+            {b.icon === 'grip' && (
+              <>
+                <path d="M12 2v6m0 8v6M2 12h6m8 0h6"/>
+                <circle cx="12" cy="12" r="4"/>
+              </>
+            )}
+            {b.icon === 'leaf' && (
+              <>
+                <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19.5 2c1 5 .5 10-2 14a8 8 0 0 1-8 4"/>
+                <path d="M2 22c1.7-4.4 5-7 9-9"/>
+              </>
+            )}
+            {b.icon === 'sparkle' && (
+              <>
+                <path d="M12 3v3m0 12v3M3 12h3m12 0h3M5.6 5.6l2.1 2.1m8.6 8.6l2.1 2.1M5.6 18.4l2.1-2.1m8.6-8.6l2.1-2.1"/>
+              </>
+            )}
+            {b.icon === 'shield' && (
+              <>
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                <path d="m9 12 2 2 4-4"/>
+              </>
+            )}
+            {b.icon === 'water' && (
+              <>
+                <path d="M12 2.5s7 8 7 12.5a7 7 0 0 1-14 0c0-4.5 7-12.5 7-12.5z"/>
+              </>
+            )}
+          </svg>
+        </div>
+        <div class="min-w-0">
+          <p class="text-sm font-semibold text-cream tracking-tight leading-tight">{b.title}</p>
+          <p class="text-xs text-n-500 font-light mt-0.5 leading-relaxed">{b.desc}</p>
+        </div>
+      </div>
+    ))}
+  </div>
+)}

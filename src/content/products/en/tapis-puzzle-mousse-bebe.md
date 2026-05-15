@@ -20,6 +20,20 @@ sku: "TAPIS-PUZZLE-MOUSSE"
 featured: false
 pubDate: 2026-05-15
 
+benefits:
+  - icon: "cushion"
+    title: "Thick & Soft"
+    desc: "High-density EPE foam for reliable protection and exceptional comfort."
+  - icon: "puzzle"
+    title: "Seamless Interlocking"
+    desc: "Tiles snap together easily, creating endless layout combinations."
+  - icon: "thermo"
+    title: "Thermal Insulation"
+    desc: "Protects from cold in winter and heat in summer for baby's comfort."
+  - icon: "grip"
+    title: "Non-Slip Surface"
+    desc: "Textured surface ensures a secure grip and added safety."
+
 attributes:
   - name: "Color"
     values:

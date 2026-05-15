@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import Icon from '../../../components/Icon.astro';
+import ProductBenefits from '../../../components/ProductBenefits.astro';
 import FabricationSection from '../../../components/FabricationSection.astro';
 import { getCollection } from 'astro:content';
 import siteConfig from '../../../../site.config.mjs';
@@ -33,7 +34,7 @@ const productHref = (slug: string) => url('/product/' + parseEntrySlug(slug).slu
 const { Content } = await product.render();
 const {
   name, price, compareAtPrice, priceRange, image, imageAlt, gallery,
-  categories, shortDescription, stock, sku, attributes, variations,
+  categories, shortDescription, stock, sku, attributes, variations, benefits,
 } = product.data as any;
 
 const allProducts = await getCollection('products');
@@ -380,6 +381,8 @@ const breadcrumbSchema = {
             })}
           </div>
         )}
+
+        {benefits && benefits.length > 0 && <ProductBenefits benefits={benefits} />}
 
         <button
           id="buy-button"

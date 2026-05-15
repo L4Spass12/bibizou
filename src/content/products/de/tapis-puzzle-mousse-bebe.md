@@ -20,6 +20,20 @@ sku: "TAPIS-PUZZLE-MOUSSE"
 featured: false
 pubDate: 2026-05-15
 
+benefits:
+  - icon: "cushion"
+    title: "Dick & Weich"
+    desc: "Hochdichter EPE-Schaumstoff für zuverlässigen Schutz und außergewöhnlichen Komfort."
+  - icon: "puzzle"
+    title: "Nahtloses Zusammenstecken"
+    desc: "Fliesen lassen sich einfach verbinden und beliebig anordnen."
+  - icon: "thermo"
+    title: "Wärmedämmung"
+    desc: "Schützt vor Kälte im Winter und Hitze im Sommer für den Komfort des Babys."
+  - icon: "grip"
+    title: "Rutschfeste Oberfläche"
+    desc: "Strukturierte Oberfläche für sicheren Halt und mehr Sicherheit."
+
 attributes:
   - name: "Farbe"
     values:
