@@ -27,6 +27,7 @@ const blog = defineCollection({
 const attrValue = z.object({
   label: z.string(),  // "Bleu foncé"
   slug: z.string(),   // "bleu-fonce"
+  color: z.string().optional(), // hex unique "#3b5998" ou double "#3b5998,#f5d76e" pour swatch
 });
 
 /**

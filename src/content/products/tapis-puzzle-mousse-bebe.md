@@ -10,6 +10,7 @@ imageAlt: "Tapis puzzle en mousse pour bébé, dalles emboîtables colorées, so
 gallery:
   - "/images/products/tapis-puzzle-mousse-bebe/2.webp"
   - "/images/products/tapis-puzzle-mousse-bebe/3.webp"
+  - "/images/products/tapis-puzzle-mousse-bebe/4.webp"
 categories:
   - "Tapis d'éveil & jeu"
 shortDescription: "Tapis de jeu modulable en dalles de mousse EPE épaisse. Doux, antidérapant et facile à nettoyer — idéal pour protéger bébé et délimiter son espace de jeu."
@@ -24,10 +25,13 @@ attributes:
     values:
       - label: "Bleu & Jaune"
         slug: "bleu-jaune"
+        color: "#3D4D6B,#F5D76E"
       - label: "Rose & Beige"
         slug: "rose-beige"
+        color: "#F5C9D3,#E8D5C4"
       - label: "Gris & Blanc"
         slug: "gris-blanc"
+        color: "#9CA3AF,#FFFFFF"
 
 variations:
   - id: 1

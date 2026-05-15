@@ -79,7 +79,7 @@ const catSlug = catToSlug(cat);
       <div id="posts-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
         {posts.map((post, i) => (
           <a href={`/${post.slug}`} class="post-card group block">
-            <div class="relative aspect-[4/3] rounded-2xl overflow-hidden bg-panel border border-cream/[0.10] mb-5">
+            <div class="relative aspect-square rounded-2xl overflow-hidden bg-panel border border-cream/[0.10] mb-5">
               {post.data.image
                 ? <img
                     src={unsplashAt(post.data.image, 600)}

@@ -148,7 +148,7 @@ const breadcrumbSchema = {
         const slides = Array.from(new Set([image, ...(gallery || [])]));
         return (
         <div class="product-gallery" data-gallery data-slide-count={slides.length}>
-          <div class="relative rounded-2xl overflow-hidden bg-panel border border-cream/[0.10] aspect-[4/3] group">
+          <div class="relative rounded-2xl overflow-hidden bg-panel border border-cream/[0.10] aspect-square group">
             <div class="gallery-track flex overflow-x-auto snap-x snap-mandatory scroll-smooth h-full" data-gallery-track>
               {slides.map((src, i) => (
                 <div class="flex-none w-full h-full snap-start snap-always">
@@ -249,6 +249,33 @@ const breadcrumbSchema = {
               const isSize = parsed.every((v: any) => v.w != null && v.h != null);
 
               if (!isSize) {
+                const isColor = attr.values.every((v: any) => typeof v.color === 'string' && v.color);
+                if (isColor) {
+                  return (
+                    <div>
+                      <label class="block text-xs text-n-500 uppercase tracking-widest mb-2 font-medium">
+                        {attr.name} : <span class="text-cream" data-selected-label={attr.name}>-</span>
+                      </label>
+                      <div class="flex flex-wrap gap-3">
+                        {attr.values.map((val: any, idx: number) => {
+                          const colors = (val.color as string).split(',').map((c: string) => c.trim());
+                          const bg = colors.length === 1
+                            ? colors[0]
+                            : `linear-gradient(135deg, ${colors[0]} 0%, ${colors[0]} 50%, ${colors[1]} 50%, ${colors[1]} 100%)`;
+                          return (
+                            <button
+                              type="button" data-variant-option data-variant-type="swatch"
+                              data-attr={attr.name} data-value={val.slug}
+                              aria-label={val.label} title={val.label}
+                              class={`variant-swatch w-10 h-10 rounded-full border-2 transition-all ${idx === 0 ? 'border-cream ring-2 ring-terracotta ring-offset-2 ring-offset-dark' : 'border-cream/[0.20] hover:border-cream/40'}`}
+                              style={`background: ${bg};`}
+                            ></button>
+                          );
+                        })}
+                      </div>
+                    </div>
+                  );
+                }
                 return (
                   <div>
                     <label class="block text-xs text-n-500 uppercase tracking-widest mb-2 font-medium">
@@ -527,7 +554,7 @@ const breadcrumbSchema = {
         <div class="slider-track flex gap-3 md:gap-4 lg:gap-5 overflow-x-auto snap-x snap-mandatory scroll-smooth pb-2 pl-6 md:pl-[max(1.5rem,calc((100vw-80rem)/2+1.5rem))] pr-6">
           {related.map((p: any) => (
             <a href={productHref(p.slug)} class="slider-card group flex-none w-[72vw] sm:w-[45vw] md:w-[30vw] lg:w-[22vw] xl:w-[310px] snap-start block">
-              <div class="relative aspect-[4/3] rounded-2xl overflow-hidden bg-panel border border-cream/[0.10] mb-3">
+              <div class="relative aspect-square rounded-2xl overflow-hidden bg-panel border border-cream/[0.10] mb-3">
                 <img src={p.data.image} srcset={unsplashSrcset(p.data.image)}
                   sizes="(max-width: 640px) 72vw, (max-width: 768px) 45vw, (max-width: 1024px) 32vw, 300px"
                   alt={p.data.imageAlt ?? p.data.name}
@@ -710,12 +737,17 @@ const breadcrumbSchema = {
 
       const pillClass = 'variant-pill text-xs font-medium px-4 py-2 rounded-full border transition-colors';
       const sizeClass = 'variant-size-card relative rounded-xl border p-2 md:p-3 transition-colors min-w-0';
-      const off = (type) => type === 'size'
-        ? sizeClass + ' bg-cream/[0.03] border-cream/[0.12] hover:border-cream/30'
-        : pillClass + ' bg-cream/[0.03] text-n-400 border-cream/[0.12] hover:text-cream hover:border-cream/20';
-      const on = (type) => type === 'size'
-        ? sizeClass + ' bg-cream/[0.05] border-cream'
-        : pillClass + ' bg-cream text-dark border-cream';
+      const swatchClass = 'variant-swatch w-10 h-10 rounded-full border-2 transition-all';
+      const off = (type) => {
+        if (type === 'size')   return sizeClass + ' bg-cream/[0.03] border-cream/[0.12] hover:border-cream/30';
+        if (type === 'swatch') return swatchClass + ' border-cream/[0.20] hover:border-cream/40';
+        return pillClass + ' bg-cream/[0.03] text-n-400 border-cream/[0.12] hover:text-cream hover:border-cream/20';
+      };
+      const on = (type) => {
+        if (type === 'size')   return sizeClass + ' bg-cream/[0.05] border-cream';
+        if (type === 'swatch') return swatchClass + ' border-cream ring-2 ring-terracotta ring-offset-2 ring-offset-dark';
+        return pillClass + ' bg-cream text-dark border-cream';
+      };
 
       selector.querySelectorAll('[data-variant-option]').forEach(btn => {
         btn.addEventListener('click', () => {

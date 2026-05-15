@@ -185,7 +185,7 @@ if (faqSchema) jsonLd.push(faqSchema);
           {products.map((product: any, i: number) => (
             <article class="product-card">
               <a href={productHref(product.slug)} class="group block">
-                <div class="relative aspect-[4/3] rounded-2xl overflow-hidden bg-panel border border-cream/[0.10] mb-5">
+                <div class="relative aspect-square rounded-2xl overflow-hidden bg-panel border border-cream/[0.10] mb-5">
                   <img
                     src={product.data.image}
                     srcset={unsplashSrcset(product.data.image)}
