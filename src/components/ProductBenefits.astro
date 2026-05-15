@@ -14,11 +14,10 @@ const { benefits } = Astro.props as Props;
 ---
 
 {benefits && benefits.length > 0 && (
-  <div class="space-y-3 mb-6 mt-2">
+  <ul class="space-y-1.5 mb-5 mt-1">
     {benefits.map(b => (
-      <div class="flex items-start gap-3 p-3 rounded-xl bg-panel border border-cream/[0.10]">
-        <div class="w-10 h-10 rounded-full bg-terracotta/10 border border-terracotta/20 flex items-center justify-center shrink-0">
-          <svg class="w-5 h-5 text-terracotta" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <li class="flex items-center gap-2.5">
+        <svg class="w-4 h-4 text-terracotta shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             {b.icon === 'cushion' && (
               <>
                 <path d="M5 7c0-1.5 1.2-3 3-3h8c1.8 0 3 1.5 3 3v10c0 1.5-1.2 3-3 3H8c-1.8 0-3-1.5-3-3V7z"/>
@@ -66,13 +65,9 @@ const { benefits } = Astro.props as Props;
                 <path d="M12 2.5s7 8 7 12.5a7 7 0 0 1-14 0c0-4.5 7-12.5 7-12.5z"/>
               </>
             )}
-          </svg>
-        </div>
-        <div class="min-w-0">
-          <p class="text-sm font-semibold text-cream tracking-tight leading-tight">{b.title}</p>
-          <p class="text-xs text-n-500 font-light mt-0.5 leading-relaxed">{b.desc}</p>
-        </div>
-      </div>
+        </svg>
+        <span class="text-sm text-cream font-medium tracking-tight">{b.title}</span>
+      </li>
     ))}
-  </div>
+  </ul>
 )}
