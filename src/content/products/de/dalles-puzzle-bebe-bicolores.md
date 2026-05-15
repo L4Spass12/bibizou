@@ -6,14 +6,14 @@ priceRange:
   min: 29.90
   max: 47.90
 image: "/images/products/dalles-puzzle-bebe-bicolores/1.webp"
-imageAlt: "Zweifarbige Baby-Puzzlefliesen aus EPE-Schaumstoff, Pakete mit 10 oder 20 Fliesen, Weiß & Rosa, Weiß & Blau, Weiß & Kaffee"
+imageAlt: "Zweifarbige Baby-Puzzlefliesen mit weicher Samtoberfläche und EVA-Schaumstoffboden, 10er- oder 20er-Pack 30x30 cm, Weiß & Rosa, Weiß & Blau, Weiß & Kaffee"
 gallery:
   - "/images/products/dalles-puzzle-bebe-bicolores/2.webp"
   - "/images/products/dalles-puzzle-bebe-bicolores/3.webp"
   - "/images/products/dalles-puzzle-bebe-bicolores/4.webp"
 categories:
   - "Tapis d'éveil & jeu"
-shortDescription: "Zweifarbige EPE-Schaumstofffliesen, die wie ein Puzzle ineinandergreifen. Erhältlich in 10er- oder 20er-Pack, drei sanfte Farbtöne zur Anpassung des Babyspielbereichs."
+shortDescription: "Zweifarbige Spielfliesen mit weicher Samtoberfläche und EVA-Schaumstoffboden. 30×30 cm Format, ineinandergreifend wie ein Puzzle und zuschneidbar. Perfekt für Baby, Haustiere, Kinder und sanfte Übungen."
 weight: 2400
 stock: 50
 sku: "DALLES-PUZZLE-BICOLORES"
@@ -22,17 +22,17 @@ pubDate: 2026-05-15
 
 benefits:
   - icon: "cushion"
-    title: "Dick & Weich"
-    desc: "Hochdichter EPE-Schaumstoff für zuverlässigen Schutz und außergewöhnlichen Komfort."
+    title: "Weicher & warmer Samt"
+    desc: "Samtoberfläche aus Baumwolle-Polyester, kuschelig und warm für Babys."
   - icon: "puzzle"
-    title: "Nahtloses Zusammenstecken"
-    desc: "Fliesen lassen sich einfach verbinden und beliebig anordnen."
+    title: "Stecken & Zuschneiden"
+    desc: "30×30 cm Fliesen, ineinandergreifend und individuell zuschneidbar."
   - icon: "thermo"
-    title: "Wärmedämmung"
-    desc: "Schützt vor Kälte im Winter und Hitze im Sommer für den Komfort des Babys."
+    title: "Hochdichter EVA-Schaumstoff"
+    desc: "Dicke Schaumstoffbasis dämpft, isoliert vor Kälte und schützt Ihre Böden."
   - icon: "grip"
-    title: "Rutschfeste Oberfläche"
-    desc: "Strukturierte Oberfläche für sicheren Halt und mehr Sicherheit."
+    title: "Vielseitig einsetzbar"
+    desc: "Baby, Haustiere, Kinder, Yoga — ein gemütlicher Boden für die ganze Familie."
 
 attributes:
   - name: "Pack"
@@ -116,25 +116,46 @@ variations:
     image: "/images/products/dalles-puzzle-bebe-bicolores/3.webp"
 ---
 
-## Gestalten Sie den Spielbereich Ihres Babys
+## Ein samtweicher Boden für Babys
 
-Die **zweifarbigen Puzzlefliesen** schaffen einen modularen Boden mit weichem, minimalistischem Design. Der Kontrast aus Weiß und Pastellfarbe verleiht jedem Raum Sanftheit, ohne die Einrichtung zu überladen.
+Die **zweifarbigen Puzzlefliesen** schaffen einen modularen Boden mit weichem, minimalistischem Design. Die Oberfläche aus Baumwoll-Polyester-Samt ist kuschelig, warm und bequem — ideal für kleine Knie. Die Basis aus hochdichtem EVA-Schaumstoff dämpft, isoliert und schützt harte Böden (Parkett, Fliesen) vor Kratzern und Stößen.
 
 ## 10er- oder 20er-Pack?
 
-- **10er-Pack**: ideal für einen kleinen Spielbereich (ca. 1,2 m²) — perfekt für eine Ecke im Kinderzimmer.
-- **20er-Pack**: deckt eine größere Fläche (ca. 2,4 m²) — ideal für das Wohnzimmer oder ein großes Schlafzimmer.
+Jede Fliese misst **30 × 30 × 1 cm**. Wählen Sie je nach Platz:
 
-Die Packs sind kompatibel: Klein starten und später erweitern.
+- **10er-Pack**: deckt ca. 0,9 m² ab — perfekt für eine Kinderzimmerecke oder einen kleinen Spielbereich.
+- **20er-Pack**: deckt ca. 1,8 m² ab — ideal für das Wohnzimmer oder eine größere Fläche.
+
+Die Packs sind kompatibel: klein starten und später erweitern.
+
+## DIY & endlose Kombinationen
+
+Die Fliesen lassen sich in jede Richtung verbinden und können **mit einem Cutter zugeschnitten werden**, um Raumkanten zu folgen, Möbel zu umgehen oder individuelle Formen zu schaffen. Mischen Sie die Farben für originelle, gemütliche Muster.
+
+## Vielseitig einsetzbar
+
+Für Babys gedacht, aber ebenso gut geeignet für:
+
+- Einen gemütlichen Platz für Haustiere
+- Bastelecke für Kinder (Malen, Sticker, Knete)
+- Yogamatte oder sanfte Übungen für Erwachsene
+- Schutz eines empfindlichen Bodens unter einem Spieltisch
 
 ## Eigenschaften
 
-- **Material**: Hochdichter EPE-Schaumstoff — weich, leicht, stoßdämpfend
-- **Ineinandergreifende Fliesen**: einfaches Zusammensetzen und Auseinandernehmen
-- **Rutschfest**: sicherer strukturierter Boden
-- **Leicht zu reinigen**: ein feuchtes Tuch genügt
+- **Oberfläche**: Baumwoll-Polyester-Samt — kuschelig und warm
+- **Basis**: hochdichter EVA-Schaumstoff — dämpfend und isolierend
+- **Maße**: 30 × 30 × 1 cm pro Fliese
+- **Ineinandergreifend & zuschneidbar**: vollständig anpassbares Layout
 - **BPA-frei**: für Babys getestete Materialien
+
+## Gut zu wissen
+
+Jeder Pack enthält **einen dekorativen Abschlussstreifen** zur Verkleidung sichtbarer Kanten. Nur auf trockener Oberfläche verwenden — nicht für Badezimmer empfohlen.
 
 ## Pflege
 
-Mit feuchtem Tuch und milder Seife abwischen. Nicht eintauchen. An der Luft trocknen.
+- **Täglich**: Samtoberfläche mit dem Staubsauger (weiche Bürste) absaugen, um Staub und Tierhaare zu entfernen.
+- **Flecken**: direkt mit lauwarmem Wasser und einem weichen Tuch oder Schwamm reinigen. Flach an der Luft trocknen lassen.
+- **Vermeiden**: Waschmaschine (verformt EVA-Schaumstoff), Trockner, Bleichmittel, längere direkte Sonneneinstrahlung.

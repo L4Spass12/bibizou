@@ -6,14 +6,14 @@ priceRange:
   min: 29.90
   max: 47.90
 image: "/images/products/dalles-puzzle-bebe-bicolores/1.webp"
-imageAlt: "Dalles puzzle bébé bicolores en mousse EPE, packs de 10 ou 20 dalles, coloris blanc & rose, blanc & bleu, blanc & café"
+imageAlt: "Dalles puzzle bébé bicolores en velours doux et mousse EVA, packs de 10 ou 20 dalles 30x30 cm, coloris blanc & rose, blanc & bleu, blanc & café"
 gallery:
   - "/images/products/dalles-puzzle-bebe-bicolores/2.webp"
   - "/images/products/dalles-puzzle-bebe-bicolores/3.webp"
   - "/images/products/dalles-puzzle-bebe-bicolores/4.webp"
 categories:
   - "Tapis d'éveil & jeu"
-shortDescription: "Dalles de jeu en mousse EPE bicolores qui s'emboîtent comme un puzzle. Disponibles en pack de 10 ou 20 dalles, trois coloris doux pour personnaliser l'espace de bébé."
+shortDescription: "Dalles de jeu bicolores avec surface velours douce et fond mousse EVA. Format 30×30 cm emboîtable comme un puzzle, découpable pour épouser votre pièce. Idéal pour bébé, mais aussi animaux, enfants et exercices."
 weight: 2400
 stock: 50
 sku: "DALLES-PUZZLE-BICOLORES"
@@ -22,17 +22,17 @@ pubDate: 2026-05-15
 
 benefits:
   - icon: "cushion"
-    title: "Épais & doux"
-    desc: "Mousse EPE haute densité pour une protection fiable et un confort exceptionnel."
+    title: "Velours doux & chaud"
+    desc: "Surface en velours coton-polyester moelleuse et chaleureuse pour bébé."
   - icon: "puzzle"
-    title: "Assemblage sans accroc"
-    desc: "Dalles emboîtables faciles à monter, libres à configurer selon votre espace."
+    title: "Assemblage & découpe libre"
+    desc: "Dalles 30×30 cm emboîtables, découpables pour épouser tous les espaces."
   - icon: "thermo"
-    title: "Isolation thermique"
-    desc: "Protège du froid en hiver et de la chaleur en été pour le confort de bébé."
+    title: "Mousse EVA haute densité"
+    desc: "Fond mousse épais qui amortit, isole du froid et protège vos sols."
   - icon: "grip"
-    title: "Surface antidérapante"
-    desc: "Texture spéciale qui garantit une bonne adhérence et plus de sécurité."
+    title: "Multi-usage"
+    desc: "Bébé, animaux, enfants, yoga — un sol confortable pour toute la famille."
 
 attributes:
   - name: "Pack"
@@ -116,25 +116,46 @@ variations:
     image: "/images/products/dalles-puzzle-bebe-bicolores/3.webp"
 ---
 
-## Personnalisez l'espace de jeu de bébé
+## Un sol doux comme du velours pour bébé
 
-Les **dalles puzzle bicolores** offrent un sol modulable au design doux et minimaliste. Le contraste blanc + couleur pastel apporte de la douceur à n'importe quelle pièce, sans surcharger la déco.
+Les **dalles puzzle bicolores** offrent un sol modulable au design doux et minimaliste. La surface en velours coton-polyester est moelleuse, chaude et confortable — idéale pour les genoux des tout-petits. Le fond en mousse EVA haute densité amortit, isole et protège vos sols durs (parquet, carrelage) des rayures et des coups.
 
 ## Pack 10 ou 20 dalles ?
 
-- **Pack 10 dalles** : idéal pour délimiter un petit espace de jeu (environ 1,2 m²) — parfait pour un coin de chambre.
-- **Pack 20 dalles** : couvre une zone plus large (environ 2,4 m²) — idéal pour le salon ou une grande chambre.
+Chaque dalle mesure **30 × 30 × 1 cm**. Vous choisissez selon votre espace :
 
-Les dalles sont compatibles entre packs : commencez petit et agrandissez plus tard si besoin.
+- **Pack 10 dalles** : couvre environ 0,9 m² — parfait pour un coin de chambre ou un petit espace de jeu.
+- **Pack 20 dalles** : couvre environ 1,8 m² — idéal pour le salon ou une plus grande zone.
+
+Les dalles sont compatibles entre packs : commencez petit et agrandissez plus tard.
+
+## DIY & combinaisons infinies
+
+Les dalles s'emboîtent dans tous les sens et **se découpent au cutter** pour épouser les contours d'une pièce, contourner un meuble ou créer une forme personnalisée. Mixez les couleurs pour des motifs originaux et chaleureux.
+
+## Multi-usage
+
+Pensé pour bébé, mais aussi parfait pour :
+
+- Créer un coin moelleux pour vos animaux
+- Atelier créatif des enfants (peinture, gommettes, pâte à modeler)
+- Tapis de yoga ou exercices doux pour adultes
+- Protéger un sol fragile sous une table de jeu
 
 ## Caractéristiques
 
-- **Matière** : Mousse EPE haute densité — douce, légère, résistante aux chocs
-- **Dalles emboîtables** : assemblage et démontage faciles
-- **Antidérapant** : fond texturé sécurisé
-- **Facile à nettoyer** : un chiffon humide suffit
+- **Surface** : velours coton-polyester — moelleux et chaud
+- **Fond** : mousse EVA haute densité — amortissant et isolant
+- **Dimensions** : 30 × 30 × 1 cm par dalle
+- **Emboîtables & découpables** : configuration totalement libre
 - **Sans BPA** : matériaux testés pour les bébés
+
+## Bon à savoir
+
+Chaque pack inclut **une bande de finition décorative** pour habiller les bords visibles. À utiliser uniquement sur une surface sèche : déconseillé en salle de bain.
 
 ## Entretien
 
-Chiffon humide + savon doux. Ne pas immerger. Sécher à l'air libre.
+- **Au quotidien** : passez l'aspirateur (embout brosse douce) sur la surface velours pour retirer poussières et poils.
+- **Taches** : nettoyez à l'eau tiède directement sur la dalle, avec un chiffon ou une éponge douce. Laissez sécher à plat, à l'air libre.
+- **À éviter** : machine à laver (déforme la mousse EVA), sèche-linge, javel, exposition prolongée au soleil.

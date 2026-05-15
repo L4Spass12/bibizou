@@ -6,14 +6,14 @@ priceRange:
   min: 29.90
   max: 47.90
 image: "/images/products/dalles-puzzle-bebe-bicolores/1.webp"
-imageAlt: "Two-tone baby puzzle tiles in EPE foam, packs of 10 or 20 tiles, white & pink, white & blue, white & coffee"
+imageAlt: "Two-tone baby puzzle tiles with soft velvet surface and EVA foam base, packs of 10 or 20 tiles 30x30 cm, white & pink, white & blue, white & coffee"
 gallery:
   - "/images/products/dalles-puzzle-bebe-bicolores/2.webp"
   - "/images/products/dalles-puzzle-bebe-bicolores/3.webp"
   - "/images/products/dalles-puzzle-bebe-bicolores/4.webp"
 categories:
   - "Tapis d'éveil & jeu"
-shortDescription: "Two-tone EPE foam play tiles that snap together like a puzzle. Available in packs of 10 or 20 tiles, three soft color options to customize baby's space."
+shortDescription: "Two-tone play tiles with soft velvet surface and EVA foam base. 30×30 cm format snaps together like a puzzle and can be cut to fit your room. Great for baby, pets, kids and gentle exercise."
 weight: 2400
 stock: 50
 sku: "DALLES-PUZZLE-BICOLORES"
@@ -22,17 +22,17 @@ pubDate: 2026-05-15
 
 benefits:
   - icon: "cushion"
-    title: "Thick & Soft"
-    desc: "High-density EPE foam for reliable protection and exceptional comfort."
+    title: "Soft & Warm Velvet"
+    desc: "Plush cotton-polyester velvet surface, cozy and warm for baby."
   - icon: "puzzle"
-    title: "Seamless Interlocking"
-    desc: "Tiles snap together easily, creating endless layout combinations."
+    title: "Snap & Cut to Fit"
+    desc: "30×30 cm tiles snap together — cut them to match any room shape."
   - icon: "thermo"
-    title: "Thermal Insulation"
-    desc: "Protects from cold in winter and heat in summer for baby's comfort."
+    title: "High-Density EVA Foam"
+    desc: "Thick foam base cushions, insulates from cold and protects your floors."
   - icon: "grip"
-    title: "Non-Slip Surface"
-    desc: "Textured surface ensures a secure grip and added safety."
+    title: "Multi-Use"
+    desc: "Baby, pets, kids, yoga — a cozy floor for the whole family."
 
 attributes:
   - name: "Pack"
@@ -116,25 +116,46 @@ variations:
     image: "/images/products/dalles-puzzle-bebe-bicolores/3.webp"
 ---
 
-## Customize your baby's play space
+## A velvet-soft floor for baby
 
-The **two-tone puzzle tiles** create a modular floor with a soft, minimalist design. The white + pastel contrast adds softness to any room without overloading the decor.
+The **two-tone puzzle tiles** create a modular floor with a soft, minimalist design. The cotton-polyester velvet surface is plush, warm and comfortable — perfect for little knees. The high-density EVA foam base cushions, insulates and protects hard floors (hardwood, tile) from scratches and dings.
 
 ## Pack of 10 or 20 tiles?
 
-- **Pack of 10 tiles**: ideal for a small play area (around 1.2 m²) — perfect for a corner of the nursery.
-- **Pack of 20 tiles**: covers a larger zone (around 2.4 m²) — ideal for the living room or a large bedroom.
+Each tile is **30 × 30 × 1 cm**. Choose based on your space:
 
-Packs are compatible: start small and expand later if needed.
+- **Pack of 10 tiles**: covers around 0.9 m² — perfect for a corner of the nursery or a small play area.
+- **Pack of 20 tiles**: covers around 1.8 m² — ideal for the living room or a larger zone.
+
+Packs are compatible: start small and expand later.
+
+## DIY & endless combinations
+
+Tiles interlock in any direction and **can be trimmed with a cutter** to follow room edges, go around furniture, or create a custom shape. Mix colors for original, cozy patterns.
+
+## Multi-use
+
+Designed for babies, but equally great for:
+
+- Creating a cozy spot for pets
+- Kids' craft corner (paint, stickers, modeling clay)
+- Yoga mat or gentle adult exercise
+- Protecting a delicate floor under a play table
 
 ## Features
 
-- **Material**: High-density EPE foam — soft, light, shock-resistant
-- **Interlocking tiles**: easy to assemble and disassemble
-- **Non-slip**: safe textured bottom
-- **Easy to clean**: a damp cloth is enough
+- **Surface**: cotton-polyester velvet — plush and warm
+- **Base**: high-density EVA foam — cushioning and insulating
+- **Dimensions**: 30 × 30 × 1 cm per tile
+- **Interlocking & cuttable**: fully customizable layout
 - **BPA-free**: tested materials for babies
+
+## Good to know
+
+Each pack includes **one decorative trim strip** to finish exposed edges. Use only on a dry surface — not recommended in bathrooms.
 
 ## Care
 
-Wipe with a damp cloth and mild soap. Do not immerse. Air-dry only.
+- **Daily**: vacuum the velvet surface (soft brush attachment) to remove dust and pet hair.
+- **Stains**: clean directly with lukewarm water using a cloth or soft sponge. Air-dry flat.
+- **Avoid**: washing machine (deforms EVA foam), tumble dryer, bleach, prolonged direct sunlight.
