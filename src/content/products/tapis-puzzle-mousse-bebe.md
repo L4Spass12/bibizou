@@ -16,7 +16,7 @@ shortDescription: "Tapis de jeu modulable en dalles de mousse EPE épaisse. Doux
 weight: 1200
 stock: 50
 sku: "TAPIS-PUZZLE-MOUSSE"
-featured: true
+featured: false
 pubDate: 2026-05-15
 
 attributes:
