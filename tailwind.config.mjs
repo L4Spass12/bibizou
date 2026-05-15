@@ -18,24 +18,24 @@ export default {
          *   terracotta  = accent = blanc pur (utilisé pour boutons, liens, labels)
          *   sage        = accent de statut (vert)
          */
-        dark:       '#FEFCF8',
-        panel:      '#FFF8F0',
-        teal:       '#FFF2E6',
-        beige:      '#F2D9C8',
-        cream:      '#2C2017',
+        dark:       '#FFFBF5',
+        panel:      '#FFF4E8',
+        teal:       '#FFEAD8',
+        beige:      '#F5C9B0',
+        cream:      '#3E2A1F',
         terracotta: '#E8724A',
-        sage:       '#5BAD8B',
+        sage:       '#7CB495',
+        accent:     '#F4A26C',
+        blush:      '#F8D7C8',
+        mint:       '#C8E6D4',
         /* Neutres supplémentaires pour granularité (optional) */
-        'n-500':    '#9C8878',
-        'n-400':    '#C4AFA3',
+        'n-500':    '#6B5142',
+        'n-400':    '#8A7060',
+        'n-300':    '#A88E7C',
       },
       fontFamily: {
-        /**
-         * One typeface, Inter, pour tout le site.
-         * "display" existe pour compat avec les class existantes, pointe sur Inter.
-         */
-        display: ['Inter', 'system-ui', 'sans-serif'],
-        body:    ['Inter', 'system-ui', 'sans-serif'],
+        display: ['Quicksand', 'system-ui', 'sans-serif'],
+        body:    ['Nunito', 'system-ui', 'sans-serif'],
       },
       letterSpacing: {
         'tightest': '-0.04em',
