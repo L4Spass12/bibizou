@@ -232,9 +232,8 @@ const breadcrumbSchema = {
             </span>
           )}
         </div>
-        <div class="mb-8"></div>
 
-        <div id="product-stock" class={`flex items-center gap-2 mb-6 text-sm font-light ${inStock ? 'text-sage' : 'text-n-500'}`}>
+        <div id="product-stock" class={`flex items-center gap-2 mb-8 text-sm font-light ${inStock ? 'text-sage' : 'text-n-500'}`}>
           <span class={`w-1.5 h-1.5 rounded-full ${inStock ? 'bg-sage' : 'bg-n-500'}`}></span>
           <span>{inStock ? t('shop.inStock', lang) : t('shop.outOfStock', lang)}</span>
         </div>
