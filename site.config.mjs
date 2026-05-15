@@ -79,21 +79,21 @@ const config = {
 
   // ⚠ ─── Catégories du BLOG (3 entrées max, conserver les keys utilisées
   //       par tes content/blog/*.md frontmatter `category`) ─────────────── ⚠
-  categories: ["Tapis d’éveil & jeu", "Guide d’achat bébé", ‘Éveil & développement’],
+  categories: ["Tapis d'éveil & jeu", "Guide d'achat bébé", 'Éveil & développement'],
   categorySlugs: {
-    "Tapis d’éveil & jeu": ‘tapis-eveil-jeu’,
-    "Guide d’achat bébé": ‘guide-achat-bebe’,
-    ‘Éveil & développement’: ‘eveil-developpement’,
+    "Tapis d'éveil & jeu": 'tapis-eveil-jeu',
+    "Guide d'achat bébé": 'guide-achat-bebe',
+    'Éveil & développement': 'eveil-developpement',
   },
 
   // ⚠ ─── Catégories PRODUITS ─────────────────────────────────────────── ⚠
   productCategories: [
-    { slug: ‘tapis-jeu-doux’,      label: ‘Tapis de jeu doux’ },
-    { slug: ‘tapis-puzzle-mousse’, label: ‘Tapis puzzle mousse’ },
-    { slug: ‘tapis-eveil-arche’,   label: "Tapis d’éveil avec arche" },
-    { slug: ‘tapis-jeu-xxl’,       label: ‘Tapis de jeu XXL’ },
-    { slug: ‘tapis-jeu-pliable’,   label: ‘Tapis de jeu pliable’ },
-    { slug: ‘veilleuses’,          label: ‘Veilleuses’ },
+    { slug: 'tapis-jeu-doux',      label: 'Tapis de jeu doux' },
+    { slug: 'tapis-puzzle-mousse', label: 'Tapis puzzle mousse' },
+    { slug: 'tapis-eveil-arche',   label: "Tapis d'éveil avec arche" },
+    { slug: 'tapis-jeu-xxl',       label: 'Tapis de jeu XXL' },
+    { slug: 'tapis-jeu-pliable',   label: 'Tapis de jeu pliable' },
+    { slug: 'veilleuses',          label: 'Veilleuses' },
   ],
 
   // ⚠ ─── Génération d'articles IA (workflow Mon/Wed/Fri 8h UTC) ─────── ⚠
@@ -116,7 +116,7 @@ const config = {
     editor: {
       name: 'Quentin Amat',
       status: 'entrepreneur individuel',
-      address: '123 rue d’Isly, 59100 Roubaix',
+      address: "123 rue d'Isly, 59100 Roubaix",
       phone: '06 27 29 34 43',
       email: 'contact@bibizou.com',
       vatStatus: 'Franchise en base de TVA - TVA non applicable, art. 293 B du CGI',
