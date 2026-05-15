@@ -253,7 +253,7 @@ const breadcrumbSchema = {
                 if (isColor) {
                   return (
                     <div>
-                      <label class="block text-xs text-n-500 uppercase tracking-widest mb-2 font-medium">
+                      <label class="block text-xs text-n-500 uppercase tracking-widest mb-3 font-medium">
                         {attr.name} : <span class="text-cream" data-selected-label={attr.name}>-</span>
                       </label>
                       <div class="flex flex-wrap gap-3">
@@ -261,15 +261,15 @@ const breadcrumbSchema = {
                           const colors = (val.color as string).split(',').map((c: string) => c.trim());
                           const bg = colors.length === 1
                             ? colors[0]
-                            : `linear-gradient(135deg, ${colors[0]} 0%, ${colors[0]} 50%, ${colors[1]} 50%, ${colors[1]} 100%)`;
+                            : `linear-gradient(90deg, ${colors[0]} 0%, ${colors[0]} 50%, ${colors[1]} 50%, ${colors[1]} 100%)`;
                           return (
                             <button
                               type="button" data-variant-option data-variant-type="swatch"
                               data-attr={attr.name} data-value={val.slug}
                               aria-label={val.label} title={val.label}
-                              class={`variant-swatch w-10 h-10 rounded-full border-2 transition-all ${idx === 0 ? 'border-cream ring-2 ring-terracotta ring-offset-2 ring-offset-dark' : 'border-cream/[0.20] hover:border-cream/40'}`}
+                              class={`variant-swatch relative w-12 h-12 rounded-full overflow-hidden transition-all shadow-sm ${idx === 0 ? 'ring-2 ring-terracotta ring-offset-2 ring-offset-dark scale-110' : 'ring-1 ring-cream/[0.15] hover:ring-cream/40 hover:scale-105'}`}
                               style={`background: ${bg};`}
-                            ></button>
+                            ><span class="absolute inset-0 rounded-full" style="box-shadow: inset 0 0 0 1px rgba(0,0,0,0.06);"></span></button>
                           );
                         })}
                       </div>
@@ -590,8 +590,8 @@ const breadcrumbSchema = {
   <style>
     .product-slider .slider-track { scrollbar-width: none; -ms-overflow-style: none; }
     .product-slider .slider-track::-webkit-scrollbar { display: none; }
-    .gallery-track { scrollbar-width: none; -ms-overflow-style: none; }
-    .gallery-track::-webkit-scrollbar { display: none; }
+    :global(.gallery-track) { scrollbar-width: none !important; -ms-overflow-style: none !important; }
+    :global(.gallery-track::-webkit-scrollbar) { display: none !important; height: 0 !important; width: 0 !important; }
     .product-toggle summary::-webkit-details-marker { display: none; }
     .product-toggle summary::marker { content: ''; }
     .below-fold-defer { content-visibility: auto; contain-intrinsic-size: auto 800px; }
@@ -659,7 +659,7 @@ const breadcrumbSchema = {
       selector.querySelectorAll('[data-attr]').forEach(btn => {
         const a = btn.dataset.attr;
         if (selected[a]) return;
-        if (btn.classList.contains('bg-cream') || btn.classList.contains('border-cream')) selected[a] = btn.dataset.value;
+        if (btn.classList.contains('bg-cream') || btn.classList.contains('border-cream') || btn.classList.contains('ring-terracotta')) selected[a] = btn.dataset.value;
       });
 
       const findVariant = () => variants.find(v => {
@@ -681,7 +681,8 @@ const breadcrumbSchema = {
           const label = document.querySelector('[data-selected-label="' + attr + '"]');
           if (!label) return;
           const pill = selector.querySelector('[data-attr="' + attr + '"][data-value="' + slug + '"]');
-          label.textContent = pill ? pill.textContent.trim() : slug;
+          const text = pill ? (pill.textContent.trim() || pill.getAttribute('aria-label') || slug) : slug;
+          label.textContent = text;
         });
         const v = findVariant();
         if (!v) { buyBtn.disabled = true; buyBtn.textContent = T_UNAVAIL; setStock(false, T_OOS); return; }
@@ -737,15 +738,15 @@ const breadcrumbSchema = {
 
       const pillClass = 'variant-pill text-xs font-medium px-4 py-2 rounded-full border transition-colors';
       const sizeClass = 'variant-size-card relative rounded-xl border p-2 md:p-3 transition-colors min-w-0';
-      const swatchClass = 'variant-swatch w-10 h-10 rounded-full border-2 transition-all';
+      const swatchClass = 'variant-swatch relative w-12 h-12 rounded-full overflow-hidden transition-all shadow-sm';
       const off = (type) => {
         if (type === 'size')   return sizeClass + ' bg-cream/[0.03] border-cream/[0.12] hover:border-cream/30';
-        if (type === 'swatch') return swatchClass + ' border-cream/[0.20] hover:border-cream/40';
+        if (type === 'swatch') return swatchClass + ' ring-1 ring-cream/[0.15] hover:ring-cream/40 hover:scale-105';
         return pillClass + ' bg-cream/[0.03] text-n-400 border-cream/[0.12] hover:text-cream hover:border-cream/20';
       };
       const on = (type) => {
         if (type === 'size')   return sizeClass + ' bg-cream/[0.05] border-cream';
-        if (type === 'swatch') return swatchClass + ' border-cream ring-2 ring-terracotta ring-offset-2 ring-offset-dark';
+        if (type === 'swatch') return swatchClass + ' ring-2 ring-terracotta ring-offset-2 ring-offset-dark scale-110';
         return pillClass + ' bg-cream text-dark border-cream';
       };
 

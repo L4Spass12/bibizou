@@ -152,6 +152,10 @@
 ::-webkit-scrollbar-thumb { background: #F5C9B0; border-radius: 10px; }
 ::-webkit-scrollbar-thumb:hover { background: #E8724A; }
 
+/* Masque la scrollbar horizontale de la galerie produit */
+.gallery-track { scrollbar-width: none; -ms-overflow-style: none; }
+.gallery-track::-webkit-scrollbar { display: none; width: 0; height: 0; }
+
 /* Atelier widget — icône panier dans le header */
 [data-atelier-header-icon] {
   color: #6B5142 !important;

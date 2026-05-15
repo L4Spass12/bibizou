@@ -23,43 +23,43 @@ pubDate: 2026-05-15
 attributes:
   - name: "Couleur"
     values:
-      - label: "Bleu & Jaune"
-        slug: "bleu-jaune"
-        color: "#3D4D6B,#F5D76E"
-      - label: "Rose & Beige"
-        slug: "rose-beige"
-        color: "#F5C9D3,#E8D5C4"
-      - label: "Gris & Blanc"
-        slug: "gris-blanc"
-        color: "#9CA3AF,#FFFFFF"
+      - label: "Marine & Rose"
+        slug: "marine-rose"
+        color: "#2C3E5E,#F5C9D3"
+      - label: "Marine & Mauve"
+        slug: "marine-mauve"
+        color: "#2C3E5E,#A89BB0"
+      - label: "Marine & Jaune"
+        slug: "marine-jaune"
+        color: "#2C3E5E,#F5D76E"
 
 variations:
   - id: 1
-    sku: "TAPIS-PUZZLE-BLEU-JAUNE"
+    sku: "TAPIS-PUZZLE-MARINE-ROSE"
     price: 19.99
     compareAtPrice: 24.99
     inStock: true
     stock: 20
     attributes:
-      Couleur: "bleu-jaune"
+      Couleur: "marine-rose"
     image: "/images/products/tapis-puzzle-mousse-bebe/1.webp"
   - id: 2
-    sku: "TAPIS-PUZZLE-ROSE-BEIGE"
+    sku: "TAPIS-PUZZLE-MARINE-MAUVE"
     price: 19.99
     compareAtPrice: 24.99
     inStock: true
     stock: 20
     attributes:
-      Couleur: "rose-beige"
+      Couleur: "marine-mauve"
     image: "/images/products/tapis-puzzle-mousse-bebe/2.webp"
   - id: 3
-    sku: "TAPIS-PUZZLE-GRIS-BLANC"
+    sku: "TAPIS-PUZZLE-MARINE-JAUNE"
     price: 19.99
     compareAtPrice: 24.99
     inStock: true
     stock: 10
     attributes:
-      Couleur: "gris-blanc"
+      Couleur: "marine-jaune"
     image: "/images/products/tapis-puzzle-mousse-bebe/3.webp"
 ---
 
