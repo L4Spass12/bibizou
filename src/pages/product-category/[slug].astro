@@ -146,7 +146,7 @@ if (faqSchema) jsonLd.push(faqSchema);
     <nav class="mb-12" aria-label="Catégories de produits">
       <details class="cat-dropdown relative inline-block">
         <summary
-          class="inline-flex items-center gap-3 px-5 py-3 rounded-full border border-cream/[0.18] bg-cream/[0.04] text-sm font-medium text-cream cursor-pointer hover:border-cream/30 hover:bg-cream/[0.07] transition-colors select-none"
+          class="inline-flex items-center gap-3 px-5 py-3 rounded-full border border-cream/[0.18] bg-panel text-sm font-semibold text-cream cursor-pointer hover:border-terracotta/40 hover:bg-blush/40 transition-colors select-none"
           aria-label="Choisir une catégorie"
         >
           <span class="text-n-500 text-xs uppercase tracking-widest">Catégorie</span>
@@ -161,7 +161,7 @@ if (faqSchema) jsonLd.push(faqSchema);
         >
           <a
             href={`/${siteConfig.shop.path}`}
-            class="flex items-center justify-between gap-3 px-4 py-2.5 rounded-xl text-sm text-n-400 hover:bg-cream/[0.06] hover:text-cream transition-colors"
+            class="flex items-center justify-between gap-3 px-4 py-2.5 rounded-xl text-sm text-n-500 hover:bg-blush/40 hover:text-cream transition-colors"
             role="menuitem"
           >
             <span>Toutes les catégories</span>
@@ -171,7 +171,7 @@ if (faqSchema) jsonLd.push(faqSchema);
           {(siteConfig.productCategories as {slug:string; label:string}[]).map(c => (
             <a
               href={`/product-category/${c.slug}`}
-              class={`flex items-center justify-between gap-3 px-4 py-2.5 rounded-xl text-sm transition-colors ${c.slug === category.slug ? 'bg-cream text-dark font-medium' : 'text-n-400 hover:bg-cream/[0.06] hover:text-cream'}`}
+              class={`flex items-center justify-between gap-3 px-4 py-2.5 rounded-xl text-sm transition-colors ${c.slug === category.slug ? 'bg-terracotta text-white font-semibold' : 'text-n-500 hover:bg-blush/40 hover:text-cream'}`}
               aria-current={c.slug === category.slug ? 'page' : undefined}
               role="menuitem"
             >

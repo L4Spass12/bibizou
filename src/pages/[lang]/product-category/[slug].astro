@@ -149,7 +149,7 @@ if (faqSchema) jsonLd.push(faqSchema);
     <nav class="mb-12">
       <details class="cat-dropdown relative inline-block">
         <summary
-          class="inline-flex items-center gap-3 px-5 py-3 rounded-full border border-cream/[0.18] bg-cream/[0.04] text-sm font-medium text-cream cursor-pointer hover:border-cream/30 hover:bg-cream/[0.07] transition-colors select-none"
+          class="inline-flex items-center gap-3 px-5 py-3 rounded-full border border-cream/[0.18] bg-panel text-sm font-semibold text-cream cursor-pointer hover:border-terracotta/40 hover:bg-blush/40 transition-colors select-none"
         >
           <span class="text-n-500 text-xs uppercase tracking-widest">{t('shop.categoryLabel', lang)}</span>
           <span class="text-cream">{category.label.replace(new RegExp(`^${siteConfig.shop.categoryLabelPrefix ?? ''}\s*`, 'i'), '')}</span>
@@ -158,7 +158,7 @@ if (faqSchema) jsonLd.push(faqSchema);
           </svg>
         </summary>
         <div class="cat-panel absolute top-full left-0 mt-2 min-w-[280px] md:min-w-[320px] rounded-2xl border border-cream/[0.18] bg-panel shadow-2xl p-2 z-20" role="menu">
-          <a href={url('/' + siteConfig.shop.path)} class="flex items-center justify-between gap-3 px-4 py-2.5 rounded-xl text-sm text-n-400 hover:bg-cream/[0.06] hover:text-cream transition-colors">
+          <a href={url('/' + siteConfig.shop.path)} class="flex items-center justify-between gap-3 px-4 py-2.5 rounded-xl text-sm text-n-500 hover:bg-blush/40 hover:text-cream transition-colors">
             <span>{t('nav.categoriesAll', lang)}</span>
             <span class="text-[10px] text-n-500 uppercase tracking-widest">{t('nav.shop', lang)}</span>
           </a>
@@ -166,7 +166,7 @@ if (faqSchema) jsonLd.push(faqSchema);
           {(siteConfig.productCategories as {slug:string; label:string}[]).map(c => (
             <a
               href={url(`/product-category/${c.slug}`)}
-              class={`flex items-center justify-between gap-3 px-4 py-2.5 rounded-xl text-sm transition-colors ${c.slug === category.slug ? 'bg-cream text-dark font-medium' : 'text-n-400 hover:bg-cream/[0.06] hover:text-cream'}`}
+              class={`flex items-center justify-between gap-3 px-4 py-2.5 rounded-xl text-sm transition-colors ${c.slug === category.slug ? 'bg-terracotta text-white font-semibold' : 'text-n-500 hover:bg-blush/40 hover:text-cream'}`}
               aria-current={c.slug === category.slug ? 'page' : undefined}
             >
               <span>{c.label.replace(new RegExp(`^${siteConfig.shop.categoryLabelPrefix ?? ''}\s*`, 'i'), '')}</span>
