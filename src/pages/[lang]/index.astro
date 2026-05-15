@@ -102,24 +102,13 @@ const faqSchema = {
 >
   <!-- ═══════════════════════════ HERO ═══════════════════════════ -->
   <section class="hero-section relative overflow-hidden min-h-[70vh] md:min-h-[75vh] flex items-center">
-    <img
-      src="/images/home/hero-desktop.webp"
-      srcset="/images/home/hero-mobile.webp 1080w, /images/home/hero-desktop-800w.webp 800w, /images/home/hero-desktop.webp 2560w"
-      sizes="100vw"
-      alt={t('home.heroTitle', lang)}
-      class="hero-img hero-bg"
-      fetchpriority="high"
-      loading="eager"
-      decoding="async"
-      width="2560"
-      height="1086"
-    />
+    <div class="hero-bg-gradient" aria-hidden="true"></div>
     <div class="relative max-w-7xl mx-auto px-6 py-20 md:py-24 w-full flex flex-col justify-center">
       <span class="tag tag-status mb-6 self-start">{t('home.heroTag', lang)}</span>
       <h1 class="text-3xl md:text-4xl lg:text-5xl font-medium tracking-tight text-cream mb-4 leading-[1.1] max-w-2xl">
         {t('home.heroTitle', lang)}
       </h1>
-      <p class="text-base md:text-lg text-n-300 mb-8 max-w-xl font-light">
+      <p class="text-base md:text-lg text-n-500 mb-8 max-w-xl font-light">
         {t('home.heroSubtitle', lang)}
       </p>
       <div class="flex flex-col sm:flex-row items-start gap-3">
@@ -134,8 +123,8 @@ const faqSchema = {
 
   <!-- ═══════════════════════════ PRODUITS EN VEDETTE ═══════════════════════════ -->
   {featuredProducts.length > 0 && (
-    <section class="relative py-20 md:py-24 px-6 border-t border-white/[0.04] overflow-hidden">
-      <div class="absolute top-0 right-0 w-[600px] h-[300px] bg-white/[0.025] blur-[120px] rounded-[100%] pointer-events-none"></div>
+    <section class="relative py-20 md:py-24 px-6 border-t border-cream/[0.08] overflow-hidden">
+      <div class="absolute top-0 right-0 w-[600px] h-[300px] bg-cream/[0.04] blur-[120px] rounded-[100%] pointer-events-none"></div>
       <div class="relative max-w-7xl mx-auto">
         <div class="flex items-end justify-between mb-10 gap-6">
           <div>
@@ -150,7 +139,7 @@ const faqSchema = {
         <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
           {featuredProducts.map(product => (
             <a href={productHref(product.slug)} class="group block">
-              <div class="relative aspect-[4/3] rounded-2xl overflow-hidden bg-panel border border-white/[0.05] mb-3">
+              <div class="relative aspect-[4/3] rounded-2xl overflow-hidden bg-panel border border-cream/[0.10] mb-3">
                 <img src={product.data.image} srcset={unsplashSrcset(product.data.image)}
                   sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
                   alt={product.data.imageAlt ?? product.data.name}
@@ -179,9 +168,9 @@ const faqSchema = {
   )}
 
   <!-- ═══════════════════════════ PERSONNALISATION ═══════════════════════════ -->
-  <section class="relative py-20 md:py-24 px-6 border-t border-white/[0.04] bg-gradient-to-br from-[#1a1008] via-panel to-dark overflow-hidden below-fold-defer">
-    <div class="absolute top-1/2 left-10 -translate-y-1/2 w-[400px] h-[400px] bg-[#ff9b5c]/[0.05] blur-[140px] rounded-full pointer-events-none"></div>
-    <div class="absolute bottom-0 right-20 w-[500px] h-[250px] bg-[#ff5c7a]/[0.04] blur-[140px] rounded-full pointer-events-none"></div>
+  <section class="relative py-20 md:py-24 px-6 border-t border-cream/[0.08] bg-gradient-to-br from-beige/40 via-panel to-dark overflow-hidden below-fold-defer">
+    <div class="absolute top-1/2 left-10 -translate-y-1/2 w-[400px] h-[400px] bg-terracotta/[0.08] blur-[140px] rounded-full pointer-events-none"></div>
+    <div class="absolute bottom-0 right-20 w-[500px] h-[250px] bg-terracotta/[0.06] blur-[140px] rounded-full pointer-events-none"></div>
     <div class="relative max-w-5xl mx-auto text-center">
       <span class="text-[10px] text-n-500 font-medium uppercase tracking-widest mb-4 block">{t('home.customLabel', lang)}</span>
       <h2 class="text-3xl md:text-4xl lg:text-5xl font-medium tracking-tight text-cream mb-5 leading-[1.1]">
@@ -201,7 +190,7 @@ const faqSchema = {
   {categoryRows.map((row, idx) => {
     const bgClass = idx % 3 === 0 ? '' : idx % 3 === 1 ? 'bg-panel' : 'bg-teal';
     return (
-    <section class={`relative py-16 md:py-20 border-t border-white/[0.04] overflow-hidden below-fold-defer ${bgClass}`}>
+    <section class={`relative py-16 md:py-20 border-t border-cream/[0.08] overflow-hidden below-fold-defer ${bgClass}`}>
       <div class="slider-glow slider-glow-1" style={`background: ${row.glow1}`}></div>
       <div class="slider-glow slider-glow-2" style={`background: ${row.glow2}`}></div>
       <div class="relative max-w-7xl mx-auto px-6">
@@ -220,7 +209,7 @@ const faqSchema = {
         <div class="slider-track flex gap-3 md:gap-4 lg:gap-5 overflow-x-auto snap-x snap-mandatory scroll-smooth pb-2 pl-6 md:pl-[max(1.5rem,calc((100vw-80rem)/2+1.5rem))] pr-6">
           {row.products.map(p => (
             <a href={productHref(p.slug)} class="slider-card group flex-none w-[72vw] sm:w-[45vw] md:w-[30vw] lg:w-[22vw] xl:w-[310px] snap-start block">
-              <div class="relative aspect-[4/3] rounded-2xl overflow-hidden bg-panel border border-white/[0.05] mb-3">
+              <div class="relative aspect-[4/3] rounded-2xl overflow-hidden bg-panel border border-cream/[0.10] mb-3">
                 <img src={p.data.image} srcset={unsplashSrcset(p.data.image)}
                   sizes="(max-width: 640px) 72vw, (max-width: 768px) 45vw, (max-width: 1024px) 32vw, 300px"
                   alt={p.data.imageAlt ?? p.data.name}
@@ -246,10 +235,10 @@ const faqSchema = {
           <div class="flex-none w-2" aria-hidden="true"></div>
         </div>
         <div class="pointer-events-none absolute inset-0 max-w-7xl mx-auto hidden md:block px-6">
-          <button type="button" data-scroll="prev" class="pointer-events-auto absolute left-2 top-[38%] -translate-y-1/2 w-10 h-10 rounded-full bg-dark/90 border border-white/[0.15] backdrop-blur flex items-center justify-center text-cream hover:bg-dark hover:border-white/30 disabled:opacity-0 disabled:pointer-events-none transition-all shadow-lg" aria-label="Prev">
+          <button type="button" data-scroll="prev" class="pointer-events-auto absolute left-2 top-[38%] -translate-y-1/2 w-10 h-10 rounded-full bg-dark/90 border border-cream/20 backdrop-blur flex items-center justify-center text-cream hover:bg-dark hover:border-cream/30 disabled:opacity-0 disabled:pointer-events-none transition-all shadow-lg" aria-label="Prev">
             <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="15 18 9 12 15 6"/></svg>
           </button>
-          <button type="button" data-scroll="next" class="pointer-events-auto absolute right-2 top-[38%] -translate-y-1/2 w-10 h-10 rounded-full bg-dark/90 border border-white/[0.15] backdrop-blur flex items-center justify-center text-cream hover:bg-dark hover:border-white/30 disabled:opacity-0 disabled:pointer-events-none transition-all shadow-lg" aria-label="Next">
+          <button type="button" data-scroll="next" class="pointer-events-auto absolute right-2 top-[38%] -translate-y-1/2 w-10 h-10 rounded-full bg-dark/90 border border-cream/20 backdrop-blur flex items-center justify-center text-cream hover:bg-dark hover:border-cream/30 disabled:opacity-0 disabled:pointer-events-none transition-all shadow-lg" aria-label="Next">
             <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="9 18 15 12 9 6"/></svg>
           </button>
         </div>
@@ -269,9 +258,15 @@ const faqSchema = {
 
   <style>
     .hero-section { isolation: isolate; }
-    .hero-img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block; z-index:0; }
+    .hero-bg-gradient {
+      position: absolute; inset: 0; z-index: 0;
+      background:
+        radial-gradient(ellipse at 20% 30%, #FFF2E6 0%, transparent 55%),
+        radial-gradient(ellipse at 80% 70%, #FBE3D6 0%, transparent 55%),
+        linear-gradient(135deg, #FEFCF8 0%, #FFF4EA 50%, #FBE3D6 100%);
+    }
     .below-fold-defer { content-visibility: auto; contain-intrinsic-size: auto 800px; }
-    .hero-section::after { content:""; position:absolute; inset:0; background:linear-gradient(to right, rgba(10,10,15,0.88), rgba(10,10,15,0.6) 55%, rgba(10,10,15,0.3)); pointer-events:none; z-index:1; }
+    .hero-section::after { content:""; position:absolute; inset:0; background:linear-gradient(to right, rgba(254,252,248,0.35), rgba(254,252,248,0.10) 55%, transparent); pointer-events:none; z-index:1; }
     .hero-section > .relative { z-index:2; }
     .product-slider .slider-track { scrollbar-width:none; -ms-overflow-style:none; }
     .product-slider .slider-track::-webkit-scrollbar { display:none; }
@@ -316,9 +311,9 @@ const faqSchema = {
   </script>
 
   <!-- ═══════════════════════════ AVIS CLIENTS ═══════════════════════════ -->
-  <section class="relative py-20 md:py-24 px-6 border-t border-white/[0.04] bg-panel overflow-hidden below-fold-defer">
-    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-[#ffd98c]/[0.04] blur-[140px] rounded-[100%] pointer-events-none"></div>
-    <div class="absolute bottom-0 left-20 w-[400px] h-[200px] bg-[#fff3c4]/[0.03] blur-[120px] rounded-full pointer-events-none"></div>
+  <section class="relative py-20 md:py-24 px-6 border-t border-cream/[0.08] bg-panel overflow-hidden below-fold-defer">
+    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-terracotta/[0.06] blur-[140px] rounded-[100%] pointer-events-none"></div>
+    <div class="absolute bottom-0 left-20 w-[400px] h-[200px] bg-beige/[0.20] blur-[120px] rounded-full pointer-events-none"></div>
     <div class="relative max-w-6xl mx-auto">
       <div class="text-center mb-14">
         <span class="text-[10px] text-n-500 font-medium uppercase tracking-widest mb-3 block">{t('home.testimonialsLabel', lang)}</span>
@@ -328,13 +323,13 @@ const faqSchema = {
       </div>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-6">
         {testimonials.map((tst: { name: string; text: string }) => (
-          <blockquote class="rounded-2xl border border-white/[0.08] bg-dark p-6 md:p-8 relative">
+          <blockquote class="rounded-2xl border border-cream/[0.12] bg-dark p-6 md:p-8 relative">
             <div class="flex gap-0.5 mb-4 text-cream">
               {[0,1,2,3,4].map(() => (
                 <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg>
               ))}
             </div>
-            <p class="text-sm md:text-base text-n-300 font-light leading-relaxed mb-5">
+            <p class="text-sm md:text-base text-n-500 font-light leading-relaxed mb-5">
               « {tst.text} »
             </p>
             <footer class="text-xs text-n-500 font-medium uppercase tracking-widest">- {tst.name}</footer>
@@ -345,8 +340,8 @@ const faqSchema = {
   </section>
 
   <!-- ═══════════════════════════ PERFORMANCE & DURABILITÉ ═══════════════════════════ -->
-  <section class="relative py-20 md:py-24 px-6 border-t border-white/[0.04] bg-gradient-to-b from-dark via-[#08101a] to-panel/50 overflow-hidden below-fold-defer">
-    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-[#3b5bff]/[0.05] blur-[140px] rounded-[100%] pointer-events-none"></div>
+  <section class="relative py-20 md:py-24 px-6 border-t border-cream/[0.08] bg-gradient-to-b from-dark via-panel to-panel/50 overflow-hidden below-fold-defer">
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-sage/[0.08] blur-[140px] rounded-[100%] pointer-events-none"></div>
     <div class="relative max-w-4xl mx-auto text-center">
       <span class="text-[10px] text-n-500 font-medium uppercase tracking-widest mb-3 block">{t('home.perfLabel', lang)}</span>
       <h2 class="text-2xl md:text-3xl font-medium tracking-tight text-cream mb-4">
@@ -359,8 +354,8 @@ const faqSchema = {
   </section>
 
   <!-- ═══════════════════════════ SECTIONS GUIDES ═══════════════════════════ -->
-  <section class="relative py-16 md:py-20 px-6 border-t border-white/[0.04] bg-panel overflow-hidden below-fold-defer">
-    <div class="absolute top-1/2 right-0 w-[400px] h-[400px] bg-white/[0.02] blur-[140px] rounded-full pointer-events-none"></div>
+  <section class="relative py-16 md:py-20 px-6 border-t border-cream/[0.08] bg-panel overflow-hidden below-fold-defer">
+    <div class="absolute top-1/2 right-0 w-[400px] h-[400px] bg-cream/[0.03] blur-[140px] rounded-full pointer-events-none"></div>
     <div class="relative max-w-4xl mx-auto space-y-14">
       <article>
         <h2 class="text-xl md:text-2xl font-medium tracking-tight text-cream mb-4 leading-tight">
@@ -396,7 +391,7 @@ const faqSchema = {
   {recentPosts.length > 0 && <div class="below-fold-defer"><BlogPreview posts={recentPosts} lang={lang} /></div>}
 
   <!-- ═══════════════════════════ FAQ ═══════════════════════════ -->
-  <section class="py-20 md:py-24 px-6 border-t border-white/[0.04] bg-panel below-fold-defer">
+  <section class="py-20 md:py-24 px-6 border-t border-cream/[0.08] bg-panel below-fold-defer">
     <div class="max-w-3xl mx-auto">
       <div class="text-center mb-12">
         <span class="text-[10px] text-n-500 font-medium uppercase tracking-widest mb-3 block">FAQ</span>
@@ -406,7 +401,7 @@ const faqSchema = {
       </div>
       <div class="space-y-3">
         {faqs.map((f: { q: string; a: string }) => (
-          <details class="group rounded-2xl border border-white/[0.08] bg-dark open:border-white/20 transition-colors">
+          <details class="group rounded-2xl border border-cream/[0.12] bg-dark open:border-cream/20 transition-colors">
             <summary class="flex items-start justify-between gap-4 px-6 py-5 cursor-pointer list-none font-medium text-base text-cream tracking-tight">
               <span class="flex-1" set:html={inlineMd(f.q)} />
               <span class="text-n-400 text-xl leading-none transition-transform group-open:rotate-45 shrink-0">+</span>
@@ -419,8 +414,8 @@ const faqSchema = {
   </section>
 
   <!-- ═══════════════════════════ CTA FINAL ═══════════════════════════ -->
-  <section class="relative py-24 px-6 overflow-hidden border-t border-white/[0.04] below-fold-defer">
-    <div class="absolute -bottom-40 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-white/[0.04] blur-[120px] rounded-[100%] pointer-events-none"></div>
+  <section class="relative py-24 px-6 overflow-hidden border-t border-cream/[0.08] below-fold-defer">
+    <div class="absolute -bottom-40 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-cream/[0.05] blur-[120px] rounded-[100%] pointer-events-none"></div>
     <div class="relative max-w-3xl mx-auto text-center">
       <h2 class="text-3xl md:text-4xl font-medium tracking-tight text-cream mb-4 leading-[1.1]">
         {t('home.ctaTitle', lang)}

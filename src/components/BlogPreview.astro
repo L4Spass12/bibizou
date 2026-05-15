@@ -19,9 +19,9 @@ const formatDate = (date: Date) =>
   new Intl.DateTimeFormat(intlLocale, { year: 'numeric', month: 'long', day: 'numeric' }).format(date);
 ---
 
-<section id="blog" class="relative py-24 px-6 border-t border-white/[0.04] overflow-hidden bg-gradient-to-b from-dark via-[#0c0e14] to-dark">
-  <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[900px] h-[400px] bg-[#3b5bff]/[0.06] blur-[140px] rounded-[100%] pointer-events-none"></div>
-  <div class="absolute bottom-10 right-10 w-[400px] h-[250px] bg-[#b45cff]/[0.04] blur-[120px] rounded-full pointer-events-none"></div>
+<section id="blog" class="relative py-24 px-6 border-t border-cream/[0.08] overflow-hidden bg-gradient-to-b from-dark via-panel to-dark">
+  <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[900px] h-[400px] bg-sage/[0.10] blur-[140px] rounded-[100%] pointer-events-none"></div>
+  <div class="absolute bottom-10 right-10 w-[400px] h-[250px] bg-terracotta/[0.06] blur-[120px] rounded-full pointer-events-none"></div>
 
   <div class="relative max-w-7xl mx-auto">
     <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
@@ -38,7 +38,7 @@ const formatDate = (date: Date) =>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
       {posts.map((post) => (
         <a href={articleHref(post.slug)} class="group block">
-          <div class="relative aspect-[4/3] rounded-2xl overflow-hidden bg-panel border border-white/[0.05] mb-5">
+          <div class="relative aspect-[4/3] rounded-2xl overflow-hidden bg-panel border border-cream/[0.10] mb-5">
             {post.data.image
               ? <img
                   src={unsplashAt(post.data.image, 600)}

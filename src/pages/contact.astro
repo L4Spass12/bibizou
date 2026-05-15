@@ -39,7 +39,7 @@ const web3formsKey = siteConfig.forms?.web3formsKey ?? '';
             name="prenom"
             required
             autocomplete="given-name"
-            class="w-full bg-panel border border-white/[0.08] rounded-lg px-4 py-3 text-sm text-cream placeholder-n-500 focus:outline-none focus:border-white/30 focus:ring-1 focus:ring-white/20 transition-colors"
+            class="w-full bg-panel border border-cream/[0.12] rounded-lg px-4 py-3 text-sm text-cream placeholder-n-500 focus:outline-none focus:border-cream/30 focus:ring-1 focus:ring-white/20 transition-colors"
           />
         </div>
         <div>
@@ -50,7 +50,7 @@ const web3formsKey = siteConfig.forms?.web3formsKey ?? '';
             name="nom"
             required
             autocomplete="family-name"
-            class="w-full bg-panel border border-white/[0.08] rounded-lg px-4 py-3 text-sm text-cream placeholder-n-500 focus:outline-none focus:border-white/30 focus:ring-1 focus:ring-white/20 transition-colors"
+            class="w-full bg-panel border border-cream/[0.12] rounded-lg px-4 py-3 text-sm text-cream placeholder-n-500 focus:outline-none focus:border-cream/30 focus:ring-1 focus:ring-white/20 transition-colors"
           />
         </div>
       </div>
@@ -65,7 +65,7 @@ const web3formsKey = siteConfig.forms?.web3formsKey ?? '';
           required
           autocomplete="email"
           placeholder="vous@exemple.com"
-          class="w-full bg-panel border border-white/[0.08] rounded-lg px-4 py-3 text-sm text-cream placeholder-n-500 focus:outline-none focus:border-white/30 focus:ring-1 focus:ring-white/20 transition-colors"
+          class="w-full bg-panel border border-cream/[0.12] rounded-lg px-4 py-3 text-sm text-cream placeholder-n-500 focus:outline-none focus:border-cream/30 focus:ring-1 focus:ring-white/20 transition-colors"
         />
       </div>
 
@@ -75,7 +75,7 @@ const web3formsKey = siteConfig.forms?.web3formsKey ?? '';
         <select
           id="contact-topic"
           name="objet"
-          class="w-full bg-panel border border-white/[0.08] rounded-lg px-4 py-3 text-sm text-cream focus:outline-none focus:border-white/30 focus:ring-1 focus:ring-white/20 transition-colors appearance-none"
+          class="w-full bg-panel border border-cream/[0.12] rounded-lg px-4 py-3 text-sm text-cream focus:outline-none focus:border-cream/30 focus:ring-1 focus:ring-white/20 transition-colors appearance-none"
         >
           <option value="">{t('contact.selectPlaceholder', lang)}</option>
           <option value="Question avant achat">{t('contact.subjectQuestion', lang)}</option>
@@ -97,7 +97,7 @@ const web3formsKey = siteConfig.forms?.web3formsKey ?? '';
           rows="6"
           required
           placeholder={t('contact.messagePlaceholder', lang)}
-          class="w-full bg-panel border border-white/[0.08] rounded-lg px-4 py-3 text-sm text-cream placeholder-n-500 focus:outline-none focus:border-white/30 focus:ring-1 focus:ring-white/20 transition-colors resize-y min-h-[140px]"
+          class="w-full bg-panel border border-cream/[0.12] rounded-lg px-4 py-3 text-sm text-cream placeholder-n-500 focus:outline-none focus:border-cream/30 focus:ring-1 focus:ring-white/20 transition-colors resize-y min-h-[140px]"
         ></textarea>
       </div>
 
@@ -138,7 +138,7 @@ const web3formsKey = siteConfig.forms?.web3formsKey ?? '';
     </form>
 
     <!-- Contact direct alternatif -->
-    <div class="mt-12 pt-8 border-t border-white/[0.08]">
+    <div class="mt-12 pt-8 border-t border-cream/[0.12]">
       <p class="text-xs text-n-500 font-light">
         Vous pouvez aussi nous écrire directement à
         <a href={`mailto:${siteConfig.legal.editor.email}`} class="text-cream hover:underline underline-offset-4">{siteConfig.legal.editor.email}</a>.

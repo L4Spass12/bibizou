@@ -72,7 +72,7 @@ const breadcrumbSchema = {
     {featured && (
       <a href={`/${featured.slug}`} class="group block mb-16 md:mb-20">
         <div class="grid md:grid-cols-5 gap-8 md:gap-10">
-          <div class="md:col-span-3 relative aspect-[16/10] md:aspect-[21/12] rounded-2xl overflow-hidden bg-panel border border-white/[0.05]">
+          <div class="md:col-span-3 relative aspect-[16/10] md:aspect-[21/12] rounded-2xl overflow-hidden bg-panel border border-cream/[0.10]">
             {featured.data.image
               ? <img
                   src={unsplashAt(featured.data.image, 800)}
@@ -114,7 +114,7 @@ const breadcrumbSchema = {
       {categories.map(cat => (
         <a
           href={`/category/${catToSlug(cat)}`}
-          class="text-xs font-medium px-4 py-2 rounded-full border border-white/[0.08] bg-white/[0.02] text-n-400 hover:text-cream hover:border-white/20 transition-colors"
+          class="text-xs font-medium px-4 py-2 rounded-full border border-cream/[0.12] bg-cream/[0.03] text-n-400 hover:text-cream hover:border-cream/20 transition-colors"
         >
           {cat}
         </a>
@@ -127,7 +127,7 @@ const breadcrumbSchema = {
       <div id="posts-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
         {rest.map((post, i) => (
           <a href={`/${post.slug}`} class="post-card group block">
-            <div class="relative aspect-[4/3] rounded-2xl overflow-hidden bg-panel border border-white/[0.05] mb-5">
+            <div class="relative aspect-[4/3] rounded-2xl overflow-hidden bg-panel border border-cream/[0.10] mb-5">
               {post.data.image
                 ? <img
                     src={unsplashAt(post.data.image, 600)}

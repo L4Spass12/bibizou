@@ -20,7 +20,7 @@ const shopUrl = `${lp}/${siteConfig.shop.path}`;
   {toc.length > 0 && (
     <nav aria-label={t('blog.toc', lang)}>
       <p class="text-[10px] font-medium uppercase tracking-widest text-n-500 mb-4">{t('blog.toc', lang)}</p>
-      <ul class="space-y-0.5 border-l border-white/[0.08]">
+      <ul class="space-y-0.5 border-l border-cream/[0.12]">
         {toc.map((h) => (
           <li>
             <a
@@ -38,7 +38,7 @@ const shopUrl = `${lp}/${siteConfig.shop.path}`;
   )}
 
   <!-- CTA -->
-  <div class="rounded-2xl p-6 border border-white/[0.08] bg-panel">
+  <div class="rounded-2xl p-6 border border-cream/[0.12] bg-panel">
     <p class="text-[10px] font-medium uppercase tracking-widest text-n-500 mb-3">{t('nav.shop', lang)}</p>
     <h3 class="text-base font-medium text-cream tracking-tight leading-tight mb-3">
       {t('blog.ctaTitle', lang)}
@@ -55,13 +55,13 @@ const shopUrl = `${lp}/${siteConfig.shop.path}`;
   <div>
     <p class="text-[10px] font-medium uppercase tracking-widest text-n-500 mb-3">{t('blog.share', lang)}</p>
     <div class="flex gap-2">
-      <button data-share="twitter" aria-label={t('blog.shareTwitter', lang)} class="share-btn w-8 h-8 rounded-full border border-white/[0.08] bg-white/[0.02] text-n-400 hover:text-cream hover:border-white/20 flex items-center justify-center transition-colors">
+      <button data-share="twitter" aria-label={t('blog.shareTwitter', lang)} class="share-btn w-8 h-8 rounded-full border border-cream/[0.12] bg-cream/[0.03] text-n-400 hover:text-cream hover:border-cream/20 flex items-center justify-center transition-colors">
         <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
       </button>
-      <button data-share="facebook" aria-label={t('blog.shareFacebook', lang)} class="share-btn w-8 h-8 rounded-full border border-white/[0.08] bg-white/[0.02] text-n-400 hover:text-cream hover:border-white/20 flex items-center justify-center transition-colors">
+      <button data-share="facebook" aria-label={t('blog.shareFacebook', lang)} class="share-btn w-8 h-8 rounded-full border border-cream/[0.12] bg-cream/[0.03] text-n-400 hover:text-cream hover:border-cream/20 flex items-center justify-center transition-colors">
         <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
       </button>
-      <button data-share="copy" aria-label={t('blog.shareCopy', lang)} class="share-btn w-8 h-8 rounded-full border border-white/[0.08] bg-white/[0.02] text-n-400 hover:text-cream hover:border-white/20 flex items-center justify-center transition-colors">
+      <button data-share="copy" aria-label={t('blog.shareCopy', lang)} class="share-btn w-8 h-8 rounded-full border border-cream/[0.12] bg-cream/[0.03] text-n-400 hover:text-cream hover:border-cream/20 flex items-center justify-center transition-colors">
         <svg class="w-3.5 h-3.5 fill-none stroke-current" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244"/></svg>
       </button>
     </div>

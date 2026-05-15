@@ -160,7 +160,7 @@ const breadcrumbSchema = {
         <div class="product-gallery" data-gallery data-slide-count={slides.length}>
           <!-- Viewport : scroll-snap horizontal. Sur mobile = swipe natif,
                sur desktop = flèches prev/next. Une seule image visible à la fois. -->
-          <div class="relative rounded-2xl overflow-hidden bg-panel border border-white/[0.05] aspect-[4/3] group">
+          <div class="relative rounded-2xl overflow-hidden bg-panel border border-cream/[0.10] aspect-[4/3] group">
             <div
               class="gallery-track flex overflow-x-auto snap-x snap-mandatory scroll-smooth h-full"
               data-gallery-track
@@ -191,7 +191,7 @@ const breadcrumbSchema = {
                   type="button"
                   data-gallery-prev
                   aria-label="Image précédente"
-                  class="hidden md:flex absolute left-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-dark/80 backdrop-blur border border-white/[0.15] items-center justify-center text-cream opacity-0 group-hover:opacity-100 hover:bg-dark hover:border-white/30 disabled:opacity-0 disabled:pointer-events-none transition-all z-10"
+                  class="hidden md:flex absolute left-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-dark/80 backdrop-blur border border-cream/20 items-center justify-center text-cream opacity-0 group-hover:opacity-100 hover:bg-dark hover:border-cream/30 disabled:opacity-0 disabled:pointer-events-none transition-all z-10"
                 >
                   <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="15 18 9 12 15 6"/></svg>
                 </button>
@@ -199,7 +199,7 @@ const breadcrumbSchema = {
                   type="button"
                   data-gallery-next
                   aria-label="Image suivante"
-                  class="hidden md:flex absolute right-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-dark/80 backdrop-blur border border-white/[0.15] items-center justify-center text-cream opacity-0 group-hover:opacity-100 hover:bg-dark hover:border-white/30 disabled:opacity-0 disabled:pointer-events-none transition-all z-10"
+                  class="hidden md:flex absolute right-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-dark/80 backdrop-blur border border-cream/20 items-center justify-center text-cream opacity-0 group-hover:opacity-100 hover:bg-dark hover:border-cream/30 disabled:opacity-0 disabled:pointer-events-none transition-all z-10"
                 >
                   <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="9 18 15 12 9 6"/></svg>
                 </button>
@@ -214,7 +214,7 @@ const breadcrumbSchema = {
                 <button
                   type="button"
                   data-gallery-thumb={i}
-                  class={`gallery-thumb aspect-square rounded-lg overflow-hidden border transition-colors ${i === 0 ? 'border-cream' : 'border-white/[0.08]'} hover:border-white/30`}
+                  class={`gallery-thumb aspect-square rounded-lg overflow-hidden border transition-colors ${i === 0 ? 'border-cream' : 'border-cream/[0.12]'} hover:border-cream/30`}
                   aria-label={`Voir l'image ${i + 1}`}
                 >
                   <img src={g} alt="" loading="lazy" decoding="async" class="w-full h-full object-cover" />
@@ -303,7 +303,7 @@ const breadcrumbSchema = {
                           data-variant-type="pill"
                           data-attr={attr.name}
                           data-value={val.slug}
-                          class={`variant-pill text-xs font-medium px-4 py-2 rounded-full border transition-colors ${idx === 0 ? 'bg-cream text-dark border-cream' : 'bg-white/[0.02] text-n-400 border-white/[0.08] hover:text-cream hover:border-white/20'}`}
+                          class={`variant-pill text-xs font-medium px-4 py-2 rounded-full border transition-colors ${idx === 0 ? 'bg-cream text-dark border-cream' : 'bg-cream/[0.03] text-n-400 border-cream/[0.12] hover:text-cream hover:border-cream/20'}`}
                         >
                           {val.label}
                         </button>
@@ -359,7 +359,7 @@ const breadcrumbSchema = {
                           data-variant-type="size"
                           data-attr={attr.name}
                           data-value={val.slug}
-                          class={`variant-size-card relative rounded-xl border p-2 md:p-3 transition-colors min-w-0 ${isSelected ? 'bg-white/[0.04] border-cream' : 'bg-white/[0.02] border-white/[0.08] hover:border-white/25'}`}
+                          class={`variant-size-card relative rounded-xl border p-2 md:p-3 transition-colors min-w-0 ${isSelected ? 'bg-cream/[0.05] border-cream' : 'bg-cream/[0.03] border-cream/[0.12] hover:border-cream/30'}`}
                           aria-label={`Taille ${val.label}${isPopular ? ' (le plus populaire)' : ''}`}
                         >
                           {isPopular && (
@@ -471,9 +471,9 @@ const breadcrumbSchema = {
         </button>
 
         <!-- Garanties -->
-        <div class="grid grid-cols-2 gap-6 mt-10 pt-8 border-t border-white/[0.08]">
+        <div class="grid grid-cols-2 gap-6 mt-10 pt-8 border-t border-cream/[0.12]">
           <div class="flex items-center gap-3">
-            <div class="w-9 h-9 rounded-full border border-white/[0.08] bg-white/[0.02] flex items-center justify-center text-cream shrink-0">
+            <div class="w-9 h-9 rounded-full border border-cream/[0.12] bg-cream/[0.03] flex items-center justify-center text-cream shrink-0">
               <Icon name="shield-check" size={16} strokeWidth={1.5} />
             </div>
             <div>
@@ -482,7 +482,7 @@ const breadcrumbSchema = {
             </div>
           </div>
           <div class="flex items-center gap-3">
-            <div class="w-9 h-9 rounded-full border border-white/[0.08] bg-white/[0.02] flex items-center justify-center text-cream shrink-0">
+            <div class="w-9 h-9 rounded-full border border-cream/[0.12] bg-cream/[0.03] flex items-center justify-center text-cream shrink-0">
               <Icon name="arrow-right" size={16} strokeWidth={1.5} />
             </div>
             <div>
@@ -499,7 +499,7 @@ const breadcrumbSchema = {
          contenu à l'intérieur (ouvert ou fermé), donc SEO-friendly. Zéro JS. -->
     <section class="mt-16 max-w-3xl below-fold-defer">
       <!-- Description -->
-      <details class="product-toggle group border-t border-white/[0.08] py-5">
+      <details class="product-toggle group border-t border-cream/[0.12] py-5">
         <summary class="flex items-center justify-between gap-4 cursor-pointer list-none select-none">
           <h2 class="text-base md:text-lg font-medium text-cream tracking-tight">Description</h2>
           <svg class="w-5 h-5 text-n-400 transition-transform group-open:rotate-180" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
@@ -520,7 +520,7 @@ const breadcrumbSchema = {
       </details>
 
       <!-- Livraison & retours -->
-      <details class="product-toggle group border-t border-white/[0.08] py-5">
+      <details class="product-toggle group border-t border-cream/[0.12] py-5">
         <summary class="flex items-center justify-between gap-4 cursor-pointer list-none select-none">
           <h2 class="text-base md:text-lg font-medium text-cream tracking-tight">Livraison & retours</h2>
           <svg class="w-5 h-5 text-n-400 transition-transform group-open:rotate-180" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
@@ -529,7 +529,7 @@ const breadcrumbSchema = {
         </summary>
         <div class="mt-5 space-y-4 text-sm text-n-400 font-light leading-relaxed">
           <!-- Date de livraison dynamique (mise en avant) -->
-          <div class="rounded-xl bg-white/[0.03] border border-white/[0.06] px-4 py-3 flex items-start gap-3">
+          <div class="rounded-xl bg-cream/[0.04] border border-cream/[0.10] px-4 py-3 flex items-start gap-3">
             <svg class="w-5 h-5 text-cream shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
               <rect x="3" y="4" width="18" height="18" rx="2"/>
               <path d="M16 2v4M8 2v4M3 10h18"/>
@@ -563,7 +563,7 @@ const breadcrumbSchema = {
       </details>
 
       <!-- Entretien -->
-      <details class="product-toggle group border-t border-b border-white/[0.08] py-5">
+      <details class="product-toggle group border-t border-b border-cream/[0.12] py-5">
         <summary class="flex items-center justify-between gap-4 cursor-pointer list-none select-none">
           <h2 class="text-base md:text-lg font-medium text-cream tracking-tight">Entretien</h2>
           <svg class="w-5 h-5 text-n-400 transition-transform group-open:rotate-180" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
@@ -609,7 +609,7 @@ const breadcrumbSchema = {
        Desktop : vignette + nom + taille + prix + bouton. -->
   <div
     id="sticky-atc"
-    class="fixed bottom-0 left-0 right-0 z-40 translate-y-full transition-transform duration-300 bg-dark/95 backdrop-blur-lg border-t border-white/[0.08]"
+    class="fixed bottom-0 left-0 right-0 z-40 translate-y-full transition-transform duration-300 bg-dark/95 backdrop-blur-lg border-t border-cream/[0.12]"
     aria-hidden="true"
   >
     <div class="max-w-7xl mx-auto px-4 md:px-6 py-3 md:py-3.5">
@@ -636,7 +636,7 @@ const breadcrumbSchema = {
         <img
           src={image}
           alt=""
-          class="w-12 h-12 rounded-lg object-cover border border-white/[0.08] shrink-0"
+          class="w-12 h-12 rounded-lg object-cover border border-cream/[0.12] shrink-0"
           loading="lazy"
           decoding="async"
         />
@@ -667,7 +667,7 @@ const breadcrumbSchema = {
 
   <!-- ═══════════════════════════ VOUS AIMEREZ AUSSI (slider full-width) ═══════════════════════════ -->
   {related.length > 0 && (
-    <section class="relative py-16 md:py-20 border-t border-white/[0.04] overflow-hidden below-fold-defer">
+    <section class="relative py-16 md:py-20 border-t border-cream/[0.08] overflow-hidden below-fold-defer">
       <div class="relative max-w-7xl mx-auto px-6">
         <div class="flex items-end justify-between mb-6 md:mb-8 gap-4">
           <div>
@@ -689,7 +689,7 @@ const breadcrumbSchema = {
               href={`/product/${p.slug}`}
               class="slider-card group flex-none w-[72vw] sm:w-[45vw] md:w-[30vw] lg:w-[22vw] xl:w-[310px] snap-start block"
             >
-              <div class="relative aspect-[4/3] rounded-2xl overflow-hidden bg-panel border border-white/[0.05] mb-3">
+              <div class="relative aspect-[4/3] rounded-2xl overflow-hidden bg-panel border border-cream/[0.10] mb-3">
                 <img
                   src={p.data.image}
                   srcset={unsplashSrcset(p.data.image)}
@@ -727,7 +727,7 @@ const breadcrumbSchema = {
           <button
             type="button"
             data-scroll="prev"
-            class="pointer-events-auto absolute left-2 top-[38%] -translate-y-1/2 w-10 h-10 rounded-full bg-dark/90 border border-white/[0.15] backdrop-blur flex items-center justify-center text-cream hover:bg-dark hover:border-white/30 disabled:opacity-0 disabled:pointer-events-none transition-all shadow-lg"
+            class="pointer-events-auto absolute left-2 top-[38%] -translate-y-1/2 w-10 h-10 rounded-full bg-dark/90 border border-cream/20 backdrop-blur flex items-center justify-center text-cream hover:bg-dark hover:border-cream/30 disabled:opacity-0 disabled:pointer-events-none transition-all shadow-lg"
             aria-label="Produits précédents"
           >
             <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="15 18 9 12 15 6"/></svg>
@@ -735,7 +735,7 @@ const breadcrumbSchema = {
           <button
             type="button"
             data-scroll="next"
-            class="pointer-events-auto absolute right-2 top-[38%] -translate-y-1/2 w-10 h-10 rounded-full bg-dark/90 border border-white/[0.15] backdrop-blur flex items-center justify-center text-cream hover:bg-dark hover:border-white/30 disabled:opacity-0 disabled:pointer-events-none transition-all shadow-lg"
+            class="pointer-events-auto absolute right-2 top-[38%] -translate-y-1/2 w-10 h-10 rounded-full bg-dark/90 border border-cream/20 backdrop-blur flex items-center justify-center text-cream hover:bg-dark hover:border-cream/30 disabled:opacity-0 disabled:pointer-events-none transition-all shadow-lg"
             aria-label="Produits suivants"
           >
             <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="9 18 15 12 9 6"/></svg>
@@ -791,7 +791,7 @@ const breadcrumbSchema = {
       const paint = () => {
         thumbs.forEach((t, i) => {
           t.className = 'gallery-thumb aspect-square rounded-lg overflow-hidden border transition-colors '
-            + (i === current ? 'border-cream' : 'border-white/[0.08] hover:border-white/30');
+            + (i === current ? 'border-cream' : 'border-cream/[0.12] hover:border-cream/30');
         });
         if (prev) prev.disabled = current <= 0;
         if (next) next.disabled = current >= count - 1;
@@ -988,10 +988,10 @@ const breadcrumbSchema = {
       const pillClass = 'variant-pill text-xs font-medium px-4 py-2 rounded-full border transition-colors';
       const sizeClass = 'variant-size-card relative rounded-xl border p-2 md:p-3 transition-colors min-w-0';
       const off = (type) => type === 'size'
-        ? sizeClass + ' bg-white/[0.02] border-white/[0.08] hover:border-white/25'
-        : pillClass + ' bg-white/[0.02] text-n-400 border-white/[0.08] hover:text-cream hover:border-white/20';
+        ? sizeClass + ' bg-cream/[0.03] border-cream/[0.12] hover:border-cream/30'
+        : pillClass + ' bg-cream/[0.03] text-n-400 border-cream/[0.12] hover:text-cream hover:border-cream/20';
       const on = (type) => type === 'size'
-        ? sizeClass + ' bg-white/[0.04] border-cream'
+        ? sizeClass + ' bg-cream/[0.05] border-cream'
         : pillClass + ' bg-cream text-dark border-cream';
 
       selector.querySelectorAll('[data-variant-option]').forEach(btn => {

@@ -134,7 +134,7 @@ const breadcrumbSchema = {
         </p>
 
         <!-- Meta -->
-        <div class="flex flex-wrap items-center gap-3 text-xs text-n-500 mb-10 pb-8 border-b border-white/[0.08] font-light">
+        <div class="flex flex-wrap items-center gap-3 text-xs text-n-500 mb-10 pb-8 border-b border-cream/[0.12] font-light">
           <div class="flex items-center gap-2">
             <div class="w-7 h-7 rounded-full bg-cream text-dark flex items-center justify-center text-[11px] font-medium">
               {author.charAt(0)}
@@ -153,7 +153,7 @@ const breadcrumbSchema = {
 
         <!-- Cover image -->
         {image && (
-          <figure class="rounded-2xl overflow-hidden mb-12 aspect-video bg-panel border border-white/[0.05]">
+          <figure class="rounded-2xl overflow-hidden mb-12 aspect-video bg-panel border border-cream/[0.10]">
             <img
               src={unsplashAt(image, 800)}
               srcset={unsplashSrcset(image)}
@@ -178,12 +178,12 @@ const breadcrumbSchema = {
           prose-ul:font-light prose-ol:font-light prose-li:text-n-400
           prose-blockquote:border-cream prose-blockquote:bg-panel prose-blockquote:rounded-r-xl prose-blockquote:py-2 prose-blockquote:not-italic prose-blockquote:text-n-400
           prose-code:text-cream prose-code:bg-panel prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded prose-code:font-normal
-          prose-hr:border-white/[0.08]
+          prose-hr:border-cream/[0.12]
           blog-tables">
           <slot />
         </article>
 
-        <!-- Tables : design dark cohérent avec le reste du site (cards .bg-panel + border-white/[0.08]).
+        <!-- Tables : design dark cohérent avec le reste du site (cards .bg-panel + border-cream/[0.12]).
              prose-table:* ne couvre pas tout (pas de prose-tr/prose-thead), donc on cible en CSS scoped. -->
         <style is:global>
           .blog-tables { overflow-x: auto; }
@@ -226,21 +226,21 @@ const breadcrumbSchema = {
 
         <!-- Tags -->
         {tags.length > 0 && (
-          <div class="flex flex-wrap gap-2 mt-14 pt-8 border-t border-white/[0.08]">
+          <div class="flex flex-wrap gap-2 mt-14 pt-8 border-t border-cream/[0.12]">
             {tags.map(tag => (
-              <span class="inline-block text-[11px] font-light px-3 py-1 rounded-full border border-white/[0.08] bg-white/[0.02] text-n-500">#{tag}</span>
+              <span class="inline-block text-[11px] font-light px-3 py-1 rounded-full border border-cream/[0.12] bg-cream/[0.03] text-n-500">#{tag}</span>
             ))}
           </div>
         )}
 
         <!-- À lire aussi -->
         {related.length > 0 && (
-          <section class="mt-16 pt-10 border-t border-white/[0.08]">
+          <section class="mt-16 pt-10 border-t border-cream/[0.12]">
             <h2 class="text-xl font-medium tracking-tight text-cream mb-8">{t('blog.alsoRead', lang)}</h2>
             <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {related.map(p => (
                 <a href={articleHref(p.slug)} class="group block">
-                  <div class="aspect-[4/3] rounded-2xl overflow-hidden bg-panel border border-white/[0.05] mb-4">
+                  <div class="aspect-[4/3] rounded-2xl overflow-hidden bg-panel border border-cream/[0.10] mb-4">
                     {p.data.image
                       ? <img
                           src={unsplashAt(p.data.image, 400)}
