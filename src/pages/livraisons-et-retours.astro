@@ -1,0 +1,51 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import siteConfig from '../../site.config.mjs';
+
+const title = "Livraisons et Retours";
+const ed = siteConfig.legal.editor;
+const domain = siteConfig.legal.domain;
+const description = `Toute commande passée sur ${domain} est traitée avec soin. Délais d'expédition, suivi, retours et remboursements.`;
+---
+
+<BaseLayout title={`${title} | ${siteConfig.name}`} description={description}>
+  <div class="max-w-3xl mx-auto px-6 py-16 md:py-24">
+    <h1 class="text-4xl md:text-5xl font-medium tracking-tight text-cream leading-[1.1] mb-10">{title}</h1>
+    <article class="prose prose-invert prose-lg max-w-none
+      prose-headings:font-medium prose-headings:tracking-tight prose-headings:text-cream
+      prose-h2:text-2xl prose-h2:mt-10 prose-h3:text-xl
+      prose-p:font-light prose-p:text-n-400 prose-p:leading-relaxed
+      prose-a:text-cream prose-a:underline prose-a:underline-offset-4 prose-a:decoration-white/30 hover:prose-a:decoration-cream
+      prose-strong:text-cream prose-strong:font-medium
+      prose-ul:font-light prose-ol:font-light prose-li:text-n-400
+      prose-hr:border-white/[0.08]">
+      <h4>1. Livraison</h4>
+      <p>Toute commande passée sur <strong>{domain}</strong> est traitée avec soin. Nous expédions votre colis sous <strong>24 à 48h ouvrées</strong> après réception du paiement. <em>(Les commandes passées le vendredi soir ou le week-end partent le lundi suivant.)</em></p>
+
+      <p><strong>Modes de livraison.</strong> Nous proposons :</p>
+      <ul>
+        <li><strong>Livraison Standard (Colissimo / La Poste)</strong> — Délai : 2 à 3 jours ouvrés en France métropolitaine.</li>
+        <li><strong>Mondial Relay (Point Relais)</strong> — Délai : 3 à 5 jours ouvrés.</li>
+      </ul>
+
+      <p>Une fois votre commande expédiée, vous recevrez automatiquement un <strong>numéro de suivi</strong> par e-mail.</p>
+
+      <h4>2. Retours et Échanges</h4>
+      <p><strong>Satisfait ou Remboursé.</strong> Conformément à la loi, vous disposez de <strong>14 jours</strong> après réception de votre commande pour nous la retourner.</p>
+
+      <p><strong>Comment effectuer un retour ?</strong></p>
+      <ol>
+        <li>Envoyez-nous un e-mail à <strong>{ed.email}</strong> avec votre numéro de commande.</li>
+        <li>Emballez soigneusement le produit (neuf, dans son emballage d’origine, non utilisé).</li>
+        <li>Expédiez le colis à : <strong>{ed.name} ({siteConfig.name})</strong>, {ed.address}, France.</li>
+      </ol>
+
+      <p><strong>Frais de retour.</strong> Si le produit est défectueux ou si nous avons fait une erreur, nous prenons en charge les frais de retour. Si vous avez simplement changé d’avis, les frais sont à votre charge.</p>
+
+      <p><strong>Remboursement.</strong> Une fois le colis reçu et vérifié, nous procédons au remboursement intégral sous <strong>7 jours maximum</strong> sur le moyen de paiement utilisé lors de l’achat.</p>
+
+      <h4>3. Un problème à la livraison ?</h4>
+      <p>Si votre colis arrive abîmé ou ouvert, merci de prendre des photos immédiatement et de nous contacter au <strong>{ed.phone}</strong> ou par e-mail à <strong>{ed.email}</strong>.</p>
+    </article>
+  </div>
+</BaseLayout>

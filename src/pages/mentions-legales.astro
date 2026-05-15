@@ -1,0 +1,41 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import siteConfig from '../../site.config.mjs';
+
+const title = "MENTIONS LÉGALES";
+const ed = siteConfig.legal.editor;
+const host = siteConfig.legal.hosting;
+const domain = siteConfig.legal.domain;
+const description = `Édition du site. Le présent site, accessible à l’URL ${domain}, est édité par ${ed.name}.`;
+---
+
+<BaseLayout title={`${title} | ${siteConfig.name}`} description={description}>
+  <div class="max-w-3xl mx-auto px-6 py-16 md:py-24">
+    <h1 class="text-4xl md:text-5xl font-medium tracking-tight text-cream leading-[1.1] mb-10">{title}</h1>
+    <article class="prose prose-invert prose-lg max-w-none
+      prose-headings:font-medium prose-headings:tracking-tight prose-headings:text-cream
+      prose-h2:text-2xl prose-h2:mt-10 prose-h3:text-xl
+      prose-p:font-light prose-p:text-n-400 prose-p:leading-relaxed
+      prose-a:text-cream prose-a:underline prose-a:underline-offset-4 prose-a:decoration-white/30 hover:prose-a:decoration-cream
+      prose-strong:text-cream prose-strong:font-medium
+      prose-ul:font-light prose-ol:font-light prose-li:text-n-400
+      prose-hr:border-white/[0.08]">
+      <p><strong>Édition du site.</strong> Le présent site, accessible à l’URL <strong>{domain}</strong> (le « Site »), est édité par :</p>
+
+      <p><strong>{ed.name}</strong>, {ed.status}, résidant au <strong>{ed.address}</strong>, de nationalité française.</p>
+
+      <p><strong>Coordonnées</strong></p>
+      <ul>
+        <li>E-mail : <strong>{ed.email}</strong></li>
+        <li>Téléphone : <strong>{ed.phone}</strong></li>
+        <li>Adresse : {ed.address}</li>
+      </ul>
+
+      <p><strong>TVA Intracommunautaire.</strong> {ed.vatStatus}.</p>
+
+      <p><strong>Directeur de la publication :</strong> {ed.name}.</p>
+
+      <p><strong>Hébergement.</strong> Le Site est hébergé par la société <strong>{host.name}</strong>, dont le siège social est situé {host.address}. Joignable par le moyen suivant : <a target="_blank" rel="noreferrer noopener" href={host.contactUrl}>{host.contactUrl}</a></p>
+    </article>
+  </div>
+</BaseLayout>
