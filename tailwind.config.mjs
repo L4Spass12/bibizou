@@ -18,16 +18,16 @@ export default {
          *   terracotta  = accent = blanc pur (utilisé pour boutons, liens, labels)
          *   sage        = accent de statut (vert)
          */
-        dark:       '#0A0A0A',
-        panel:      '#0D0D0D',
-        teal:       '#111111',
-        beige:      '#1F1F1F',
-        cream:      '#FFFFFF',
-        terracotta: '#FFFFFF',
-        sage:       '#22C55E',
+        dark:       '#FEFCF8',
+        panel:      '#FFF8F0',
+        teal:       '#FFF2E6',
+        beige:      '#F2D9C8',
+        cream:      '#2C2017',
+        terracotta: '#E8724A',
+        sage:       '#5BAD8B',
         /* Neutres supplémentaires pour granularité (optional) */
-        'n-500':    '#737373',
-        'n-400':    '#A3A3A3',
+        'n-500':    '#9C8878',
+        'n-400':    '#C4AFA3',
       },
       fontFamily: {
         /**
