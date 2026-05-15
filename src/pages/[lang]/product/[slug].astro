@@ -177,6 +177,12 @@ const breadcrumbSchema = {
                 <button type="button" data-gallery-next class="hidden md:flex absolute right-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-dark/80 backdrop-blur border border-cream/20 items-center justify-center text-cream opacity-0 group-hover:opacity-100 hover:bg-dark hover:border-cream/30 disabled:opacity-0 disabled:pointer-events-none transition-all z-10">
                   <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="9 18 15 12 9 6"/></svg>
                 </button>
+
+                <div class="md:hidden absolute bottom-3 left-1/2 -translate-x-1/2 flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-dark/60 backdrop-blur-sm pointer-events-none z-10" aria-hidden="true">
+                  {slides.map((_, i) => (
+                    <span data-gallery-dot={i} class={`block rounded-full transition-all ${i === 0 ? 'w-4 h-1.5 bg-cream' : 'w-1.5 h-1.5 bg-cream/50'}`}></span>
+                  ))}
+                </div>
               </>
             )}
           </div>
@@ -603,12 +609,14 @@ const breadcrumbSchema = {
       if (!root) return null;
       const track  = root.querySelector('[data-gallery-track]');
       const thumbs = Array.from(root.querySelectorAll('[data-gallery-thumb]'));
+      const dots   = Array.from(root.querySelectorAll('[data-gallery-dot]'));
       const prev   = root.querySelector('[data-gallery-prev]');
       const next   = root.querySelector('[data-gallery-next]');
       const count  = parseInt(root.dataset.slideCount || '0', 10);
       let current  = 0;
       const paint = () => {
         thumbs.forEach((t, i) => { t.className = 'gallery-thumb aspect-square rounded-lg overflow-hidden border transition-colors ' + (i === current ? 'border-cream' : 'border-cream/[0.12] hover:border-cream/30'); });
+        dots.forEach((d, i) => { d.className = 'block rounded-full transition-all ' + (i === current ? 'w-4 h-1.5 bg-cream' : 'w-1.5 h-1.5 bg-cream/50'); });
         if (prev) prev.disabled = current <= 0;
         if (next) next.disabled = current >= count - 1;
       };
