@@ -82,7 +82,7 @@ const cats = (siteConfig.productCategories || []) as {slug:string; label:string}
               return (
                 <a
                   href={url(`/product-category/${c.slug}`)}
-                  class={`flex items-center justify-between gap-3 px-4 py-2.5 rounded-xl text-sm transition-colors ${active ? 'bg-cream text-dark font-medium' : 'text-n-400 hover:bg-cream/[0.06] hover:text-cream'}`}
+                  class={`flex items-center justify-between gap-3 px-4 py-2.5 rounded-xl text-sm transition-colors ${active ? 'bg-terracotta text-white font-semibold' : 'text-n-500 hover:bg-blush/40 hover:text-cream'}`}
                   aria-current={active ? 'page' : undefined}
                   role="menuitem"
                 >
@@ -210,14 +210,16 @@ const cats = (siteConfig.productCategories || []) as {slug:string; label:string}
   /* ─── Liens de nav avec indicateur de page active ───────────────── */
   .nav-link {
     position: relative;
-    color: #9ca3af; /* n-400 */
+    color: #6B5142; /* n-500 */
     transition: color 0.2s;
+    font-weight: 500;
   }
   .nav-link:hover {
-    color: #F5F1E8; /* cream */
+    color: #E8724A; /* terracotta */
   }
   .nav-link.nav-active {
-    color: #F5F1E8;
+    color: #3E2A1F; /* cream (texte sombre) */
+    font-weight: 600;
   }
   .nav-link.nav-active::after {
     content: "";
@@ -226,7 +228,7 @@ const cats = (siteConfig.productCategories || []) as {slug:string; label:string}
     right: 0;
     bottom: -8px;
     height: 2px;
-    background: #F5F1E8;
+    background: #E8724A; /* terracotta */
     border-radius: 2px;
   }
 
