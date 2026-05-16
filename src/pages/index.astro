@@ -106,8 +106,23 @@ const faqSchema = {
        - L'image hero est un <img> direct de la section (pas de wrapper z-indexé)
        - Le voile sombre est appliqué via `::after` en CSS pur (pas de div overlay) -->
   <section class="hero-section relative overflow-hidden min-h-[70vh] md:min-h-[75vh] flex items-center">
-    <!-- Fond gradient pastel (sans image) : crème → pêche clair → blush rosé -->
-    <div class="hero-bg-gradient" aria-hidden="true"></div>
+    <!-- Image hero responsive : mobile portrait / desktop landscape -->
+    <picture aria-hidden="true" class="hero-bg-img">
+      <source
+        media="(min-width: 768px)"
+        srcset="/images/home/hero-desktop-400w.webp 400w, /images/home/hero-desktop-800w.webp 800w, /images/home/hero-desktop.webp 1920w"
+        sizes="100vw"
+        type="image/webp"
+      />
+      <img
+        src="/images/home/hero-mobile.webp"
+        srcset="/images/home/hero-mobile-400w.webp 400w, /images/home/hero-mobile-800w.webp 800w, /images/home/hero-mobile.webp 750w"
+        sizes="100vw"
+        alt=""
+        fetchpriority="high"
+        decoding="async"
+      />
+    </picture>
 
     <div class="relative max-w-7xl mx-auto px-6 py-20 md:py-24 w-full flex flex-col justify-center">
       <span class="tag tag-status mb-6 self-start">{t("home.heroTag", "fr")}</span>
@@ -302,15 +317,22 @@ const faqSchema = {
        Le voile sombre est un ::after en CSS (pas un div overlay dans le DOM
        → Lighthouse voit l'image comme non couverte). */
     .hero-section { isolation: isolate; }
-    /* Hero gradient pastel (crème → pêche → blush) : fill section, z-index 0 */
-    .hero-bg-gradient {
+
+    /* Image hero : couvre toute la section en object-fit cover */
+    .hero-bg-img {
       position: absolute;
       inset: 0;
       z-index: 0;
-      background:
-        radial-gradient(ellipse at 20% 30%, #FFF2E6 0%, transparent 55%),
-        radial-gradient(ellipse at 80% 70%, #FBE3D6 0%, transparent 55%),
-        linear-gradient(135deg, #FEFCF8 0%, #FFF4EA 50%, #FBE3D6 100%);
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+    .hero-bg-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      display: block;
     }
 
     /* ─── content-visibility: auto pour sections below-fold ───────
@@ -321,12 +343,12 @@ const faqSchema = {
       content-visibility: auto;
       contain-intrinsic-size: auto 800px;
     }
-    /* Voile très subtil pour adoucir le gradient : z-index 1 sous le contenu */
+    /* Voile sombre sur l'image pour lisibilité du texte */
     .hero-section::after {
       content: "";
       position: absolute;
       inset: 0;
-      background: linear-gradient(to right, rgba(254,252,248,0.35), rgba(254,252,248,0.10) 55%, transparent);
+      background: linear-gradient(to right, rgba(0,0,0,0.35) 0%, rgba(0,0,0,0.15) 60%, transparent 100%);
       pointer-events: none;
       z-index: 1;
     }
