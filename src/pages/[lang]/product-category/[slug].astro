@@ -181,7 +181,7 @@ if (faqSchema) jsonLd.push(faqSchema);
 
     {products.length > 0 ? (
       <section>
-        <div id="products-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+        <div id="products-grid" class="grid grid-cols-2 lg:grid-cols-3 gap-3 md:gap-6 lg:gap-8">
           {products.map((product: any, i: number) => (
             <article class="product-card">
               <a href={productHref(product.slug)} class="group block">
