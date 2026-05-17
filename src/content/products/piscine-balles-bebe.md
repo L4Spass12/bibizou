@@ -15,7 +15,7 @@ gallery:
   - "/images/products/piscine-balles-bebe/5.webp"
 categories:
   - "Tapis d'éveil & jeu"
-shortDescription: "Piscine à balles bébé et aire de jeu pour enfants de 0 à 6 ans. Grande surface de jeu, bords rembourrés, modèles du carré au 180×200 cm. La piscine à balles bébé idéale en intérieur comme en extérieur."
+shortDescription: "Piscine à balles pour bébé et aire de jeu pour enfants de 0 à 6 ans. Grande surface de jeu, bords rembourrés, modèles du carré au 180×200 cm. La piscine à balles idéale pour bébé, en intérieur comme en extérieur."
 weight: 3200
 stock: 40
 sku: "PISCINE-BALLES-BEBE"
@@ -119,7 +119,7 @@ variations:
 
 La **piscine à balles bébé** offre un espace de jeu délimité, confortable et stimulant pour les enfants de 0 à 6 ans. Ses **bords rembourrés et sa structure souple** protègent bébé des chocs, même dans les moments de grande agitation. Remplie de balles colorées, cette piscine à balles devient une vraie piscine sèche irrésistible ; vide, c'est une aire de jeu idéale pour ramper, s'asseoir et explorer.
 
-## Quelle taille de piscine à balles bébé choisir ?
+## Quelle taille de piscine à balles pour bébé choisir ?
 
 - **Carré** : format compact, parfait pour un coin de chambre ou un petit appartement.
 - **Double porte soccer** : le modèle star avec deux portes d'accès en forme de buts — idéal pour les enfants plus actifs.
@@ -132,14 +132,14 @@ La **piscine à balles bébé** offre un espace de jeu délimité, confortable e
 
 Le fond légèrement surélevé retient parfaitement les balles, les petits cubes et les jouets sans qu'ils roulent partout. Sans balles, c'est aussi un **espace de motricité douce** pour les bébés qui apprennent à se retourner, à ramper ou à se lever.
 
-## Une piscine à balles bébé pour tous les âges
+## Une piscine à balles adaptée à tous les âges de bébé
 
 - **Bébés** : dès 0 mois pour le tummy time et l'éveil sensoriel
 - **Tout-petits** : espace de jeu autonome sécurisé
 - **Enfants** : terrain de jeu actif jusqu'à 6 ans
 - **Intérieur & extérieur** : salon, chambre, jardin ou terrasse
 
-## Caractéristiques techniques de la piscine à balles
+## Les caractéristiques techniques de la piscine à balles
 
 - **Matière** : structure en plastique souple et bords rembourrés
 - **Tailles** : carré, double soccer, 120×120, 120×180, 150×180, 180×200 cm

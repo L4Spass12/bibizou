@@ -119,7 +119,7 @@ variations:
 
 Das **Baby-Bällebad** bietet Kleinkindern einen abgegrenzten, komfortablen und anregenden Spielraum für Kinder von 0 bis 6. Die **gepolsterten Ränder und flexible Struktur** schützen das Baby vor Stößen — auch bei wildem Spielen. Mit bunten Bällen gefüllt wird es zu einem unwiderstehlichen Trockenbecken; leer ist es eine ideale Zone zum Krabbeln, Sitzen und Erkunden.
 
-## Welche Baby-Bällebad-Größe wählen?
+## Welche Größe für das Baby-Bällebad wählen?
 
 - **Quadrat**: kompaktes Format, perfekt für eine Zimmerecke oder eine kleine Wohnung.
 - **2 Fußballtore**: der Publikumsliebling — zwei Zugangsöffnungen in Torform, ideal für aktivere Kinder.
@@ -132,7 +132,7 @@ Das **Baby-Bällebad** bietet Kleinkindern einen abgegrenzten, komfortablen und 
 
 Der leicht erhöhte Boden hält Bälle, kleine Würfel und Spielzeug sicher im Bereich. Ohne Bälle ist es auch eine **sanfte Motorikzone** für Babys, die das Umdrehen, Krabbeln oder Aufstehen lernen.
 
-## Ein Baby-Bällebad für jedes Alter
+## Ein Baby-Bällebad für Kinder jeden Alters
 
 - **Babys**: ab 0 Monaten für Bauchlage und Sinneswahrnehmung
 - **Kleinkinder**: sicherer, selbstständiger Spielbereich

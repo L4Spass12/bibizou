@@ -123,11 +123,11 @@ variations:
     image: "/images/products/parc-bebe-pliable-diy/3.webp"
 ---
 
-## Why choose a foldable & modular baby playpen?
+## Why choose a foldable and modular baby playpen?
 
 The **foldable and modular baby playpen** creates a secure, defined play zone for any room. Thanks to its adjustable double-height system, this baby playpen grows with your child — ideal from birth through the first steps and beyond.
 
-## Which configuration for your modular baby playpen?
+## Which configuration should you pick for your modular baby playpen?
 
 Available in **12, 14 or 16 panels** to suit your space:
 
@@ -145,11 +145,11 @@ The **2-level adjustable** system lets you raise the panels as baby grows and be
 
 Made from **BPA-free, phthalate-free food-grade plastic**, certified for infants from birth. Smooth surface with no sharp edges — easy to wipe clean with soapy water.
 
-## Foldable baby playpen: indoor, outdoor, anywhere
+## A foldable baby playpen for indoor, outdoor, anywhere
 
 Lightweight and **foldable in seconds**, it moves effortlessly between bedroom, living room, garden or terrace. Tool-free assembly throughout.
 
-## Baby playpen technical specs
+## Technical specs of the baby playpen
 
 - **Panels**: BPA-free HDPE plastic
 - **Configurations**: 12 / 14 / 16 panels

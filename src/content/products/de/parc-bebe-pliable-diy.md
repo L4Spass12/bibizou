@@ -127,7 +127,7 @@ variations:
 
 Das **faltbare und modulare Baby-Laufgitter** schafft eine sichere, abgegrenzte Spielzone für jeden Raum. Dank des doppelt verstellbaren Höhensystems wächst dieses Laufgitter mit Ihrem Kind mit — ideal von Geburt an bis zu den ersten Schritten und darüber hinaus.
 
-## Welche Konfiguration für Ihr modulares Baby-Laufgitter?
+## Welche Konfiguration für Ihr modulares Baby-Laufgitter wählen?
 
 Erhältlich mit **12, 14 oder 16 Paneelen** je nach verfügbarem Platz:
 
@@ -141,11 +141,11 @@ Jede Konfiguration ist als **reines Gitter** (ohne Zubehör) oder als **Komplett
 
 Das **2-stufige Verstellsystem** ermöglicht es, die Panelhöhe an Alter und Mobilität des Babys anzupassen. Schluss mit Laufgittern, die ein aufstehendes Kind nach wenigen Wochen überwinden kann.
 
-## Sicheres Baby-Laufgitter: BPA-freie Materialien
+## Ein sicheres Baby-Laufgitter: BPA-freie Materialien
 
 Hergestellt aus **BPA-freiem, weichmacherfreiem Lebensmittelkunststoff**, für Säuglinge ab Geburt zertifiziert. Glatte Oberfläche ohne scharfe Kanten — einfach mit Seifenwasser abwischbar.
 
-## Faltbares Baby-Laufgitter: innen, außen, überall
+## Ein faltbares Baby-Laufgitter für drinnen, draußen, überall
 
 Leicht und **in Sekunden zusammenklappbar**, lässt es sich mühelos zwischen Kinderzimmer, Wohnzimmer, Garten oder Terrasse transportieren. Werkzeugfreie Montage.
 
