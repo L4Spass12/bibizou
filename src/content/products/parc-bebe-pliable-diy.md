@@ -14,7 +14,7 @@ gallery:
   - "/images/products/parc-bebe-pliable-diy/5.webp"
   - "/images/products/parc-bebe-pliable-diy/6.webp"
 categories:
-  - "Tapis d'éveil & jeu"
+  - "parc-bebe-pliable"
 shortDescription: "Parc bébé pliable et modulable à double hauteur ajustable. Choisissez 12, 14 ou 16 panneaux pour un parc bébé évolutif sur-mesure. Matériaux certifiés sans BPA, idéal en intérieur comme en extérieur."
 weight: 4500
 stock: 30

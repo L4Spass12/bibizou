@@ -94,6 +94,8 @@ const config = {
     { slug: 'tapis-jeu-xxl',       label: 'Tapis de jeu XXL' },
     { slug: 'tapis-jeu-pliable',   label: 'Tapis de jeu pliable' },
     { slug: 'veilleuses',          label: 'Veilleuses' },
+    { slug: 'parc-bebe-pliable',     label: 'Parc pour bébé pliable' },
+    { slug: 'piscine-a-balles-bebe', label: 'Piscine à balles bébé' },
   ],
 
   // ⚠ ─── Génération d'articles IA (workflow Mon/Wed/Fri 8h UTC) ─────── ⚠

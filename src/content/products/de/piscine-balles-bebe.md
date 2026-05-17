@@ -14,7 +14,7 @@ gallery:
   - "/images/products/piscine-balles-bebe/6.webp"
   - "/images/products/piscine-balles-bebe/5.webp"
 categories:
-  - "Tapis d'éveil & jeu"
+  - "piscine-a-balles-bebe"
 shortDescription: "Baby-Bällebad und Spielbereich für Kinder von 0 bis 6 Jahren. Große gepolsterte Spielfläche, Modelle vom Quadrat bis 180×200 cm. Das perfekte Baby-Bällebad für drinnen und draußen."
 weight: 3200
 stock: 40

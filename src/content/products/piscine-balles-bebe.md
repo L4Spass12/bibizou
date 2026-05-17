@@ -14,7 +14,7 @@ gallery:
   - "/images/products/piscine-balles-bebe/6.webp"
   - "/images/products/piscine-balles-bebe/5.webp"
 categories:
-  - "Tapis d'éveil & jeu"
+  - "piscine-a-balles-bebe"
 shortDescription: "Piscine à balles pour bébé et aire de jeu pour enfants de 0 à 6 ans. Grande surface de jeu, bords rembourrés, modèles du carré au 180×200 cm. La piscine à balles idéale pour bébé, en intérieur comme en extérieur."
 weight: 3200
 stock: 40

@@ -14,7 +14,7 @@ gallery:
   - "/images/products/parc-bebe-pliable-diy/5.webp"
   - "/images/products/parc-bebe-pliable-diy/6.webp"
 categories:
-  - "Tapis d'éveil & jeu"
+  - "parc-bebe-pliable"
 shortDescription: "Foldable and modular baby playpen with adjustable double height. Pick 12, 14 or 16 panels for a custom evolving safety fence. BPA-free certified — the perfect baby playpen for indoor and outdoor use."
 weight: 4500
 stock: 30

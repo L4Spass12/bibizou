@@ -14,7 +14,7 @@ gallery:
   - "/images/products/piscine-balles-bebe/6.webp"
   - "/images/products/piscine-balles-bebe/5.webp"
 categories:
-  - "Tapis d'éveil & jeu"
+  - "piscine-a-balles-bebe"
 shortDescription: "Baby ball pit and play area for children 0 to 6 years. Large padded play surface, models from square to 180×200 cm. The perfect baby ball pit for indoor and outdoor use."
 weight: 3200
 stock: 40
