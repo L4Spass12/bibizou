@@ -1,12 +1,12 @@
 ---
-name: "Baby-Bällebad & Spielbereich"
+name: "Baby-Bällebad & Spielbereich — Sicher & Gepolstert"
 price: 69.90
 compareAtPrice: 89.90
 priceRange:
   min: 69.90
   max: 99.90
 image: "/images/products/piscine-balles-bebe/3.webp"
-imageAlt: "Baby-Bällebad und Spielbereich für drinnen und draußen, verschiedene Größen von 120x120 cm bis 180x200 cm, für Kinder von 0-6 Jahren"
+imageAlt: "Baby-Bällebad und Spielbereich, verschiedene Größen vom Quadrat bis 180×200 cm, für Kinder 0-6 Jahre, innen und außen"
 gallery:
   - "/images/products/piscine-balles-bebe/4.webp"
   - "/images/products/piscine-balles-bebe/1.webp"
@@ -15,7 +15,7 @@ gallery:
   - "/images/products/piscine-balles-bebe/5.webp"
 categories:
   - "Tapis d'éveil & jeu"
-shortDescription: "Baby-Bällebad und Spielbereich für Kinder von 0 bis 6 Jahren. Große Spielfläche mit gepolsterten Rändern, quadratische oder rechteckige Modelle bis 180×200 cm. Ideal drinnen und draußen."
+shortDescription: "Baby-Bällebad und Spielbereich für Kinder von 0 bis 6 Jahren. Große gepolsterte Spielfläche, Modelle vom Quadrat bis 180×200 cm. Das perfekte Baby-Bällebad für drinnen und draußen."
 weight: 3200
 stock: 40
 sku: "PISCINE-BALLES-BEBE"
@@ -115,11 +115,11 @@ variations:
     image: "/images/products/piscine-balles-bebe/5.webp"
 ---
 
-## Eine weiche, sichere Spielwelt für 0–6-Jährige
+## Warum ein Baby-Bällebad wählen?
 
-Das **Baby-Bällebad & der Spielbereich** bietet Kleinkindern einen abgegrenzten, komfortablen und anregenden Spielraum. Die **gepolsterten Ränder und flexible Struktur** schützen das Baby vor Stößen — auch bei wildem Spielen. Mit bunten Bällen gefüllt wird es zu einem unwiderstehlichen Trockenbecken; leer ist es eine ideale Zone zum Krabbeln, Sitzen und Erkunden.
+Das **Baby-Bällebad** bietet Kleinkindern einen abgegrenzten, komfortablen und anregenden Spielraum für Kinder von 0 bis 6. Die **gepolsterten Ränder und flexible Struktur** schützen das Baby vor Stößen — auch bei wildem Spielen. Mit bunten Bällen gefüllt wird es zu einem unwiderstehlichen Trockenbecken; leer ist es eine ideale Zone zum Krabbeln, Sitzen und Erkunden.
 
-## Welche Größe ist die richtige?
+## Welche Baby-Bällebad-Größe wählen?
 
 - **Quadrat**: kompaktes Format, perfekt für eine Zimmerecke oder eine kleine Wohnung.
 - **2 Fußballtore**: der Publikumsliebling — zwei Zugangsöffnungen in Torform, ideal für aktivere Kinder.
@@ -128,18 +128,18 @@ Das **Baby-Bällebad & der Spielbereich** bietet Kleinkindern einen abgegrenzten
 - **150×180 cm**: viel Platz für Familien mit mehreren Kindern.
 - **180×200 cm**: das größte Format — eine echte Familien-Spielzone.
 
-## Bällebad oder Spielbereich: zwei Funktionen in einem
+## Bällebad oder Spielbereich: zwei Nutzungen, ein Produkt
 
 Der leicht erhöhte Boden hält Bälle, kleine Würfel und Spielzeug sicher im Bereich. Ohne Bälle ist es auch eine **sanfte Motorikzone** für Babys, die das Umdrehen, Krabbeln oder Aufstehen lernen.
 
-## Für die ganze Familie, das ganze Jahr
+## Ein Baby-Bällebad für jedes Alter
 
 - **Babys**: ab 0 Monaten für Bauchlage und Sinneswahrnehmung
 - **Kleinkinder**: sicherer, selbstständiger Spielbereich
 - **Kinder**: aktiver Spielbereich bis 6 Jahre
 - **Innen & außen**: Wohnzimmer, Kinderzimmer, Garten oder Terrasse
 
-## Eigenschaften
+## Technische Daten des Baby-Bällebads
 
 - **Material**: weiche Kunststoffstruktur mit gepolsterten Rändern
 - **Größen**: Quadrat, 2 Fußballtore, 120×120, 120×180, 150×180, 180×200 cm

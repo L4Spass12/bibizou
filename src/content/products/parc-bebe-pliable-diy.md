@@ -1,12 +1,12 @@
 ---
-name: "Enclos Bébé Pliable & Modulable"
+name: "Parc Bébé Pliable & Modulable — Enclos Évolutif Sécurisé"
 price: 219.99
 compareAtPrice: 269.99
 priceRange:
   min: 219.99
   max: 459.99
 image: "/images/products/parc-bebe-pliable-diy/1.webp"
-imageAlt: "Enclos bébé pliable et modulable double hauteur, 12 à 16 panneaux, matériaux sécurisés sans BPA, intérieur et extérieur"
+imageAlt: "Parc bébé pliable et modulable, enclos évolutif à double hauteur avec 12 à 16 panneaux, matériaux sécurisés sans BPA, intérieur et extérieur"
 gallery:
   - "/images/products/parc-bebe-pliable-diy/2.webp"
   - "/images/products/parc-bebe-pliable-diy/3.webp"
@@ -15,7 +15,7 @@ gallery:
   - "/images/products/parc-bebe-pliable-diy/6.webp"
 categories:
   - "Tapis d'éveil & jeu"
-shortDescription: "Enclos bébé pliable à double hauteur ajustable. Choisissez 12, 14 ou 16 panneaux, en barrière seule ou pack complet avec jeux. Matériaux certifiés sans BPA, utilisable en intérieur comme en extérieur."
+shortDescription: "Parc bébé pliable et modulable à double hauteur ajustable. Choisissez 12, 14 ou 16 panneaux pour un parc bébé évolutif sur-mesure. Matériaux certifiés sans BPA, idéal en intérieur comme en extérieur."
 weight: 4500
 stock: 30
 sku: "PARC-BEBE-MODULABLE"
@@ -123,11 +123,11 @@ variations:
     image: "/images/products/parc-bebe-pliable-diy/3.webp"
 ---
 
-## Un espace sécurisé que bébé peut explorer en toute liberté
+## Pourquoi choisir un parc bébé pliable et modulable ?
 
-L'**enclos bébé pliable & modulable** crée une zone de jeu sûre et délimitée, adaptée à n'importe quel espace. Grâce à son système de double hauteur ajustable, il évolue avec votre enfant — parfait de la naissance jusqu'aux premiers pas et au-delà.
+Le **parc bébé pliable et modulable** crée un espace de jeu sûr et délimité, qui s'adapte à n'importe quelle pièce. Grâce à son système de double hauteur ajustable, ce parc bébé évolutif accompagne votre enfant — parfait de la naissance jusqu'aux premiers pas et au-delà.
 
-## Choisissez votre configuration
+## Quelle configuration pour votre parc bébé modulable ?
 
 Disponible en **12, 14 ou 16 panneaux** pour couvrir plus ou moins de surface :
 
@@ -137,19 +137,19 @@ Disponible en **12, 14 ou 16 panneaux** pour couvrir plus ou moins de surface :
 
 Chaque configuration est disponible en **barrière seule** (enclos nu) ou en **pack complet** avec jouets d'éveil, tapis de fond et accessoires inclus.
 
-## Double hauteur : une vraie sécurité durable
+## Double hauteur : un parc bébé évolutif qui grandit avec votre enfant
 
 Le système **2 niveaux réglables** permet d'adapter la hauteur des panneaux selon l'âge et la mobilité de bébé. Fini les enclos trop bas qu'un enfant qui se lève peut enjamber en quelques semaines.
 
-## Matériaux sûrs, certifiés pour bébé
+## Parc bébé sécurisé : matériaux certifiés sans BPA
 
 Fabriqué en **plastique alimentaire sans BPA ni phtalates**, certifié pour les enfants en bas âge. Surface lisse et sans arêtes vives — nettoyage rapide à l'eau savonneuse.
 
-## Polyvalent : intérieur & extérieur
+## Parc bébé pliable : intérieur, extérieur, partout
 
 Léger et **pliable en quelques secondes**, il se transporte facilement entre la chambre, le salon, le jardin ou la terrasse. Le montage est entièrement sans outils.
 
-## Caractéristiques
+## Caractéristiques techniques du parc bébé
 
 - **Panneaux** : plastique HDPE sans BPA
 - **Configurations** : 12 / 14 / 16 panneaux

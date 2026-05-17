@@ -1,12 +1,12 @@
 ---
-name: "Foldable & Modular Baby Playpen"
+name: "Foldable & Modular Baby Playpen — Adjustable Safety Fence"
 price: 219.99
 compareAtPrice: 269.99
 priceRange:
   min: 219.99
   max: 459.99
 image: "/images/products/parc-bebe-pliable-diy/1.webp"
-imageAlt: "Foldable modular baby playpen with double adjustable height, 12 to 16 panels, BPA-free certified materials, indoor and outdoor use"
+imageAlt: "Foldable modular baby playpen with adjustable double height, 12 to 16 panels, BPA-free certified materials, for indoor and outdoor use"
 gallery:
   - "/images/products/parc-bebe-pliable-diy/2.webp"
   - "/images/products/parc-bebe-pliable-diy/3.webp"
@@ -15,7 +15,7 @@ gallery:
   - "/images/products/parc-bebe-pliable-diy/6.webp"
 categories:
   - "Tapis d'éveil & jeu"
-shortDescription: "Foldable baby playpen with double adjustable height. Choose 12, 14 or 16 panels, fence only or full playset. BPA-free certified materials, perfect for indoor and outdoor use."
+shortDescription: "Foldable and modular baby playpen with adjustable double height. Pick 12, 14 or 16 panels for a custom evolving safety fence. BPA-free certified — the perfect baby playpen for indoor and outdoor use."
 weight: 4500
 stock: 30
 sku: "PARC-BEBE-MODULABLE"
@@ -123,11 +123,11 @@ variations:
     image: "/images/products/parc-bebe-pliable-diy/3.webp"
 ---
 
-## A safe space for baby to explore freely
+## Why choose a foldable & modular baby playpen?
 
-The **foldable & modular baby playpen** creates a secure, defined play zone that adapts to any room. Its double adjustable height system grows with your child — ideal from birth through the first steps and beyond.
+The **foldable and modular baby playpen** creates a secure, defined play zone for any room. Thanks to its adjustable double-height system, this baby playpen grows with your child — ideal from birth through the first steps and beyond.
 
-## Pick your configuration
+## Which configuration for your modular baby playpen?
 
 Available in **12, 14 or 16 panels** to suit your space:
 
@@ -137,19 +137,19 @@ Available in **12, 14 or 16 panels** to suit your space:
 
 Each configuration comes as a **fence only** (bare enclosure) or as a **full playset** with activity toys, floor mat and accessories included.
 
-## Double height: lasting safety
+## Double height: a baby playpen that grows with your child
 
 The **2-level adjustable** system lets you raise the panels as baby grows and becomes more mobile. No more playpens that a pulling-up baby can topple over in a matter of weeks.
 
-## Safe, certified materials
+## A safe baby playpen: BPA-free certified materials
 
 Made from **BPA-free, phthalate-free food-grade plastic**, certified for infants from birth. Smooth surface with no sharp edges — easy to wipe clean with soapy water.
 
-## Versatile: indoor & outdoor
+## Foldable baby playpen: indoor, outdoor, anywhere
 
 Lightweight and **foldable in seconds**, it moves effortlessly between bedroom, living room, garden or terrace. Tool-free assembly throughout.
 
-## Features
+## Baby playpen technical specs
 
 - **Panels**: BPA-free HDPE plastic
 - **Configurations**: 12 / 14 / 16 panels

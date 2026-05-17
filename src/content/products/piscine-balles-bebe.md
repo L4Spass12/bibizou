@@ -1,12 +1,12 @@
 ---
-name: "Aire de Jeu & Piscine à Balles Bébé"
+name: "Piscine à Balles Bébé — Aire de Jeu Pliable & Sécurisée"
 price: 69.90
 compareAtPrice: 89.90
 priceRange:
   min: 69.90
   max: 99.90
 image: "/images/products/piscine-balles-bebe/3.webp"
-imageAlt: "Aire de jeu piscine à balles bébé intérieur extérieur, plusieurs tailles de 120x120 cm à 180x200 cm, pour enfants 0-6 ans"
+imageAlt: "Piscine à balles bébé multi-tailles, aire de jeu pour enfants 0-6 ans, modèles carré et rectangulaires de 120x120 à 180x200 cm"
 gallery:
   - "/images/products/piscine-balles-bebe/4.webp"
   - "/images/products/piscine-balles-bebe/1.webp"
@@ -15,7 +15,7 @@ gallery:
   - "/images/products/piscine-balles-bebe/5.webp"
 categories:
   - "Tapis d'éveil & jeu"
-shortDescription: "Aire de jeu et piscine à balles pour bébé de 0 à 6 ans. Grande surface de jeu, bords rembourrés, modèle carré ou rectangulaire jusqu'à 180×200 cm. Idéale en intérieur comme en extérieur."
+shortDescription: "Piscine à balles bébé et aire de jeu pour enfants de 0 à 6 ans. Grande surface de jeu, bords rembourrés, modèles du carré au 180×200 cm. La piscine à balles bébé idéale en intérieur comme en extérieur."
 weight: 3200
 stock: 40
 sku: "PISCINE-BALLES-BEBE"
@@ -115,11 +115,11 @@ variations:
     image: "/images/products/piscine-balles-bebe/5.webp"
 ---
 
-## Un univers de jeu doux et sécurisé pour les 0-6 ans
+## Pourquoi opter pour une piscine à balles bébé ?
 
-L'**aire de jeu & piscine à balles bébé** offre un espace de jeu délimité, confortable et stimulant. Ses **bords rembourrés et sa structure souple** protègent bébé des chocs, même dans les moments de grande agitation. Remplie de balles colorées, elle devient une piscine sèche irrésistible ; vide, c'est une aire de jeu idéale pour ramper, s'asseoir et explorer.
+La **piscine à balles bébé** offre un espace de jeu délimité, confortable et stimulant pour les enfants de 0 à 6 ans. Ses **bords rembourrés et sa structure souple** protègent bébé des chocs, même dans les moments de grande agitation. Remplie de balles colorées, cette piscine à balles devient une vraie piscine sèche irrésistible ; vide, c'est une aire de jeu idéale pour ramper, s'asseoir et explorer.
 
-## Quelle taille choisir ?
+## Quelle taille de piscine à balles bébé choisir ?
 
 - **Carré** : format compact, parfait pour un coin de chambre ou un petit appartement.
 - **Double porte soccer** : le modèle star avec deux portes d'accès en forme de buts — idéal pour les enfants plus actifs.
@@ -128,18 +128,18 @@ L'**aire de jeu & piscine à balles bébé** offre un espace de jeu délimité, 
 - **150×180 cm** : grand espace adapté aux familles avec plusieurs enfants.
 - **180×200 cm** : le plus grand format — une vraie zone de jeu familiale.
 
-## Piscine sèche ou aire de jeu : deux usages en un
+## Piscine à balles ou aire de jeu : deux usages, un seul produit
 
 Le fond légèrement surélevé retient parfaitement les balles, les petits cubes et les jouets sans qu'ils roulent partout. Sans balles, c'est aussi un **espace de motricité douce** pour les bébés qui apprennent à se retourner, à ramper ou à se lever.
 
-## Pour toute la famille, toute l'année
+## Une piscine à balles bébé pour tous les âges
 
 - **Bébés** : dès 0 mois pour le tummy time et l'éveil sensoriel
 - **Tout-petits** : espace de jeu autonome sécurisé
 - **Enfants** : terrain de jeu actif jusqu'à 6 ans
 - **Intérieur & extérieur** : salon, chambre, jardin ou terrasse
 
-## Caractéristiques
+## Caractéristiques techniques de la piscine à balles
 
 - **Matière** : structure en plastique souple et bords rembourrés
 - **Tailles** : carré, double soccer, 120×120, 120×180, 150×180, 180×200 cm

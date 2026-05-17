@@ -1,12 +1,12 @@
 ---
-name: "Baby Ball Pit & Play Area"
+name: "Baby Ball Pit & Indoor Play Area — Safe & Padded"
 price: 69.90
 compareAtPrice: 89.90
 priceRange:
   min: 69.90
   max: 99.90
 image: "/images/products/piscine-balles-bebe/3.webp"
-imageAlt: "Baby ball pit and play area for indoor and outdoor use, multiple sizes from 120x120 cm to 180x200 cm, for children 0-6 years"
+imageAlt: "Baby ball pit and play area, multiple sizes from square to 180x200 cm, for children 0-6 years, indoor and outdoor"
 gallery:
   - "/images/products/piscine-balles-bebe/4.webp"
   - "/images/products/piscine-balles-bebe/1.webp"
@@ -15,7 +15,7 @@ gallery:
   - "/images/products/piscine-balles-bebe/5.webp"
 categories:
   - "Tapis d'éveil & jeu"
-shortDescription: "Baby ball pit and play area for children 0 to 6 years. Large play surface with padded edges, square or rectangular models up to 180×200 cm. Perfect indoors and outdoors."
+shortDescription: "Baby ball pit and play area for children 0 to 6 years. Large padded play surface, models from square to 180×200 cm. The perfect baby ball pit for indoor and outdoor use."
 weight: 3200
 stock: 40
 sku: "PISCINE-BALLES-BEBE"
@@ -115,11 +115,11 @@ variations:
     image: "/images/products/piscine-balles-bebe/5.webp"
 ---
 
-## A soft, safe play world for babies 0–6
+## Why choose a baby ball pit?
 
-The **baby ball pit & play area** gives little ones a defined, comfortable and stimulating space. Its **padded edges and flexible structure** protect baby from bumps — even during the most energetic play sessions. Fill it with colourful balls for an irresistible dry pool; leave it empty for a perfect crawling, sitting and exploring zone.
+The **baby ball pit** gives little ones a defined, comfortable and stimulating space for children 0 to 6. Its **padded edges and flexible structure** protect baby from bumps — even during the most energetic play sessions. Fill it with colourful balls for an irresistible dry pool; leave it empty for a perfect crawling, sitting and exploring zone.
 
-## Which size is right for you?
+## Which baby ball pit size should you choose?
 
 - **Square**: compact format, great for a bedroom corner or a small flat.
 - **2 Soccer Doors**: the fan favourite — two access doors shaped like goals, ideal for more active kids.
@@ -128,18 +128,18 @@ The **baby ball pit & play area** gives little ones a defined, comfortable and s
 - **150×180 cm**: large space suited to families with several kids.
 - **180×200 cm**: the biggest format — a true family play zone.
 
-## Ball pit or play area: two uses in one
+## Ball pit or play area: two uses, one product
 
 The slightly raised base keeps balls, small blocks and toys neatly contained. Without balls, it's also a **gentle motor-skills zone** for babies learning to roll, crawl or pull themselves up.
 
-## For the whole family, all year round
+## A baby ball pit for every age
 
 - **Babies**: from 0 months for tummy time and sensory play
 - **Toddlers**: secure independent play space
 - **Kids**: active play area up to 6 years old
 - **Indoor & outdoor**: living room, nursery, garden or terrace
 
-## Features
+## Baby ball pit technical specs
 
 - **Material**: soft plastic frame with padded edges
 - **Sizes**: square, 2 soccer doors, 120×120, 120×180, 150×180, 180×200 cm
