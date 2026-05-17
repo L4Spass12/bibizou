@@ -62,7 +62,7 @@ variations:
     attributes:
       Panneaux: "12-panneaux"
       Kit: "barriere-seule"
-    image: "/images/products/parc-bebe-pliable-diy/1.webp"
+    image: "/images/products/parc-bebe-pliable-diy/6.webp"
   - id: 2
     sku: "PARC-12-PLAYSET"
     price: 389.99
@@ -72,7 +72,7 @@ variations:
     attributes:
       Panneaux: "12-panneaux"
       Kit: "pack-complet"
-    image: "/images/products/parc-bebe-pliable-diy/2.webp"
+    image: "/images/products/parc-bebe-pliable-diy/4.webp"
   - id: 3
     sku: "PARC-14-FENCE"
     price: 269.99
@@ -82,7 +82,7 @@ variations:
     attributes:
       Panneaux: "14-panneaux"
       Kit: "barriere-seule"
-    image: "/images/products/parc-bebe-pliable-diy/3.webp"
+    image: "/images/products/parc-bebe-pliable-diy/6.webp"
   - id: 4
     sku: "PARC-14-PLAYSET"
     price: 434.99
@@ -92,7 +92,7 @@ variations:
     attributes:
       Panneaux: "14-panneaux"
       Kit: "pack-complet"
-    image: "/images/products/parc-bebe-pliable-diy/4.webp"
+    image: "/images/products/parc-bebe-pliable-diy/1.webp"
   - id: 5
     sku: "PARC-16-FENCE"
     price: 279.99
@@ -102,7 +102,7 @@ variations:
     attributes:
       Panneaux: "16-panneaux"
       Kit: "barriere-seule"
-    image: "/images/products/parc-bebe-pliable-diy/5.webp"
+    image: "/images/products/parc-bebe-pliable-diy/6.webp"
   - id: 6
     sku: "PARC-16-PLAYSET"
     price: 459.99
@@ -112,7 +112,7 @@ variations:
     attributes:
       Panneaux: "16-panneaux"
       Kit: "pack-complet"
-    image: "/images/products/parc-bebe-pliable-diy/6.webp"
+    image: "/images/products/parc-bebe-pliable-diy/3.webp"
 ---
 
 ## Un espace sécurisé que bébé peut explorer en toute liberté

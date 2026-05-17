@@ -5,14 +5,14 @@ compareAtPrice: 89.90
 priceRange:
   min: 69.90
   max: 99.90
-image: "/images/products/piscine-balles-bebe/1.webp"
+image: "/images/products/piscine-balles-bebe/3.webp"
 imageAlt: "Baby ball pit and play area for indoor and outdoor use, multiple sizes from 120x120 cm to 180x200 cm, for children 0-6 years"
 gallery:
-  - "/images/products/piscine-balles-bebe/2.webp"
-  - "/images/products/piscine-balles-bebe/3.webp"
   - "/images/products/piscine-balles-bebe/4.webp"
-  - "/images/products/piscine-balles-bebe/5.webp"
+  - "/images/products/piscine-balles-bebe/1.webp"
+  - "/images/products/piscine-balles-bebe/2.webp"
   - "/images/products/piscine-balles-bebe/6.webp"
+  - "/images/products/piscine-balles-bebe/5.webp"
 categories:
   - "Tapis d'éveil & jeu"
 shortDescription: "Baby ball pit and play area for children 0 to 6 years. Large play surface with padded edges, square or rectangular models up to 180×200 cm. Perfect indoors and outdoors."
@@ -61,7 +61,7 @@ variations:
     stock: 10
     attributes:
       Size: "carre"
-    image: "/images/products/piscine-balles-bebe/1.webp"
+    image: "/images/products/piscine-balles-bebe/6.webp"
   - id: 2
     sku: "PISCINE-SOCCER"
     price: 89.90
@@ -70,7 +70,7 @@ variations:
     stock: 8
     attributes:
       Size: "double-porte-soccer"
-    image: "/images/products/piscine-balles-bebe/2.webp"
+    image: "/images/products/piscine-balles-bebe/1.webp"
   - id: 3
     sku: "PISCINE-120X120"
     price: 79.90
@@ -97,7 +97,7 @@ variations:
     stock: 6
     attributes:
       Size: "150x180"
-    image: "/images/products/piscine-balles-bebe/5.webp"
+    image: "/images/products/piscine-balles-bebe/2.webp"
   - id: 6
     sku: "PISCINE-180X200"
     price: 99.90
@@ -106,7 +106,7 @@ variations:
     stock: 4
     attributes:
       Size: "180x200"
-    image: "/images/products/piscine-balles-bebe/6.webp"
+    image: "/images/products/piscine-balles-bebe/5.webp"
 ---
 
 ## A soft, safe play world for babies 0–6

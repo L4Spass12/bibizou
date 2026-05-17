@@ -5,14 +5,14 @@ compareAtPrice: 89.90
 priceRange:
   min: 69.90
   max: 99.90
-image: "/images/products/piscine-balles-bebe/1.webp"
+image: "/images/products/piscine-balles-bebe/3.webp"
 imageAlt: "Aire de jeu piscine à balles bébé intérieur extérieur, plusieurs tailles de 120x120 cm à 180x200 cm, pour enfants 0-6 ans"
 gallery:
-  - "/images/products/piscine-balles-bebe/2.webp"
-  - "/images/products/piscine-balles-bebe/3.webp"
   - "/images/products/piscine-balles-bebe/4.webp"
-  - "/images/products/piscine-balles-bebe/5.webp"
+  - "/images/products/piscine-balles-bebe/1.webp"
+  - "/images/products/piscine-balles-bebe/2.webp"
   - "/images/products/piscine-balles-bebe/6.webp"
+  - "/images/products/piscine-balles-bebe/5.webp"
 categories:
   - "Tapis d'éveil & jeu"
 shortDescription: "Aire de jeu et piscine à balles pour bébé de 0 à 6 ans. Grande surface de jeu, bords rembourrés, modèle carré ou rectangulaire jusqu'à 180×200 cm. Idéale en intérieur comme en extérieur."
@@ -61,7 +61,7 @@ variations:
     stock: 10
     attributes:
       Taille: "carre"
-    image: "/images/products/piscine-balles-bebe/1.webp"
+    image: "/images/products/piscine-balles-bebe/6.webp"
   - id: 2
     sku: "PISCINE-SOCCER"
     price: 89.90
@@ -70,7 +70,7 @@ variations:
     stock: 8
     attributes:
       Taille: "double-porte-soccer"
-    image: "/images/products/piscine-balles-bebe/2.webp"
+    image: "/images/products/piscine-balles-bebe/1.webp"
   - id: 3
     sku: "PISCINE-120X120"
     price: 79.90
@@ -97,7 +97,7 @@ variations:
     stock: 6
     attributes:
       Taille: "150x180"
-    image: "/images/products/piscine-balles-bebe/5.webp"
+    image: "/images/products/piscine-balles-bebe/2.webp"
   - id: 6
     sku: "PISCINE-180X200"
     price: 99.90
@@ -106,7 +106,7 @@ variations:
     stock: 4
     attributes:
       Taille: "180x200"
-    image: "/images/products/piscine-balles-bebe/6.webp"
+    image: "/images/products/piscine-balles-bebe/5.webp"
 ---
 
 ## Un univers de jeu doux et sécurisé pour les 0-6 ans
