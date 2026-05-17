@@ -34,9 +34,11 @@ for (const file of files) {
   if (!meta.width || meta.width < 500) continue;
 
   for (const w of WIDTHS) {
-    if (w >= meta.width) continue;
     const out = file.replace(/\.webp$/, `-${w}w.webp`);
     if (fs.existsSync(out)) continue;
+    // withoutEnlargement: si la source est plus petite que w, le fichier
+    // sera à la taille source (pas d'upscale). Le srcset descriptor est
+    // légèrement optimiste mais le fichier existe toujours → pas de 404.
     const resized = await sharp(buf)
       .resize({ width: w, withoutEnlargement: true })
       .webp({ quality: 80, effort: 5 })

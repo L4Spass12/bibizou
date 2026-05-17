@@ -343,12 +343,14 @@ const faqSchema = {
       content-visibility: auto;
       contain-intrinsic-size: auto 800px;
     }
-    /* Voile sombre sur l'image pour lisibilité du texte */
+    /* Voile sombre sur l'image pour lisibilité du texte —
+       couche uniforme légère sur toute la surface (mobile & desktop),
+       renforcée à gauche là où le texte se superpose */
     .hero-section::after {
       content: "";
       position: absolute;
       inset: 0;
-      background: linear-gradient(to right, rgba(0,0,0,0.50) 0%, rgba(0,0,0,0.25) 60%, transparent 100%);
+      background: linear-gradient(to right, rgba(0,0,0,0.50) 0%, rgba(0,0,0,0.35) 50%, rgba(0,0,0,0.25) 100%);
       pointer-events: none;
       z-index: 1;
     }
