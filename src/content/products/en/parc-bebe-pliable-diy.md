@@ -36,6 +36,14 @@ benefits:
     title: "Indoor & Outdoor"
     desc: "Lightweight, folds in seconds — easy to move anywhere."
 
+care:
+  - title: "Daily"
+    desc: "Wipe panels with a damp cloth."
+  - title: "Deep cleaning"
+    desc: "Warm water + mild soap, rinse and air-dry."
+  - title: "Avoid"
+    desc: "Abrasive products, solvents, prolonged intense sunlight."
+
 attributes:
   - name: "Panels"
     values:
@@ -149,9 +157,3 @@ Lightweight and **foldable in seconds**, it moves effortlessly between bedroom, 
 - **Assembly**: tool-free, quick setup
 - **Use**: indoor & outdoor
 - **Cleaning**: wipe with soapy water
-
-## Care
-
-- **Daily**: wipe panels with a damp cloth.
-- **Deep clean**: warm water + mild soap, rinse and air-dry.
-- **Avoid**: abrasive products, solvents, prolonged intense sunlight.

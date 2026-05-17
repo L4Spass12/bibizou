@@ -34,6 +34,14 @@ benefits:
     title: "Multi-usage"
     desc: "Bébé, animaux, enfants, yoga — un sol confortable pour toute la famille."
 
+care:
+  - title: "Au quotidien"
+    desc: "Passez l'aspirateur (embout brosse douce) sur la surface velours pour retirer poussières et poils."
+  - title: "Taches"
+    desc: "Nettoyez à l'eau tiède directement sur la dalle, avec un chiffon ou une éponge douce. Laissez sécher à plat, à l'air libre."
+  - title: "À éviter"
+    desc: "Machine à laver (déforme la mousse EVA), sèche-linge, javel, exposition prolongée au soleil."
+
 attributes:
   - name: "Pack"
     values:
@@ -153,9 +161,3 @@ Pensé pour bébé, mais aussi parfait pour :
 ## Bon à savoir
 
 Chaque pack inclut **une bande de finition décorative** pour habiller les bords visibles. À utiliser uniquement sur une surface sèche : déconseillé en salle de bain.
-
-## Entretien
-
-- **Au quotidien** : passez l'aspirateur (embout brosse douce) sur la surface velours pour retirer poussières et poils.
-- **Taches** : nettoyez à l'eau tiède directement sur la dalle, avec un chiffon ou une éponge douce. Laissez sécher à plat, à l'air libre.
-- **À éviter** : machine à laver (déforme la mousse EVA), sèche-linge, javel, exposition prolongée au soleil.

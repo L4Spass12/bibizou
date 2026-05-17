@@ -36,6 +36,12 @@ benefits:
     title: "Innen & außen"
     desc: "Geeignet für Wohnzimmer, Kinderzimmer, Garten oder Terrasse."
 
+care:
+  - title: "Reinigung"
+    desc: "Mit feuchtem Schwamm und mildem Seifenwasser abwischen, dann an der Luft trocknen."
+  - title: "Vermeiden"
+    desc: "Waschmaschine, Scheuermittel, längere direkte Wärmeeinwirkung."
+
 attributes:
   - name: "Größe"
     values:
@@ -140,8 +146,3 @@ Der leicht erhöhte Boden hält Bälle, kleine Würfel und Spielzeug sicher im B
 - **Geeignet für**: Kinder von 0–6 Jahren
 - **Verwendung**: innen & außen
 - **Bälle**: nicht im Lieferumfang (separat erhältlich)
-
-## Pflege
-
-- **Reinigung**: mit feuchtem Schwamm und mildem Seifenwasser abwischen, dann an der Luft trocknen.
-- **Vermeiden**: Waschmaschine, Scheuermittel, längere direkte Wärmeeinwirkung.

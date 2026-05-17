@@ -34,6 +34,10 @@ benefits:
     title: "Surface antidérapante"
     desc: "Texture spéciale qui garantit une bonne adhérence et plus de sécurité."
 
+care:
+  - title: "Nettoyage"
+    desc: "Essuyez avec un chiffon humide. Ne pas immerger. Séchage à l'air libre."
+
 attributes:
   - name: "Couleur"
     values:
@@ -92,7 +96,3 @@ Le **tapis puzzle en mousse** crée un espace de jeu confortable et protégé po
 ## Pourquoi nos parents l'adorent ?
 
 Bébé passe ses premières heures à ramper, rouler, s'asseoir — autant d'activités qui nécessitent un sol doux et hygiénique. Ce tapis puzzle protège les petits genoux et les petites mains tout en délimitant clairement l'espace de jeu.
-
-## Entretien
-
-Essuyez avec un chiffon humide. Ne pas immerger. Séchage à l'air libre.

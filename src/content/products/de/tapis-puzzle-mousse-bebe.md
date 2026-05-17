@@ -34,6 +34,10 @@ benefits:
     title: "Rutschfeste Oberfläche"
     desc: "Strukturierte Oberfläche für sicheren Halt und mehr Sicherheit."
 
+care:
+  - title: "Reinigung"
+    desc: "Mit einem feuchten Tuch abwischen. Nicht eintauchen. An der Luft trocknen."
+
 attributes:
   - name: "Farbe"
     values:
@@ -92,7 +96,3 @@ Die **Puzzle-Spielmatte aus Schaumstoff** schafft einen bequemen und geschützte
 ## Warum Eltern es lieben
 
 Babys verbringen ihre ersten Monate mit Krabbeln, Rollen und Sitzen — Aktivitäten, die einen weichen und hygienischen Boden erfordern. Diese Puzzlematte schützt kleine Knie und Hände und grenzt den Spielbereich klar ab.
-
-## Pflege
-
-Mit einem feuchten Tuch abwischen. Nicht eintauchen. An der Luft trocknen.

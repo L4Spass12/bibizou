@@ -36,6 +36,12 @@ benefits:
     title: "Indoor & Outdoor"
     desc: "Works in the living room, nursery, garden or terrace."
 
+care:
+  - title: "Cleaning"
+    desc: "Wipe with a damp sponge and mild soapy water, then air-dry."
+  - title: "Avoid"
+    desc: "Washing machine, abrasive products, prolonged direct heat."
+
 attributes:
   - name: "Size"
     values:
@@ -140,8 +146,3 @@ The slightly raised base keeps balls, small blocks and toys neatly contained. Wi
 - **Suitable for**: children 0–6 years
 - **Use**: indoor & outdoor
 - **Balls**: not included (sold separately)
-
-## Care
-
-- **Cleaning**: wipe with a damp sponge and mild soapy water, then air-dry.
-- **Avoid**: washing machine, abrasive products, prolonged direct heat.

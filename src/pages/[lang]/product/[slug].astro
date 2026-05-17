@@ -7,6 +7,7 @@ import { getCollection } from 'astro:content';
 import siteConfig from '../../../../site.config.mjs';
 import { unsplashSrcset } from '../../../lib/image';
 import { parseEntrySlug, t, localePrefix, ACTIVE_LOCALES, localeMeta } from '../../../lib/i18n';
+import { inlineMd } from '../../../lib/inline-md';
 
 export async function getStaticPaths() {
   const products = await getCollection('products');
@@ -482,21 +483,16 @@ const breadcrumbSchema = {
           </svg>
         </summary>
         <div class="mt-5 space-y-4 text-sm text-n-400 font-light leading-relaxed">
-          {lang === 'en' ? (
-            <>
-              <div><h3 class="text-cream font-medium mb-1.5">Daily cleaning</h3><p>Wipe with a damp cloth and a little mild soap. Dry with a clean cloth and let air-dry before next use.</p></div>
-              <div><h3 class="text-cream font-medium mb-1.5">Deep cleaning</h3><ol class="list-decimal pl-5 space-y-1"><li>Disassemble the tiles one by one — that's the advantage of the puzzle format.</li><li>Clean each tile with a soft damp sponge and mild soap. <strong class="text-cream">Never immerse</strong> tiles fully in water.</li><li>Wipe with a clean damp cloth to remove the soap.</li><li>Let dry <strong class="text-cream">flat, in open air</strong>, away from direct sunlight or heat, before reassembling.</li></ol></div>
-              <div><h3 class="text-cream font-medium mb-1.5">Avoid</h3><ul class="list-disc pl-5 space-y-1"><li>Washing machine and tumble dryer (deforms EPE foam)</li><li>Prolonged full immersion (water seeps between layers)</li><li>Radiator, hairdryer, direct sunlight</li><li>Bleach, solvents, abrasive or alcohol-based cleaners</li></ul></div>
-              <div><h3 class="text-cream font-medium mb-1.5">Durability tip</h3><p>The puzzle format means damaged tiles can be replaced individually without changing the whole mat. For optimal daily hygiene, disassemble and air the tiles regularly (once a month).</p></div>
-            </>
-          ) : lang === 'de' ? (
-            <>
-              <div><h3 class="text-cream font-medium mb-1.5">Tägliche Reinigung</h3><p>Mit einem feuchten Tuch und etwas milder Seife abwischen. Mit einem sauberen Tuch trocknen und vor der nächsten Verwendung an der Luft trocknen lassen.</p></div>
-              <div><h3 class="text-cream font-medium mb-1.5">Tiefenreinigung</h3><ol class="list-decimal pl-5 space-y-1"><li>Die Fliesen einzeln auseinandernehmen — das ist der Vorteil des Puzzle-Formats.</li><li>Jede Fliese mit einem weichen feuchten Schwamm und milder Seife reinigen. <strong class="text-cream">Niemals vollständig</strong> in Wasser eintauchen.</li><li>Mit einem sauberen feuchten Tuch nachwischen, um die Seife zu entfernen.</li><li><strong class="text-cream">Flach an der Luft</strong> trocknen lassen, fern von Sonne oder Wärmequellen, bevor wieder zusammengesetzt wird.</li></ol></div>
-              <div><h3 class="text-cream font-medium mb-1.5">Vermeiden</h3><ul class="list-disc pl-5 space-y-1"><li>Waschmaschine und Trockner (verformt EPE-Schaumstoff)</li><li>Längeres vollständiges Eintauchen (Wasser dringt zwischen die Schichten)</li><li>Heizkörper, Föhn, direkte Sonneneinstrahlung</li><li>Bleichmittel, Lösungsmittel, scharfe oder alkoholische Reiniger</li></ul></div>
-              <div><h3 class="text-cream font-medium mb-1.5">Langlebigkeits-Tipp</h3><p>Dank des Puzzle-Formats können beschädigte Fliesen einzeln ersetzt werden, ohne die gesamte Matte zu wechseln. Für optimale Hygiene die Fliesen regelmäßig (einmal monatlich) auseinandernehmen und lüften.</p></div>
-            </>
-          ) : null}
+          {product.data.care && product.data.care.length > 0 ? product.data.care.map(item => (
+            <div>
+              <h3 class="text-cream font-medium mb-1.5">{item.title}</h3>
+              <p set:html={inlineMd(item.desc)}></p>
+            </div>
+          )) : (
+            <div>
+              <p>Wipe with a damp cloth and a little mild soap. Avoid washing machine, dryer, bleach, solvents, and prolonged direct sunlight.</p>
+            </div>
+          )}
         </div>
       </details>
     </section>

@@ -36,6 +36,14 @@ benefits:
     title: "Innen & außen"
     desc: "Leicht, in Sekunden zusammenklappbar — überall einsetzbar."
 
+care:
+  - title: "Täglich"
+    desc: "Paneele mit einem feuchten Tuch abwischen."
+  - title: "Tiefenreinigung"
+    desc: "Lauwarmes Wasser + mildes Spülmittel, abspülen und an der Luft trocknen."
+  - title: "Vermeiden"
+    desc: "Scheuermittel, Lösungsmittel, längere intensive Sonneneinstrahlung."
+
 attributes:
   - name: "Paneele"
     values:
@@ -149,9 +157,3 @@ Leicht und **in Sekunden zusammenklappbar**, lässt es sich mühelos zwischen Ki
 - **Montage**: werkzeugfrei, schneller Aufbau
 - **Verwendung**: innen & außen
 - **Reinigung**: mit Seifenwasser abwischen
-
-## Pflege
-
-- **Täglich**: Paneele mit einem feuchten Tuch abwischen.
-- **Tiefenreinigung**: lauwarmes Wasser + mildes Spülmittel, abspülen und an der Luft trocknen.
-- **Vermeiden**: Scheuermittel, Lösungsmittel, längere intensive Sonneneinstrahlung.

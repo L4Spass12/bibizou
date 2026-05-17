@@ -34,6 +34,10 @@ benefits:
     title: "Non-Slip Surface"
     desc: "Textured surface ensures a secure grip and added safety."
 
+care:
+  - title: "Cleaning"
+    desc: "Wipe with a damp cloth. Do not immerse. Air-dry only."
+
 attributes:
   - name: "Color"
     values:
@@ -92,7 +96,3 @@ The **foam puzzle play mat** creates a comfortable and protected play space for 
 ## Why parents love it
 
 Babies spend their first months crawling, rolling, and sitting — all activities that need a soft, hygienic floor. This puzzle mat protects little knees and hands while clearly defining the play area.
-
-## Care
-
-Wipe with a damp cloth. Do not immerse. Air-dry only.

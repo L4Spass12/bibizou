@@ -89,6 +89,11 @@ const products = defineCollection({
       title: z.string(),
       desc: z.string(),
     })).default([]),
+    // ─── Entretien (drawer dynamique sur la page produit) ───
+    care: z.array(z.object({
+      title: z.string(),
+      desc: z.string(),
+    })).default([]),
   }),
 });
 

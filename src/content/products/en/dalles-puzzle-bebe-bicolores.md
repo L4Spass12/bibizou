@@ -34,6 +34,14 @@ benefits:
     title: "Multi-Use"
     desc: "Baby, pets, kids, yoga — a cozy floor for the whole family."
 
+care:
+  - title: "Daily"
+    desc: "Vacuum the velvet surface (soft brush attachment) to remove dust and pet hair."
+  - title: "Stains"
+    desc: "Clean directly with lukewarm water using a cloth or soft sponge. Air-dry flat."
+  - title: "Avoid"
+    desc: "Washing machine (deforms EVA foam), tumble dryer, bleach, prolonged direct sunlight."
+
 attributes:
   - name: "Pack"
     values:
@@ -153,9 +161,3 @@ Designed for babies, but equally great for:
 ## Good to know
 
 Each pack includes **one decorative trim strip** to finish exposed edges. Use only on a dry surface — not recommended in bathrooms.
-
-## Care
-
-- **Daily**: vacuum the velvet surface (soft brush attachment) to remove dust and pet hair.
-- **Stains**: clean directly with lukewarm water using a cloth or soft sponge. Air-dry flat.
-- **Avoid**: washing machine (deforms EVA foam), tumble dryer, bleach, prolonged direct sunlight.

@@ -36,6 +36,12 @@ benefits:
     title: "Intérieur & extérieur"
     desc: "Adapté au salon, à la chambre, au jardin ou à la terrasse."
 
+care:
+  - title: "Nettoyage"
+    desc: "Éponge humide avec eau savonneuse douce, puis sécher à l'air libre."
+  - title: "À éviter"
+    desc: "Machines à laver, produits abrasifs, chaleur directe prolongée."
+
 attributes:
   - name: "Taille"
     values:
@@ -140,8 +146,3 @@ Le fond légèrement surélevé retient parfaitement les balles, les petits cube
 - **Convient** : bébés de 0 à 6 ans
 - **Utilisation** : intérieur & extérieur
 - **Balles** : non incluses (vendues séparément)
-
-## Entretien
-
-- **Nettoyage** : éponge humide avec eau savonneuse douce, puis sécher à l'air libre.
-- **À éviter** : machines à laver, produits abrasifs, chaleur directe prolongée.

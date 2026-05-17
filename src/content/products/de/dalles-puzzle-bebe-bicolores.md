@@ -34,6 +34,14 @@ benefits:
     title: "Vielseitig einsetzbar"
     desc: "Baby, Haustiere, Kinder, Yoga — ein gemütlicher Boden für die ganze Familie."
 
+care:
+  - title: "Täglich"
+    desc: "Samtoberfläche mit dem Staubsauger (weiche Bürste) absaugen, um Staub und Tierhaare zu entfernen."
+  - title: "Flecken"
+    desc: "Direkt mit lauwarmem Wasser und einem weichen Tuch oder Schwamm reinigen. Flach an der Luft trocknen lassen."
+  - title: "Vermeiden"
+    desc: "Waschmaschine (verformt EVA-Schaumstoff), Trockner, Bleichmittel, längere direkte Sonneneinstrahlung."
+
 attributes:
   - name: "Pack"
     values:
@@ -153,9 +161,3 @@ Für Babys gedacht, aber ebenso gut geeignet für:
 ## Gut zu wissen
 
 Jeder Pack enthält **einen dekorativen Abschlussstreifen** zur Verkleidung sichtbarer Kanten. Nur auf trockener Oberfläche verwenden — nicht für Badezimmer empfohlen.
-
-## Pflege
-
-- **Täglich**: Samtoberfläche mit dem Staubsauger (weiche Bürste) absaugen, um Staub und Tierhaare zu entfernen.
-- **Flecken**: direkt mit lauwarmem Wasser und einem weichen Tuch oder Schwamm reinigen. Flach an der Luft trocknen lassen.
-- **Vermeiden**: Waschmaschine (verformt EVA-Schaumstoff), Trockner, Bleichmittel, längere direkte Sonneneinstrahlung.

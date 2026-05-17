@@ -7,6 +7,7 @@ import { getCollection } from 'astro:content';
 import siteConfig from '../../../site.config.mjs';
 import { unsplashSrcset } from '../../lib/image';
 import { parseEntrySlug } from '../../lib/i18n';
+import { inlineMd } from '../../lib/inline-md';
 
 export async function getStaticPaths() {
   const products = await getCollection('products');
@@ -607,32 +608,23 @@ const breadcrumbSchema = {
           </svg>
         </summary>
         <div class="mt-5 space-y-4 text-sm text-n-400 font-light leading-relaxed">
-          <div>
-            <h3 class="text-cream font-medium mb-1.5">Nettoyage au quotidien</h3>
-            <p>Passez un chiffon humide avec un peu de savon doux (type savon de Marseille ou liniment) sur la surface. Essuyez avec un chiffon sec et laissez sécher à l'air libre avant la prochaine utilisation.</p>
-          </div>
-          <div>
-            <h3 class="text-cream font-medium mb-1.5">Nettoyage en profondeur</h3>
-            <ol class="list-decimal pl-5 space-y-1">
-              <li>Démontez les dalles une par une — c'est l'avantage du format puzzle.</li>
-              <li>Nettoyez chaque dalle avec une éponge douce humidifiée et du savon doux. <strong class="text-cream">N'immergez jamais complètement</strong> les dalles dans l'eau.</li>
-              <li>Rincez avec un chiffon humide propre pour retirer le savon.</li>
-              <li>Laissez sécher <strong class="text-cream">à plat, à l'air libre</strong>, loin du soleil direct et de toute source de chaleur, avant de réassembler.</li>
-            </ol>
-          </div>
-          <div>
-            <h3 class="text-cream font-medium mb-1.5">À éviter absolument</h3>
-            <ul class="list-disc pl-5 space-y-1">
-              <li>Machine à laver et sèche-linge (déforme la mousse EPE)</li>
-              <li>Immersion complète prolongée (l'eau s'infiltre entre les couches)</li>
-              <li>Radiateur, sèche-cheveux, exposition au soleil direct</li>
-              <li>Javel, solvants, nettoyants abrasifs ou alcoolisés</li>
-            </ul>
-          </div>
-          <div>
-            <h3 class="text-cream font-medium mb-1.5">Conseil durabilité</h3>
-            <p>L'avantage du format puzzle : si une dalle est tachée ou abîmée, vous pouvez la remplacer individuellement sans changer tout le tapis. Pour une hygiène optimale au quotidien, démontez et aérez les dalles régulièrement (1 fois/mois).</p>
-          </div>
+          {product.data.care && product.data.care.length > 0 ? product.data.care.map(item => (
+            <div>
+              <h3 class="text-cream font-medium mb-1.5">{item.title}</h3>
+              <p set:html={inlineMd(item.desc)}></p>
+            </div>
+          )) : (
+            <>
+              <div>
+                <h3 class="text-cream font-medium mb-1.5">Nettoyage au quotidien</h3>
+                <p>Passez un chiffon humide avec un peu de savon doux sur la surface. Essuyez avec un chiffon sec et laissez sécher à l'air libre.</p>
+              </div>
+              <div>
+                <h3 class="text-cream font-medium mb-1.5">À éviter</h3>
+                <p>Machine à laver, sèche-linge, javel, solvants, exposition prolongée au soleil direct.</p>
+              </div>
+            </>
+          )}
         </div>
       </details>
     </section>

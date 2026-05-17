@@ -36,6 +36,14 @@ benefits:
     title: "Intérieur & extérieur"
     desc: "Résistant, pliable en quelques secondes, facile à transporter partout."
 
+care:
+  - title: "Quotidien"
+    desc: "Essuyez les panneaux avec un chiffon humide."
+  - title: "Nettoyage en profondeur"
+    desc: "Eau tiède + savon doux, rincer et sécher à l'air libre."
+  - title: "À éviter"
+    desc: "Produits abrasifs, solvants, exposition prolongée au soleil intense."
+
 attributes:
   - name: "Panneaux"
     values:
@@ -149,9 +157,3 @@ Léger et **pliable en quelques secondes**, il se transporte facilement entre la
 - **Assemblage** : sans outils, montage rapide
 - **Utilisation** : intérieur & extérieur
 - **Entretien** : nettoyage à l'eau savonneuse
-
-## Entretien
-
-- **Quotidien** : essuyez les panneaux avec un chiffon humide.
-- **Nettoyage en profondeur** : eau tiède + savon doux, rincer et sécher à l'air libre.
-- **À éviter** : produits abrasifs, solvants, exposition prolongée au soleil intense.
