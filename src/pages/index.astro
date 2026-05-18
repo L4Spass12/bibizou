@@ -53,12 +53,12 @@ const categoryRows = (siteConfig.home?.categoryRows ?? [])
 const testimonials = siteConfig.home?.testimonials?.fr ?? [];
 const faqs = siteConfig.home?.faqs?.fr ?? [];
 
-// Sections guides : remplace LINK_GAMING / LINK_XXL par les URLs de
+// Sections guides : remplace LINK_PRIMARY / LINK_XXL par les URLs de
 // catégories configurées dans site.config.home.guideLinks.
 function injectLinks(html: string) {
   const links = siteConfig.home?.guideLinks ?? {};
   return html
-    .replace('LINK_GAMING', links.gaming ? `/product-category/${links.gaming}` : '/blog')
+    .replace('LINK_PRIMARY', links.primary ? `/product-category/${links.primary}` : '/blog')
     .replace('LINK_XXL', links.xxl ? `/product-category/${links.xxl}` : '/blog');
 }
 

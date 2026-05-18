@@ -75,7 +75,7 @@ const hasVariations = Array.isArray(variations) && variations.length > 0;
 const inStock = hasVariations ? variations.some(v => v.inStock) : (stock == null || stock > 0);
 
 // ─── SEO : titre court + meta description unique par produit ──────────
-// Titre : max ~60 chars. "Nom du produit | BuddyPad" si ça rentre,
+// Titre : max ~60 chars. "Nom du produit | <SiteName>" si ça rentre,
 // sinon juste "Nom du produit" (sans le nom du site).
 const brandSuffix = ` | ${siteConfig.name}`;
 const seoTitle = (name.length + brandSuffix.length) <= 60

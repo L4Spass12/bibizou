@@ -30,7 +30,7 @@ const displayPrice = (d: any) =>
     ? `Dès ${formatPrice(d.priceRange.min)}`
     : formatPrice(d.price);
 
-// Transforme slug en label lisible : "tapis-de-souris-xxl" → "Tapis de souris XXL"
+// Transforme slug en label lisible : "tapis-jeu-doux" → "Tapis de jeu doux"
 const catLabel = (slug: string) =>
   slug.replace(/^[a-z]+-[a-z]+-[a-z]+-/, '').replace(/-/g, ' ').replace(/^\w/, c => c.toUpperCase());
 

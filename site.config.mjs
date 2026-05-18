@@ -165,9 +165,9 @@ const config = {
   },
 
   // ⚠ ─── Mentions légales (coordonnées de l'éditeur du site) ─────────── ⚠
-  // Pour BuddyPad et tous les futurs sites de Quentin Amat (EI), ces
-  // données restent identiques. Si un nouveau site est édité par une
-  // autre entité (SAS, SARL, etc.), c'est ici qu'il faut adapter.
+  // Données de l'entrepreneur individuel Quentin Amat — identiques pour
+  // tous ses sites. Si un nouveau site est édité par une autre entité
+  // (SAS, SARL, etc.), c'est ici qu'il faut adapter.
   legal: {
     // Format affiché dans les CGV / mentions / politique de confidentialité
     editor: {
@@ -195,8 +195,11 @@ const config = {
     // Alt text de l'image hero (visible aux lecteurs d'écran + Google Images)
     heroImageAlt: "Bébé jouant sur un tapis d'éveil Bibizou coloré et doux",
 
+    // Placeholders LINK_PRIMARY / LINK_XXL utilisés dans i18n/*.json
+    // (home.guide1P1 / home.guide2P1) → remplacés au runtime par les URLs
+    // de catégories ci-dessous.
     guideLinks: {
-      gaming: 'tapis-jeu-doux',
+      primary: 'tapis-eveil-arche',
       xxl: 'tapis-jeu-xxl',
     },
 

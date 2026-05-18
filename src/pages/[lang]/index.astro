@@ -65,12 +65,12 @@ const displayPrice = (d: any) =>
 
 const productHref = (slug: string) => url('/product/' + parseEntrySlug(slug).slug);
 
-// Sections guides : remplace les placeholders LINK_GAMING / LINK_XXL par les
+// Sections guides : remplace les placeholders LINK_PRIMARY / LINK_XXL par les
 // vrais liens préfixés locale.
 function injectLinks(html: string) {
   const links = siteConfig.home?.guideLinks ?? {};
   return html
-    .replace('LINK_GAMING', links.gaming ? url(`/product-category/${links.gaming}`) : url('/blog'))
+    .replace('LINK_PRIMARY', links.primary ? url(`/product-category/${links.primary}`) : url('/blog'))
     .replace('LINK_XXL', links.xxl ? url(`/product-category/${links.xxl}`) : url('/blog'));
 }
 

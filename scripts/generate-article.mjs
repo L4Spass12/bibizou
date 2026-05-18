@@ -278,8 +278,8 @@ Rédige un article de blog long-format, de haute qualité éditoriale, optimisé
 - **Catégorie** : ${meta.category}
 
 ## STRUCTURE OBLIGATOIRE (dans cet ordre)
-1. **Introduction** (150-180 mots) - accroche avec un constat ou une question, inclure le mot-clé principal dans les 100 premiers mots
-2. **3 à 4 sections H2** - chaque section avec 150-200 mots, sous-titres H3 si pertinent
+1. **Introduction** (150-180 mots) - PAS de titre/heading pour l'intro, commence directement par le 1er paragraphe. Accroche avec un constat ou une question, inclure le mot-clé principal dans les 100 premiers mots.
+2. **3 à 4 sections H2 thématiques** - chaque section avec 150-200 mots, sous-titres H3 si pertinent. Les H2 doivent être DISTINCTS du titre de l'article (interdit de réutiliser le titre comme H2).
 3. **Section FAQ** - titre H2 "Questions fréquentes", puis 3 accordéons HTML avec ce format EXACT (pas de markdown, HTML pur) :
 <details>
 <summary>La question ici ?</summary>
@@ -308,7 +308,14 @@ Aucun lien ne peut être omis. Chaque lien doit apparaître une fois dans le tex
 - Interdiction absolue d'utiliser le caractère "—" (tiret cadratin), utilise "-" à la place
 
 ## LONGUEUR
-800 à 1000 mots. Pas de titre H1. Commencer directement par l'introduction.`;
+800 à 1000 mots.
+
+## INTERDICTIONS ABSOLUES
+- Pas de titre H1 (le H1 est généré depuis le frontmatter)
+- Pas de H2/H3 qui reprend le titre de l'article
+- Pas de heading "## Introduction" ni "### Introduction" - démarre directement par le 1er paragraphe
+- Pas de séparateurs horizontaux \`---\` entre les sections (les H2 séparent suffisamment)
+- Pas de heading "## Conclusion" - la conclusion peut être nommée différemment (ex: "## Pour aller plus loin", "## Notre sélection") ou démarrer directement sans titre`;
 
   const articleMsg = await client.messages.create({
     model: 'claude-sonnet-4-6',
