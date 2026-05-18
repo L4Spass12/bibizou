@@ -51,25 +51,37 @@ const TRANSLATABLE_FIELDS = {
 const LANG_NAMES = { fr: 'French', en: 'English', de: 'German' };
 
 const SEO_GUIDANCE = {
-  en: `Use natural English search terms that mouse pad shoppers in the US/UK
-markets actually type into Google. Preferred forms:
-- "mouse pad" (NOT "mousepad" / "mouse mat" — minority spellings)
-- "desk mat" / "deskmat" for the XXL bureau format
-- "extended mouse pad" or "XXL mouse pad" for >60 cm
-- "gaming mouse pad", "RGB mouse pad", "wireless charging mouse pad"
-- "tissue / cloth surface" for fabric, "hard pad" for rigid
-Adapt cultural references: Amazon.fr → Amazon, TVA → tax/VAT, € stays € but
-add USD context only if needed. Default to US English (color, customize, behavior).`,
+  en: `Use natural English search terms that parents in the US/UK actually
+type into Google when shopping for baby gear. Preferred forms:
+- "baby play mat" / "play mat" (NOT "baby playmat" one-word)
+- "activity mat" / "activity gym" for arch-style awakening mats
+- "foam play mat" / "interlocking foam mats" / "puzzle play mat" for EVA tiles
+- "XXL play mat", "extra large play mat" for big formats
+- "foldable play mat" for travel/folding models
+- "baby ball pit", "ball pit pool" (NOT "ball pool")
+- "baby playpen" / "play yard" (US) — never "baby park" (literal FR)
+- "night light", "nursery night light", "baby night light"
+- "tummy time" stays in English (universal parenting term)
+Materials: "EVA foam", "soft foam", "non-toxic", "BPA-free", "phthalate-free".
+Adapt cultural references: Amazon.fr → Amazon, TVA → tax / VAT,
+"France métropolitaine" → omit. € stays €. Default to US English
+(color, customize, behavior, mom).`,
 
-  de: `Use natural German search terms that mouse pad shoppers actually type
-into Google.de. Preferred forms:
-- "Mauspad" (Standardterm), "großes Mauspad" / "XXL Mauspad" für > 60 cm
-- "Schreibtischunterlage" / "Deskpad" für das Bureau-Format
-- "Gaming Mauspad", "RGB Mauspad", "kabelloses Ladepad"
-- "Stoff" für tissu, "Hartmauspad" für rigide
-Use the consumer/gaming "du"-form (informal) — never "Sie" — to match the
-target audience tone (gamers + télétravailleurs jeunes). Adapt cultural
-references: Amazon.fr → Amazon, TVA → MwSt., euros stay €.`,
+  de: `Use natural German search terms that parents actually type into
+Google.de when shopping for baby gear. Preferred forms:
+- "Spielmatte" / "Krabbelmatte" for soft play mats
+- "Spielbogen" for arch activity mats (NOT "Aktivitätsmatte")
+- "Schaumstoff-Puzzlematte" / "Puzzlematte" / "Bodenmatte" for EVA tiles
+- "XXL Spielmatte" / "große Spielmatte" for big formats
+- "Faltbare Spielmatte" / "Reise-Spielmatte" for foldable models
+- "Bällebad" (NOT "Ballpool")
+- "Laufgitter" / "Laufstall" / "Baby-Laufgitter" for playpens
+- "Nachtlicht" / "Baby-Nachtlicht" / "Sternenhimmel-Projektor"
+- "Bauchlage" for tummy time
+Materials: "EVA-Schaumstoff", "schadstofffrei", "BPA-frei", "lebensmittelecht".
+Use informal "du"-form (modern young-parents tone) — never "Sie". Adapt
+cultural references: Amazon.fr → Amazon, TVA → MwSt., "France métropolitaine"
+→ omit, € stays €.`,
 };
 
 // Le system prompt : volumineux et identique pour TOUTES les requêtes →
@@ -97,13 +109,14 @@ as a literal word-for-word translation from French.
    - Blockquotes (>)
 
 3. Preserve proper nouns AS-IS:
-   - Brand names: ${siteConfig.name}, Razer, Logitech, Corsair, SteelSeries,
-     HyperX, Stripe, Amazon, Atelier, Web3Forms
-   - Product model names (Goliathus, QcK, Gigantus, MM700, etc.)
+   - Brand names: ${siteConfig.name}, Amazon, Stripe, Web3Forms
+   - Methodology / approach names: Montessori, Pikler, Reggio Emilia, Loczy
+   - Certifications: CE, Oeko-Tex, EN 71, ASTM F963
    - Place names that aren't being adapted
    - The site name "${siteConfig.name}" is invariable
 
-4. Preserve technical units verbatim: DPI, mm, cm, €, %, kg
+4. Preserve technical units verbatim: mm, cm, m, kg, g, €, %, °C, mois, ans
+   (translate "mois"/"ans" to "months"/"years" in EN and "Monate"/"Jahre" in DE)
 
 5. Convert INTERNAL markdown links by adding the locale prefix:
    - /blog/ → /${targetLang}/blog/

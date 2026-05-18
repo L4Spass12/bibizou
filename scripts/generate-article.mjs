@@ -289,10 +289,10 @@ Rédige un article de blog long-format, de haute qualité éditoriale, optimisé
 4. **Conclusion + CTA** (80-100 mots) - synthèse et invitation à ${siteConfig.article.cta}
 
 ## RÈGLES E-E-A-T
-- **Expertise** : chiffres concrets, vocabulaire professionnel culinaire
-- **Experience** : "chez ${siteConfig.name}, nous avons constaté...", retour d'expérience réel
+- **Expertise** : chiffres concrets, vocabulaire professionnel petite enfance (motricité libre, éveil sensoriel, tummy time, matériaux EVA / sans BPA, normes EN 71 / Oeko-Tex)
+- **Experience** : "chez ${siteConfig.name}, nous avons constaté...", retour d'expérience réel auprès des familles
 - **Autorité** : structure claire, contenu actionnable et non générique
-- **Confiance** : ton honnête, nuances quand pertinent
+- **Confiance** : ton honnête, nuances quand pertinent (ex: "à partir de X mois" plutôt que "dès la naissance" si non vérifiable)
 
 ## MAILLAGE INTERNE — RÈGLE ABSOLUE
 Tu DOIS intégrer CHACUN de ces liens dans le corps du texte (pas en liste, de manière naturelle dans une phrase) :
