@@ -87,7 +87,7 @@ La zone de jeu peut être délimitée par une étagère basse accessible (*pikle
 
 Pour aller plus loin dans l'organisation de votre espace, n'hésitez pas à consulter [notre blog](/blog/) qui regorge de conseils pratiques pour chaque étape du développement.
 
-Si vous hésitez encore sur le modèle adapté à la configuration de votre pièce, découvrez notre guide dédié sur les [tapis adaptés à votre espace](/choisir-tapis-souris-2026/) pour affiner votre choix selon vos contraintes réelles.
+Si vous hésitez encore sur le modèle adapté à la configuration de votre pièce, parcourez [notre boutique de tapis bébé](/boutique/) pour comparer les formats et matières selon vos contraintes réelles.
 
 ---
 
