@@ -5,7 +5,7 @@ import { getCollection } from 'astro:content';
 import siteConfig from '../../../../site.config.mjs';
 import { unsplashSrcset, unsplashAt } from '../../../lib/image';
 import InfiniteReveal from '../../../components/InfiniteReveal.astro';
-import { parseEntrySlug, t, localePrefix, ACTIVE_LOCALES, localeMeta } from '../../../lib/i18n';
+import { parseEntrySlug, t, localePrefix, ACTIVE_LOCALES, localeMeta, blogCategoryLabel } from '../../../lib/i18n';
 
 export async function getStaticPaths() {
   return ACTIVE_LOCALES
@@ -96,7 +96,7 @@ const breadcrumbSchema = {
             }
           </div>
           <div class="md:col-span-2 flex flex-col justify-center">
-            <span class="text-[10px] text-n-500 font-medium uppercase tracking-widest mb-3">{featured.data.category}</span>
+            <span class="text-[10px] text-n-500 font-medium uppercase tracking-widest mb-3">{blogCategoryLabel(featured.data.category, lang)}</span>
             <h2 class="text-2xl md:text-3xl text-cream font-medium tracking-tight leading-tight mb-4 group-hover:underline underline-offset-4">
               {featured.data.title}
             </h2>
@@ -123,7 +123,7 @@ const breadcrumbSchema = {
           href={url(`/category/${catToSlug(cat)}`)}
           class="text-xs font-medium px-4 py-2 rounded-full border border-cream/[0.12] bg-cream/[0.03] text-n-400 hover:text-cream hover:border-cream/20 transition-colors"
         >
-          {cat}
+          {blogCategoryLabel(cat, lang)}
         </a>
       ))}
     </div>
@@ -150,7 +150,7 @@ const breadcrumbSchema = {
               }
             </div>
             <div>
-              <span class="text-[10px] text-n-500 font-medium uppercase tracking-widest mb-2 block">{post.data.category}</span>
+              <span class="text-[10px] text-n-500 font-medium uppercase tracking-widest mb-2 block">{blogCategoryLabel(post.data.category, lang)}</span>
               <h2 class="text-base font-medium text-cream mb-1 tracking-tight leading-snug group-hover:underline underline-offset-4">
                 {post.data.title}
               </h2>

@@ -1,6 +1,6 @@
 ---
 import siteConfig from '../../site.config.mjs';
-import { t, localeFromPath, localePrefix } from '../lib/i18n';
+import { t, localeFromPath, localePrefix, blogCategoryLabel } from '../lib/i18n';
 
 const lang = localeFromPath(Astro.url.pathname);
 const lp = localePrefix(lang);
@@ -67,7 +67,7 @@ const currentYear = new Date().getFullYear();
         {siteConfig.categories.map(cat => {
           const slug = siteConfig.categorySlugs?.[cat]
             ?? cat.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
-          return <li><a href={url(`/category/${slug}`)} class="hover:text-cream transition-colors">{cat}</a></li>;
+          return <li><a href={url(`/category/${slug}`)} class="hover:text-cream transition-colors">{blogCategoryLabel(cat, lang)}</a></li>;
         })}
       </ul>
     </div>

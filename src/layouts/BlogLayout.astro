@@ -5,7 +5,7 @@ import type { CollectionEntry } from 'astro:content';
 import siteConfig from '../../site.config.mjs';
 import type { MarkdownHeading } from 'astro';
 import { unsplashSrcset, unsplashAt } from '../lib/image';
-import { t, parseEntrySlug, localePrefix, localeMeta } from '../lib/i18n';
+import { t, parseEntrySlug, localePrefix, localeMeta, blogCategoryLabel } from '../lib/i18n';
 
 interface Props {
   post: CollectionEntry<'blog'>;
@@ -121,7 +121,7 @@ const breadcrumbSchema = {
       <!-- Article -->
       <div class="min-w-0 max-w-3xl">
         <!-- Category tag -->
-        <a href={url(`/category/${catToSlug(category)}`)} class="text-[10px] text-n-500 font-medium uppercase tracking-widest hover:text-cream transition-colors">{category}</a>
+        <a href={url(`/category/${catToSlug(category)}`)} class="text-[10px] text-n-500 font-medium uppercase tracking-widest hover:text-cream transition-colors">{blogCategoryLabel(category, lang)}</a>
 
         <!-- Title -->
         <h1 class="text-3xl md:text-4xl lg:text-5xl font-medium tracking-tight text-cream mt-4 mb-6 leading-[1.15]">
@@ -254,7 +254,7 @@ const breadcrumbSchema = {
                     }
                   </div>
                   <div>
-                    <span class="text-[10px] text-n-500 font-medium uppercase tracking-widest">{p.data.category}</span>
+                    <span class="text-[10px] text-n-500 font-medium uppercase tracking-widest">{blogCategoryLabel(p.data.category, lang)}</span>
                     <h3 class="text-sm font-medium text-cream mt-1 tracking-tight leading-snug group-hover:underline underline-offset-4 line-clamp-2">{p.data.title}</h3>
                     <time class="text-[11px] text-n-500 font-light mt-2 block">{formatDate(p.data.pubDate)}</time>
                   </div>

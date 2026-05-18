@@ -4,7 +4,7 @@ import { getCollection } from 'astro:content';
 import siteConfig from '../../../../site.config.mjs';
 import { unsplashSrcset } from '../../../lib/image';
 import { inlineMd } from '../../../lib/inline-md';
-import { parseEntrySlug, t, localePrefix, ACTIVE_LOCALES, localeMeta, categoryLabel } from '../../../lib/i18n';
+import { parseEntrySlug, t, localePrefix, ACTIVE_LOCALES, localeMeta, categoryLabel, pluralMark } from '../../../lib/i18n';
 import InfiniteReveal from '../../../components/InfiniteReveal.astro';
 
 export async function getStaticPaths() {
@@ -128,7 +128,7 @@ if (faqSchema) jsonLd.push(faqSchema);
 
     <header class="mb-10 max-w-3xl">
       <span class="text-[10px] text-n-500 font-medium uppercase tracking-widest mb-3 block">
-        {products.length}
+        {t('shop.productsCount', lang, { n: products.length, plural: pluralMark(products.length, lang, lang === 'de' ? 'e' : 's') })}
       </span>
       <h1 class="text-4xl md:text-5xl font-medium tracking-tight text-cream leading-[1.1] mb-6">
         {catLabel}

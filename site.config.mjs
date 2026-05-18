@@ -85,6 +85,26 @@ const config = {
     "Guide d'achat bébé": 'guide-achat-bebe',
     'Éveil & développement': 'eveil-developpement',
   },
+  // Labels traduits des catégories de blog (lus via blogCategoryLabel()
+  // dans src/lib/i18n.ts). La clé reste la string FR utilisée comme `category`
+  // dans le frontmatter des articles — c'est notre identifiant stable.
+  categoryLabels: {
+    "Tapis d'éveil & jeu": {
+      fr: "Tapis d'éveil & jeu",
+      en: 'Activity & play mats',
+      de: 'Spiel- & Krabbelmatten',
+    },
+    "Guide d'achat bébé": {
+      fr: "Guide d'achat bébé",
+      en: 'Baby buying guide',
+      de: 'Baby-Kaufberatung',
+    },
+    'Éveil & développement': {
+      fr: 'Éveil & développement',
+      en: 'Sensory & development',
+      de: 'Entwicklung & Sinne',
+    },
+  },
 
   // ⚠ ─── Catégories PRODUITS ─────────────────────────────────────────── ⚠
   // `label` reste pour rétro-compat (utilisé partout en FR par défaut).

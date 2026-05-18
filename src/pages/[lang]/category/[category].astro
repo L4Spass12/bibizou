@@ -5,7 +5,7 @@ import Icon from '../../../components/Icon.astro';
 import siteConfig from '../../../../site.config.mjs';
 import { unsplashSrcset, unsplashAt } from '../../../lib/image';
 import InfiniteReveal from '../../../components/InfiniteReveal.astro';
-import { parseEntrySlug, t, localePrefix, ACTIVE_LOCALES, localeMeta } from '../../../lib/i18n';
+import { parseEntrySlug, t, localePrefix, ACTIVE_LOCALES, localeMeta, blogCategoryLabel, pluralMark } from '../../../lib/i18n';
 
 // getStaticPaths s'exécute dans un contexte isolé → on déclare catToSlug à
 // l'intérieur. On le ré-utilise aussi côté template via une const ci-dessous.
@@ -54,12 +54,16 @@ const formatDate = (date: Date) =>
 
 const SITE_URL = siteConfig.url;
 const catSlug = catToSlug(cat);
+// Label de catégorie traduit dans la langue courante (fallback FR).
+const catLabel = blogCategoryLabel(cat, lang);
+// "X article" / "X articles" / "X Artikel" selon la locale
+const countStr = t('blog.postsCount', lang, { n: posts.length, plural: pluralMark(posts.length, lang) });
 
 const collectionSchema = {
   '@context': 'https://schema.org',
   '@type': 'CollectionPage',
-  name: `${cat} - ${siteConfig.name}`,
-  description: `${cat} - ${posts.length}`,
+  name: `${catLabel} - ${siteConfig.name}`,
+  description: `${catLabel} - ${countStr}`,
   url: `${SITE_URL}${lp}/category/${catSlug}`,
   inLanguage: localeMeta(lang).htmlLang,
   isPartOf: { '@type': 'WebSite', name: siteConfig.name, url: SITE_URL },
@@ -71,7 +75,7 @@ const breadcrumbSchema = {
   itemListElement: [
     { '@type': 'ListItem', position: 1, name: t('nav.home', lang), item: `${SITE_URL}${lp}/` },
     { '@type': 'ListItem', position: 2, name: t('nav.blog', lang), item: `${SITE_URL}${lp}/blog` },
-    { '@type': 'ListItem', position: 3, name: cat, item: `${SITE_URL}${lp}/category/${catSlug}` },
+    { '@type': 'ListItem', position: 3, name: catLabel, item: `${SITE_URL}${lp}/category/${catSlug}` },
   ],
 };
 
@@ -79,8 +83,8 @@ const blogCategories = siteConfig.categories as string[];
 ---
 
 <BaseLayout
-  title={`${cat} - ${siteConfig.name}`}
-  description={`${cat}`}
+  title={`${catLabel} - ${siteConfig.name}`}
+  description={`${catLabel}`}
   jsonLd={[collectionSchema, breadcrumbSchema]}
 >
   <div class="max-w-7xl mx-auto px-6 pt-6 md:pt-8 pb-16 md:pb-24">
@@ -89,14 +93,14 @@ const blogCategories = siteConfig.categories as string[];
       <span>/</span>
       <a href={url('/blog')} class="hover:text-cream transition-colors">{t('nav.blog', lang)}</a>
       <span>/</span>
-      <span class="text-n-400">{cat}</span>
+      <span class="text-n-400">{catLabel}</span>
     </nav>
 
     <header class="mb-12">
       <h1 class="text-3xl md:text-4xl lg:text-5xl font-medium tracking-tight text-cream leading-[1.1] mb-3">
-        {cat}
+        {catLabel}
       </h1>
-      <p class="text-sm text-n-500 font-light">{posts.length}</p>
+      <p class="text-sm text-n-500 font-light">{countStr}</p>
     </header>
 
     <!-- Category filters -->
@@ -112,7 +116,7 @@ const blogCategories = siteConfig.categories as string[];
             class={`text-xs font-medium px-4 py-2 rounded-full transition-colors ${isActive ? 'bg-cream text-dark' : 'border border-cream/[0.12] bg-cream/[0.03] text-n-400 hover:text-cream hover:border-cream/20'}`}
             aria-current={isActive ? 'page' : undefined}
           >
-            {c}
+            {blogCategoryLabel(c, lang)}
           </a>
         );
       })}
@@ -144,7 +148,7 @@ const blogCategories = siteConfig.categories as string[];
                 }
               </div>
               <div>
-                <span class="text-[10px] text-n-500 font-medium uppercase tracking-widest mb-2 block">{post.data.category}</span>
+                <span class="text-[10px] text-n-500 font-medium uppercase tracking-widest mb-2 block">{blogCategoryLabel(post.data.category, lang)}</span>
                 <h2 class="text-base font-medium text-cream mb-1 tracking-tight leading-snug group-hover:underline underline-offset-4">
                   {post.data.title}
                 </h2>

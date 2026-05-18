@@ -120,6 +120,34 @@ export function categoryLabel(slug: string, lang: Locale = DEFAULT_LOCALE): stri
 }
 
 /**
+ * Marqueur de pluriel à interpoler dans une chaîne traduite (placeholder
+ * `{plural}`). Évite de dupliquer les phrases singulier/pluriel dans le JSON.
+ *
+ * - FR : `mark` si n > 1, sinon vide (0 et 1 = singulier en français)
+ * - EN / DE : `mark` si n ≠ 1, sinon vide (1 = singulier, 0 = pluriel)
+ *
+ * Le marqueur par défaut est 's'. Pour le pluriel allemand des noms en
+ * -e (Produkt → Produkte), passer 'e' en 3e argument.
+ */
+export function pluralMark(n: number, lang: Locale = DEFAULT_LOCALE, mark = 's'): string {
+  if (lang === 'fr') return n > 1 ? mark : '';
+  return n === 1 ? '' : mark;
+}
+
+/**
+ * Retourne le label localisé d'une catégorie de blog.
+ *
+ * La clé d'entrée est le label FR (celui présent dans `category:` des
+ * articles + dans siteConfig.categories). Fallback : FR → entrée brute.
+ */
+export function blogCategoryLabel(cat: string, lang: Locale = DEFAULT_LOCALE): string {
+  const map = (siteConfig.categoryLabels ?? {}) as Record<string, Partial<Record<Locale, string>>>;
+  const entry = map[cat];
+  if (!entry) return cat;
+  return entry[lang] ?? entry.fr ?? cat;
+}
+
+/**
  * Extrait la locale et le "vrai" slug d'une content entry Astro.
  *
  * Convention : si l'entry est dans un sous-dossier dont le nom correspond à
