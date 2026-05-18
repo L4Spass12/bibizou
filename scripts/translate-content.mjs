@@ -132,8 +132,10 @@ ${SEO_GUIDANCE[targetLang]}
 10. If you encounter the sentinel "{{NO_TRANSLATE}}", return the input unchanged.`;
 }
 
-const MODEL = 'claude-sonnet-4-5';
+const MODEL_BODY   = 'claude-sonnet-4-5';   // body article — qualité maximale
+const MODEL_FIELDS = 'claude-haiku-4-5-20251001'; // petits champs (titre, tags, FAQ…)
 
+// Traduit le body de l'article (Sonnet — qualité maximale).
 async function translate(client, text, kind, targetLang, systemPrompt) {
   const trimmed = (text ?? '').toString().trim();
   if (!trimmed) return text;
@@ -151,19 +153,41 @@ ${trimmed}
 ## OUTPUT (translated ${kind} only)`;
 
   const msg = await client.messages.create({
-    model: MODEL,
+    model: MODEL_BODY,
     max_tokens: 8192,
-    system: [
-      {
-        type: 'text',
-        text: systemPrompt,
-        cache_control: { type: 'ephemeral' },
-      },
-    ],
+    system: [{ type: 'text', text: systemPrompt, cache_control: { type: 'ephemeral' } }],
     messages: [{ role: 'user', content: userPrompt }],
   });
-  // Cleanup : tirets cadratin que Claude ré-introduit parfois
   return msg.content[0].text.trim().replace(/[—–]/g, '-');
+}
+
+// Traduit tous les petits champs (titre, tags, FAQ…) en un seul appel Haiku.
+// fieldsMap : { "clé": "texte FR" }  →  retourne { "clé": "texte traduit" }
+// Fallback : null si le JSON retourné est invalide (l'appelant revient aux appels individuels).
+async function translateBatch(client, fieldsMap, targetLang, systemPrompt) {
+  const entries = Object.entries(fieldsMap).filter(([, v]) => v && String(v).trim());
+  if (entries.length === 0) return {};
+
+  const userPrompt = `Translate every value in the JSON below from French to ${LANG_NAMES[targetLang]}.
+Return ONLY a valid JSON object with identical keys and translated values.
+Apply all system rules (brand names, markdown, units, links, no em-dash).
+
+${JSON.stringify(Object.fromEntries(entries), null, 2)}`;
+
+  const msg = await client.messages.create({
+    model: MODEL_FIELDS,
+    max_tokens: 2048,
+    system: [{ type: 'text', text: systemPrompt, cache_control: { type: 'ephemeral' } }],
+    messages: [{ role: 'user', content: userPrompt }],
+  });
+
+  const raw = msg.content[0].text.trim().replace(/^```json\n?|\n?```$/g, '');
+  try {
+    return JSON.parse(raw);
+  } catch {
+    console.warn('translateBatch: JSON invalide, fallback appels individuels.');
+    return null;
+  }
 }
 
 /** Préfixe `/<lang>` aux liens markdown internes du body qui n'en ont pas. */
@@ -219,43 +243,95 @@ async function translateOneEntry(client, srcPath, opts, systemPrompt) {
   const fields = TRANSLATABLE_FIELDS[collection];
   const newData = JSON.parse(JSON.stringify(data));
 
-  // Strings simples
-  for (const f of fields.strings) {
-    if (newData[f]) newData[f] = await translate(client, newData[f], f, lang, systemPrompt);
-  }
+  // ── Étape 1 : batch Haiku pour tous les petits champs ─────────────────
+  // On construit un objet plat { clé: texte } pour l'envoi en une seule requête.
+  const batchMap = {};
 
-  // Tableaux de strings (tags, keywords)
+  for (const f of fields.strings) {
+    if (newData[f]) batchMap[`s:${f}`] = newData[f];
+  }
   for (const f of fields.arrays) {
     if (Array.isArray(newData[f])) {
-      const out = [];
-      for (const item of newData[f]) {
-        out.push(await translate(client, item, `${f} item`, lang, systemPrompt));
-      }
-      newData[f] = out;
+      newData[f].forEach((item, i) => { if (item) batchMap[`a:${f}[${i}]`] = item; });
     }
   }
-
-  // FAQ
   if (fields.faq && Array.isArray(newData.faq)) {
-    for (const item of newData.faq) {
-      if (item.q) item.q = await translate(client, item.q, 'FAQ question', lang, systemPrompt);
-      if (item.a) item.a = await translate(client, item.a, 'FAQ answer', lang, systemPrompt);
-    }
+    newData.faq.forEach((item, i) => {
+      if (item.q) batchMap[`faq[${i}].q`] = item.q;
+      if (item.a) batchMap[`faq[${i}].a`] = item.a;
+    });
+  }
+  if (fields.productAttributes && Array.isArray(newData.attributes)) {
+    newData.attributes.forEach((attr, ai) => {
+      if (attr.name) batchMap[`attr[${ai}].name`] = attr.name;
+      if (Array.isArray(attr.values)) {
+        attr.values.forEach((v, vi) => {
+          if (v.label) batchMap[`attr[${ai}].v[${vi}]`] = v.label;
+        });
+      }
+    });
   }
 
-  // Attributs produit (name + values[].label, slug préservé)
-  if (fields.productAttributes && Array.isArray(newData.attributes)) {
-    for (const attr of newData.attributes) {
-      if (attr.name) attr.name = await translate(client, attr.name, 'product attribute name', lang, systemPrompt);
-      if (Array.isArray(attr.values)) {
-        for (const v of attr.values) {
-          if (v.label) v.label = await translate(client, v.label, 'product attribute value', lang, systemPrompt);
+  const batchResult = await translateBatch(client, batchMap, lang, systemPrompt);
+
+  if (batchResult) {
+    // Applique les résultats du batch
+    for (const f of fields.strings) {
+      if (batchResult[`s:${f}`]) newData[f] = batchResult[`s:${f}`];
+    }
+    for (const f of fields.arrays) {
+      if (Array.isArray(newData[f])) {
+        newData[f] = newData[f].map((item, i) => batchResult[`a:${f}[${i}]`] ?? item);
+      }
+    }
+    if (fields.faq && Array.isArray(newData.faq)) {
+      newData.faq.forEach((item, i) => {
+        if (batchResult[`faq[${i}].q`]) item.q = batchResult[`faq[${i}].q`];
+        if (batchResult[`faq[${i}].a`]) item.a = batchResult[`faq[${i}].a`];
+      });
+    }
+    if (fields.productAttributes && Array.isArray(newData.attributes)) {
+      newData.attributes.forEach((attr, ai) => {
+        if (batchResult[`attr[${ai}].name`]) attr.name = batchResult[`attr[${ai}].name`];
+        if (Array.isArray(attr.values)) {
+          attr.values.forEach((v, vi) => {
+            if (batchResult[`attr[${ai}].v[${vi}]`]) v.label = batchResult[`attr[${ai}].v[${vi}]`];
+          });
+        }
+      });
+    }
+    console.log(`  ✓ batch Haiku (${Object.keys(batchMap).length} champs)`);
+  } else {
+    // Fallback : appels individuels Sonnet si le batch échoue
+    for (const f of fields.strings) {
+      if (newData[f]) newData[f] = await translate(client, newData[f], f, lang, systemPrompt);
+    }
+    for (const f of fields.arrays) {
+      if (Array.isArray(newData[f])) {
+        const out = [];
+        for (const item of newData[f]) out.push(await translate(client, item, `${f} item`, lang, systemPrompt));
+        newData[f] = out;
+      }
+    }
+    if (fields.faq && Array.isArray(newData.faq)) {
+      for (const item of newData.faq) {
+        if (item.q) item.q = await translate(client, item.q, 'FAQ question', lang, systemPrompt);
+        if (item.a) item.a = await translate(client, item.a, 'FAQ answer', lang, systemPrompt);
+      }
+    }
+    if (fields.productAttributes && Array.isArray(newData.attributes)) {
+      for (const attr of newData.attributes) {
+        if (attr.name) attr.name = await translate(client, attr.name, 'product attribute name', lang, systemPrompt);
+        if (Array.isArray(attr.values)) {
+          for (const v of attr.values) {
+            if (v.label) v.label = await translate(client, v.label, 'product attribute value', lang, systemPrompt);
+          }
         }
       }
     }
   }
 
-  // Body (gros morceau, en dernier pour cumuler le bénéfice du cache)
+  // ── Étape 2 : body avec Sonnet (qualité préservée) ─────────────────────
   let translatedBody = content;
   if (content && content.trim()) {
     translatedBody = await translate(client, content, 'article body', lang, systemPrompt);
