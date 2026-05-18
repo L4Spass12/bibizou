@@ -130,7 +130,7 @@ jobs:
             "set ftp:ssl-allow yes",
             f"open ftp://{os.environ['FTP_HOST']}",
             f"user {os.environ['FTP_USER']} {os.environ['FTP_PASS']}",
-            "mirror --reverse --delete --verbose dist/ /public_html/",
+            "mirror --reverse --delete --verbose --ignore-time --parallel=4 dist/ /public_html/",
             "quit",
           ])
 
