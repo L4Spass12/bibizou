@@ -1,6 +1,6 @@
 ---
-title: "Tapis de jeu bébé XXL pliable comment l'intégrer à la décoration montessori de la chambre"
-description: "Tapis de jeu bébé XXL montessori pliable : découvrez comment l'intégrer harmonieusement à la décoration de la chambre montessori de votre enfant."
+title: "Tapis de jeu bébé XXL pliable & déco Montessori"
+description: "Tapis de jeu bébé XXL pliable : découvrez comment l'intégrer harmonieusement à une chambre montessori, matériaux sûrs et idées déco à adopter."
 pubDate: 2026-05-18
 author: "Équipe Bibizou"
 category: Éveil & développement

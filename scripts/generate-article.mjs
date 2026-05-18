@@ -168,42 +168,68 @@ Retourne UNIQUEMENT le titre du sujet, sans guillemets ni ponctuation finale.`
 
   const title = todo[0];
   const today = todayISO();
-  const slug = slugify(title);
-
-  const filePath = path.join(__dirname, '..', 'src', 'content', 'blog', `${slug}.md`);
-  if (fs.existsSync(filePath)) {
-    console.log(`Fichier déjà existant: ${slug}.md — marqué comme fait.`);
+  // Slug provisoire depuis le topic — sert juste à détecter rapidement les
+  // topics déjà traités via leur ancien slug long, pour ne pas re-générer.
+  const provisionalSlug = slugify(title);
+  const provisionalPath = path.join(__dirname, '..', 'src', 'content', 'blog', `${provisionalSlug}.md`);
+  if (fs.existsSync(provisionalPath)) {
+    console.log(`Fichier déjà existant (slug long): ${provisionalSlug}.md — marqué comme fait.`);
     markAsDone(title, today);
     process.exit(0);
   }
 
   console.log(`Génération : "${title}"`);
 
-  // Claude définit catégorie, tags et mot-clé
+  // Claude définit catégorie, tags, mot-clé ET titre SEO court (≤ 60 chars)
+  // depuis le topic. Le topic peut être un brouillon long ("Tapis de jeu bébé
+  // XXL pliable comment l'intégrer à la décoration montessori de la chambre"
+  // = 94 chars) — Claude en tire un titre SEO punchy + le mot-clé.
   const metaMsg = await client.messages.create({
     model: 'claude-haiku-4-5-20251001',
-    max_tokens: 200,
+    max_tokens: 350,
     messages: [{
       role: 'user',
       content: `Pour cet article de blog sur ${siteConfig.name} (${siteConfig.article.context}) :
-Titre : "${title}"
+Topic original : "${title}"
 
 Réponds en JSON uniquement, sans markdown :
 {
+  "seoTitle": "titre SEO accrocheur, MAX 60 caractères espaces inclus, contient le mot-clé principal, capitalisation Title Case française (1re lettre + noms propres uniquement)",
   "category": "une valeur parmi : ${siteConfig.categories.join(', ')}",
   "tags": ["tag1", "tag2", "tag3"],
-  "kw": "mot-clé principal SEO (3-5 mots)"
-}`
+  "kw": "mot-clé principal SEO (3-5 mots, le plus recherché sur Google)"
+}
+
+Règle absolue : seoTitle doit faire ≤ 60 caractères. Si le topic est trop long, condense-le sans perdre le mot-clé ni l'angle.`
     }]
   });
 
-  let meta = { category: siteConfig.categories[0], tags: [siteConfig.article.theme.split(',')[0].trim()], kw: title };
+  let meta = { seoTitle: title.slice(0, 60), category: siteConfig.categories[0], tags: [siteConfig.article.theme.split(',')[0].trim()], kw: title };
   try {
     const raw = metaMsg.content[0].text.replace(/```json\n?|\n?```/g, '').trim();
-    meta = JSON.parse(raw);
+    meta = { ...meta, ...JSON.parse(raw) };
   } catch {
     console.warn('Métadonnées par défaut utilisées.');
   }
+
+  // Garde-fou : si Claude dépasse 60 chars, on tronque proprement à un mot.
+  if (meta.seoTitle && meta.seoTitle.length > 60) {
+    console.warn(`seoTitle trop long (${meta.seoTitle.length} chars) → troncature à 60.`);
+    meta.seoTitle = meta.seoTitle.slice(0, 60).replace(/\s+\S*$/, '').trim();
+  }
+  // Le titre stocké dans le frontmatter = version SEO courte (= titre du H1 et du <title>).
+  const seoTitle = meta.seoTitle || title;
+
+  // Slug FINAL dérivé du seoTitle court → URL propre + SEO-friendly.
+  // (avant : slug long de 80+ caractères tiré du topic verbeux)
+  const slug = slugify(seoTitle);
+  const filePath = path.join(__dirname, '..', 'src', 'content', 'blog', `${slug}.md`);
+  if (fs.existsSync(filePath)) {
+    console.log(`Fichier déjà existant (slug court): ${slug}.md — marqué comme fait.`);
+    markAsDone(title, today);
+    process.exit(0);
+  }
+  console.log(`Slug final : ${slug}  (seoTitle: "${seoTitle}", ${seoTitle.length} chars)`);
 
   // Snap la catégorie sur la valeur canonique du site.config (insensible aux variantes
   // d'apostrophe ' / ' / ` et à la casse) pour respecter strictement le schéma Astro.
@@ -212,7 +238,8 @@ Réponds en JSON uniquement, sans markdown :
   if (!canonicalCat) console.warn(`Catégorie "${meta.category}" inconnue → fallback "${siteConfig.categories[0]}"`);
   meta.category = canonicalCat || siteConfig.categories[0];
 
-  // Maillage interne dynamique — liste des articles existants
+  // Maillage interne dynamique — articles existants + catégories produits
+  // (commerce > blog, donc on PRIORISE les catégories produits dans le mix).
   const blogDir = path.join(__dirname, '..', 'src', 'content', 'blog');
   const existingArticles = fs.readdirSync(blogDir)
     .filter(f => f.endsWith('.md') && !f.includes(slug))
@@ -224,35 +251,63 @@ Réponds en JSON uniquement, sans markdown :
     })
     .filter(Boolean);
 
-  let internalLinks = `- [${siteConfig.name}](/) — page d'accueil du site\n- [notre blog](/blog/) — tous nos articles`;
+  // Liste les catégories produits avec leur label FR (pour que Claude choisisse).
+  const productCats = (siteConfig.productCategories ?? []).map(c => ({
+    slug: c.slug,
+    label: c.labels?.fr ?? c.label ?? c.slug,
+  }));
 
-  if (existingArticles.length > 0) {
-    const articleList = existingArticles.map(a => `"${a.title}" -> /${a.slug}/`).join('\n');
+  let internalLinks = `- [${siteConfig.name}](/) — page d'accueil du site\n- [notre boutique](/boutique/) — toutes nos catégories produits\n- [notre blog](/blog/) — tous nos articles`;
+
+  if (existingArticles.length > 0 || productCats.length > 0) {
+    const articleList = existingArticles.length > 0
+      ? `## Articles de blog existants :\n${existingArticles.map(a => `"${a.title}" -> /${a.slug}/`).join('\n')}`
+      : '## Aucun autre article de blog.';
+    const catList = productCats.length > 0
+      ? `## Catégories produits du shop :\n${productCats.map(c => `"${c.label}" -> /product-category/${c.slug}/`).join('\n')}`
+      : '';
+
     const linkMsg = await client.messages.create({
       model: 'claude-haiku-4-5-20251001',
-      max_tokens: 400,
+      max_tokens: 600,
       messages: [{
         role: 'user',
-        content: `Nouvel article : "${title}" (mot-clé : "${meta.kw}")
+        content: `Nouvel article : "${seoTitle}" (mot-clé principal : "${meta.kw}")
 
-Articles existants :
 ${articleList}
 
-Choisis les 3 articles les plus pertinents à lier naturellement depuis le nouvel article.
-Réponds en JSON sans markdown : [{"title": "...", "path": "/slug/", "anchor": "texte du lien naturel 3-5 mots"}]`
+${catList}
+
+Choisis 4 liens internes pertinents à intégrer naturellement dans le nouvel article.
+RÈGLE DE MIX : au moins **2 catégories produits** (priorité commerce) + 1 à 2 articles de blog (renforcement thématique). Les catégories produits sont la cible commerciale principale : elles convertissent en ventes, donc privilégie-les si pertinent.
+
+Pour chaque lien, propose une ancre 3-5 mots naturelle, descriptive, intégrable dans une phrase.
+
+Réponds en JSON sans markdown :
+[{"type": "category|article", "path": "/...", "anchor": "ancre naturelle", "title": "titre/label original"}]`
       }]
     });
 
     try {
       const raw = linkMsg.content[0].text.replace(/```json\n?|\n?```/g, '').trim();
       const picks = JSON.parse(raw);
-      // Valide que chaque pick correspond à un slug réel (évite les hallucinations)
       const validated = picks.map(p => {
+        // Catégorie produit
+        if (p.type === 'category' || p.path?.startsWith('/product-category/')) {
+          const slug = p.path?.replace(/^\/product-category\//, '').replace(/\/$/, '');
+          const match = productCats.find(c => c.slug === slug);
+          if (!match) {
+            console.warn(`Catégorie produit introuvable : ${p.path}`);
+            return null;
+          }
+          return { anchor: p.anchor, path: `/product-category/${match.slug}/`, title: match.label };
+        }
+        // Article de blog
         const match = existingArticles.find(a =>
           p.path?.includes(a.slug) || p.title === a.title
         );
         if (!match) {
-          console.warn(`Lien rejeté (slug introuvable) : ${p.path ?? p.title}`);
+          console.warn(`Article introuvable : ${p.path ?? p.title}`);
           return null;
         }
         return { anchor: p.anchor, path: `/${match.slug}/`, title: match.title };
@@ -273,7 +328,8 @@ Réponds en JSON sans markdown : [{"title": "...", "path": "/slug/", "anchor": "
 Rédige un article de blog long-format, de haute qualité éditoriale, optimisé pour le référencement Google selon les critères **E-E-A-T** (Experience, Expertise, Authoritativeness, Trustworthiness).
 
 ## SUJET
-- **Titre** : ${title}
+- **Titre SEO** (= titre H1 et balise <title>) : ${seoTitle}
+- **Angle / topic original** : ${title}
 - **Mot-clé principal** : ${meta.kw}
 - **Catégorie** : ${meta.category}
 
@@ -398,12 +454,33 @@ Aucun lien ne peut être omis. Chaque lien doit apparaître une fois dans le tex
     max_tokens: 200,
     messages: [{
       role: 'user',
-      content: `Écris une meta description SEO de 150 caractères maximum pour cet article. Inclure le mot-clé "${meta.kw}". Retourne UNIQUEMENT la meta description, sans guillemets.
-Titre : ${title}`
+      content: `Rédige une meta description SEO pour cet article de blog.
+
+Titre : ${seoTitle}
+Mot-clé principal : ${meta.kw}
+
+RÈGLES STRICTES :
+- 140 à 160 caractères MAXIMUM (espaces inclus)
+- Le mot-clé principal "${meta.kw}" doit apparaître dans les 60 premiers caractères
+- Commence par un verbe d'action ou un constat (Découvrez, Optez pour, Le guide…, Tout savoir sur…)
+- Termine par un CTA implicite ou explicite (notre guide complet, à découvrir, etc.)
+- Pas de guillemets autour du texte, pas de markdown
+
+Retourne UNIQUEMENT la meta description.`
     }]
   });
 
-  const description = descMsg.content[0].text.trim().replace(/"/g, "'").slice(0, 155);
+  // Meta description : 140-160 chars idéal, 165 absolu (Google tronque ~920px ≈ 160 chars).
+  let description = descMsg.content[0].text.trim().replace(/"/g, "'");
+  if (description.length > 160) {
+    console.warn(`Description trop longue (${description.length} chars) → troncature à un mot.`);
+    description = description.slice(0, 160).replace(/\s+\S*$/, '').trim();
+    // Ré-ajoute un point final si manquant après troncature
+    if (!/[.!?]$/.test(description)) description += '.';
+  }
+  if (description.length < 120) {
+    console.warn(`Description trop courte (${description.length} chars) — risque de Google la réécrire.`);
+  }
 
   const faqYaml = faqItems.length > 0
     ? `faq:\n${faqItems.map(f => `  - q: "${f.q.replace(/"/g, "'")}"\n    a: "${f.a.replace(/"/g, "'")}"`).join('\n')}\n`
@@ -431,8 +508,10 @@ Titre : ${title}`
     ? `image: "/images/blog/${coverFile}"\nimageAlt: "${coverAlt}"\nimageTitle: "${coverTitle}"\n`
     : '';
 
+  // Le titre du frontmatter = seoTitle court (≤ 60 chars), utilisé pour H1 + <title>.
+  // Le topic long d'origine reste dans topics.json comme référence éditoriale.
   const frontmatter = `---
-title: "${title}"
+title: "${seoTitle.replace(/"/g, "'")}"
 description: "${description}"
 pubDate: ${today}
 author: "${siteConfig.article.author}"
