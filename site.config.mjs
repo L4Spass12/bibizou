@@ -87,15 +87,50 @@ const config = {
   },
 
   // ⚠ ─── Catégories PRODUITS ─────────────────────────────────────────── ⚠
+  // `label` reste pour rétro-compat (utilisé partout en FR par défaut).
+  // `labels: { fr, en, de }` fournit la version traduite — lue via
+  // categoryLabel(slug, lang) depuis src/lib/i18n.ts.
   productCategories: [
-    { slug: 'tapis-jeu-doux',      label: 'Tapis de jeu doux' },
-    { slug: 'tapis-puzzle-mousse', label: 'Tapis puzzle mousse' },
-    { slug: 'tapis-eveil-arche',   label: "Tapis d'éveil avec arche" },
-    { slug: 'tapis-jeu-xxl',       label: 'Tapis de jeu XXL' },
-    { slug: 'tapis-jeu-pliable',   label: 'Tapis de jeu pliable' },
-    { slug: 'veilleuses',          label: 'Veilleuses' },
-    { slug: 'parc-bebe-pliable',     label: 'Parc pour bébé pliable' },
-    { slug: 'piscine-a-balles-bebe', label: 'Piscine à balles bébé' },
+    {
+      slug: 'tapis-jeu-doux',
+      label: 'Tapis de jeu doux',
+      labels: { fr: 'Tapis de jeu doux', en: 'Soft play mats', de: 'Weiche Spielmatten' },
+    },
+    {
+      slug: 'tapis-puzzle-mousse',
+      label: 'Tapis puzzle mousse',
+      labels: { fr: 'Tapis puzzle mousse', en: 'Foam puzzle mats', de: 'Schaumstoff-Puzzlematten' },
+    },
+    {
+      slug: 'tapis-eveil-arche',
+      label: "Tapis d'éveil avec arche",
+      labels: { fr: "Tapis d'éveil avec arche", en: 'Activity mats with arch', de: 'Spielmatten mit Spielbogen' },
+    },
+    {
+      slug: 'tapis-jeu-xxl',
+      label: 'Tapis de jeu XXL',
+      labels: { fr: 'Tapis de jeu XXL', en: 'XXL play mats', de: 'XXL-Spielmatten' },
+    },
+    {
+      slug: 'tapis-jeu-pliable',
+      label: 'Tapis de jeu pliable',
+      labels: { fr: 'Tapis de jeu pliable', en: 'Foldable play mats', de: 'Faltbare Spielmatten' },
+    },
+    {
+      slug: 'veilleuses',
+      label: 'Veilleuses',
+      labels: { fr: 'Veilleuses', en: 'Night lights', de: 'Nachtlichter' },
+    },
+    {
+      slug: 'parc-bebe-pliable',
+      label: 'Parc pour bébé pliable',
+      labels: { fr: 'Parc pour bébé pliable', en: 'Foldable baby playpen', de: 'Faltbares Baby-Laufgitter' },
+    },
+    {
+      slug: 'piscine-a-balles-bebe',
+      label: 'Piscine à balles bébé',
+      labels: { fr: 'Piscine à balles bébé', en: 'Baby ball pit', de: 'Baby-Bällebad' },
+    },
   ],
 
   // ⚠ ─── Génération d'articles IA (workflow Mon/Wed/Fri 8h UTC) ─────── ⚠

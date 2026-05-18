@@ -103,6 +103,23 @@ export function currencyForLocale(lang: Locale): string {
 }
 
 /**
+ * Retourne le label localisé d'une catégorie produit.
+ *
+ * Cherche `productCategories[].labels[lang]` puis retombe sur `.labels.fr`
+ * puis sur `.label` (legacy). Garantit toujours une chaîne non vide.
+ */
+export function categoryLabel(slug: string, lang: Locale = DEFAULT_LOCALE): string {
+  const cats = (siteConfig.productCategories ?? []) as Array<{
+    slug: string;
+    label?: string;
+    labels?: Partial<Record<Locale, string>>;
+  }>;
+  const cat = cats.find(c => c.slug === slug);
+  if (!cat) return slug;
+  return cat.labels?.[lang] ?? cat.labels?.fr ?? cat.label ?? slug;
+}
+
+/**
  * Extrait la locale et le "vrai" slug d'une content entry Astro.
  *
  * Convention : si l'entry est dans un sous-dossier dont le nom correspond à
