@@ -70,7 +70,7 @@ variations:
     attributes:
       Pack: "10-tiles"
       Color: "white-pink"
-    image: "/images/products/dalles-puzzle-bebe-bicolores/1.webp"
+    image: "/images/products/dalles-puzzle-bebe-bicolores/3.webp"
   - id: 2
     sku: "DALLES-10-BLANC-BLEU"
     price: 29.90
@@ -90,7 +90,7 @@ variations:
     attributes:
       Pack: "10-tiles"
       Color: "white-coffee"
-    image: "/images/products/dalles-puzzle-bebe-bicolores/3.webp"
+    image: "/images/products/dalles-puzzle-bebe-bicolores/1.webp"
   - id: 4
     sku: "DALLES-20-BLANC-ROSE"
     price: 47.90
@@ -100,7 +100,7 @@ variations:
     attributes:
       Pack: "20-tiles"
       Color: "white-pink"
-    image: "/images/products/dalles-puzzle-bebe-bicolores/1.webp"
+    image: "/images/products/dalles-puzzle-bebe-bicolores/3.webp"
   - id: 5
     sku: "DALLES-20-BLANC-BLEU"
     price: 47.90
@@ -120,7 +120,7 @@ variations:
     attributes:
       Pack: "20-tiles"
       Color: "white-coffee"
-    image: "/images/products/dalles-puzzle-bebe-bicolores/3.webp"
+    image: "/images/products/dalles-puzzle-bebe-bicolores/1.webp"
 ---
 
 ## A velvet-soft floor for baby

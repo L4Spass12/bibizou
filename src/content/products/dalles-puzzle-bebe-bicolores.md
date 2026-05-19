@@ -50,15 +50,15 @@ attributes:
         slug: "20-dalles"
   - name: "Couleur"
     values:
+      - label: "Blanc & Café"
+        slug: "blanc-cafe"
+        color: "#FFFFFF,#B8957A"
       - label: "Blanc & Rose"
         slug: "blanc-rose"
         color: "#FFFFFF,#F5C9D3"
       - label: "Blanc & Bleu"
         slug: "blanc-bleu"
         color: "#FFFFFF,#B8D4E8"
-      - label: "Blanc & Café"
-        slug: "blanc-cafe"
-        color: "#FFFFFF,#B8957A"
 
 variations:
   - id: 1
@@ -70,7 +70,7 @@ variations:
     attributes:
       Pack: "10-dalles"
       Couleur: "blanc-rose"
-    image: "/images/products/dalles-puzzle-bebe-bicolores/1.webp"
+    image: "/images/products/dalles-puzzle-bebe-bicolores/3.webp"
   - id: 2
     sku: "DALLES-10-BLANC-BLEU"
     price: 29.90
@@ -90,7 +90,7 @@ variations:
     attributes:
       Pack: "10-dalles"
       Couleur: "blanc-cafe"
-    image: "/images/products/dalles-puzzle-bebe-bicolores/3.webp"
+    image: "/images/products/dalles-puzzle-bebe-bicolores/1.webp"
   - id: 4
     sku: "DALLES-20-BLANC-ROSE"
     price: 47.90
@@ -100,7 +100,7 @@ variations:
     attributes:
       Pack: "20-dalles"
       Couleur: "blanc-rose"
-    image: "/images/products/dalles-puzzle-bebe-bicolores/1.webp"
+    image: "/images/products/dalles-puzzle-bebe-bicolores/3.webp"
   - id: 5
     sku: "DALLES-20-BLANC-BLEU"
     price: 47.90
@@ -120,7 +120,7 @@ variations:
     attributes:
       Pack: "20-dalles"
       Couleur: "blanc-cafe"
-    image: "/images/products/dalles-puzzle-bebe-bicolores/3.webp"
+    image: "/images/products/dalles-puzzle-bebe-bicolores/1.webp"
 ---
 
 ## Un sol doux comme du velours pour bébé
