@@ -8,6 +8,7 @@ priceRange:
 image: "/images/products/dalles-puzzle-bebe-bicolores/1.webp"
 imageAlt: "Two-tone baby puzzle tiles with soft velvet surface and EVA foam base, packs of 10 or 20 tiles 30x30 cm, white & pink, white & blue, white & coffee"
 gallery:
+  - "/images/products/dalles-puzzle-bebe-bicolores/4.webp"
   - "/images/products/dalles-puzzle-bebe-bicolores/2.webp"
   - "/images/products/dalles-puzzle-bebe-bicolores/3.webp"
 categories:

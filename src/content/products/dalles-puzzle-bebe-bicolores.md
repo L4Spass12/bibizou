@@ -8,6 +8,7 @@ priceRange:
 image: "/images/products/dalles-puzzle-bebe-bicolores/1.webp"
 imageAlt: "Dalles puzzle bébé bicolores en velours doux et mousse EVA, packs de 10 ou 20 dalles 30x30 cm, coloris blanc & rose, blanc & bleu, blanc & café"
 gallery:
+  - "/images/products/dalles-puzzle-bebe-bicolores/4.webp"
   - "/images/products/dalles-puzzle-bebe-bicolores/2.webp"
   - "/images/products/dalles-puzzle-bebe-bicolores/3.webp"
 categories:

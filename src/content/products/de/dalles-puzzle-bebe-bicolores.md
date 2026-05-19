@@ -8,6 +8,7 @@ priceRange:
 image: "/images/products/dalles-puzzle-bebe-bicolores/1.webp"
 imageAlt: "Zweifarbige Baby-Puzzlefliesen mit weicher Samtoberfläche und EVA-Schaumstoffboden, 10er- oder 20er-Pack 30x30 cm, Weiß & Rosa, Weiß & Blau, Weiß & Kaffee"
 gallery:
+  - "/images/products/dalles-puzzle-bebe-bicolores/4.webp"
   - "/images/products/dalles-puzzle-bebe-bicolores/2.webp"
   - "/images/products/dalles-puzzle-bebe-bicolores/3.webp"
 categories:
