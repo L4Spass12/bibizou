@@ -10,7 +10,6 @@ imageAlt: "Dalles puzzle bébé bicolores en velours doux et mousse EVA, packs d
 gallery:
   - "/images/products/dalles-puzzle-bebe-bicolores/2.webp"
   - "/images/products/dalles-puzzle-bebe-bicolores/3.webp"
-  - "/images/products/dalles-puzzle-bebe-bicolores/4.webp"
 categories:
   - "Tapis d'éveil & jeu"
 shortDescription: "Dalles de jeu bicolores avec surface velours douce et fond mousse EVA. Format 30×30 cm emboîtable comme un puzzle, découpable pour épouser votre pièce. Idéal pour bébé, mais aussi animaux, enfants et exercices."

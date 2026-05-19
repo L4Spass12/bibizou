@@ -10,7 +10,6 @@ imageAlt: "Two-tone baby puzzle tiles with soft velvet surface and EVA foam base
 gallery:
   - "/images/products/dalles-puzzle-bebe-bicolores/2.webp"
   - "/images/products/dalles-puzzle-bebe-bicolores/3.webp"
-  - "/images/products/dalles-puzzle-bebe-bicolores/4.webp"
 categories:
   - "Tapis d'éveil & jeu"
 shortDescription: "Two-tone play tiles with soft velvet surface and EVA foam base. 30×30 cm format snaps together like a puzzle and can be cut to fit your room. Great for baby, pets, kids and gentle exercise."

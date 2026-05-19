@@ -10,7 +10,6 @@ imageAlt: "Zweifarbige Baby-Puzzlefliesen mit weicher Samtoberfläche und EVA-Sc
 gallery:
   - "/images/products/dalles-puzzle-bebe-bicolores/2.webp"
   - "/images/products/dalles-puzzle-bebe-bicolores/3.webp"
-  - "/images/products/dalles-puzzle-bebe-bicolores/4.webp"
 categories:
   - "Tapis d'éveil & jeu"
 shortDescription: "Zweifarbige Spielfliesen mit weicher Samtoberfläche und EVA-Schaumstoffboden. 30×30 cm Format, ineinandergreifend wie ein Puzzle und zuschneidbar. Perfekt für Baby, Haustiere, Kinder und sanfte Übungen."
