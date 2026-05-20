@@ -1,6 +1,8 @@
 {
-  "name": "Bibizou",
-  "version": "1.0.0",
+  "serverInfo": {
+    "name": "Bibizou",
+    "version": "1.0.0"
+  },
   "description": "Bibizou — catalogue de tapis de jeu et d'éveil pour bébé : tapis puzzle, tapis d'activité, accessoires doux et sécurisés.",
   "url": "https://bibizou.com",
   "capabilities": {
