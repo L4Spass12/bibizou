@@ -113,6 +113,7 @@ const productSchema = {
     highPrice: priceRange?.max ?? price,
     offerCount: variations.length,
     availability: inStock ? 'https://schema.org/InStock' : 'https://schema.org/OutOfStock',
+    seller: { '@type': 'Organization', name: siteConfig.name, url: SITE_URL },
   } : {
     '@type': 'Offer',
     url: productUrl,
@@ -120,6 +121,7 @@ const productSchema = {
     price: price.toFixed(2),
     availability: inStock ? 'https://schema.org/InStock' : 'https://schema.org/OutOfStock',
     itemCondition: 'https://schema.org/NewCondition',
+    seller: { '@type': 'Organization', name: siteConfig.name, url: SITE_URL },
   },
 };
 

@@ -48,6 +48,9 @@ RewriteRule ^(en|de)(/(.*))?$ /$3 [L,R=302]
 
 # Security headers
 <IfModule mod_headers.c>
+  # Agent discovery (RFC 8288) — unquoted tokens are valid per spec, avoids Apache escaping issues
+  Header always set Link "</.well-known/api-catalog>; rel=api-catalog, </sitemap-index.xml>; rel=sitemap, </rss.xml>; rel=alternate"
+
   # Clickjacking protection
   Header always set X-Frame-Options "SAMEORIGIN"
 
@@ -81,6 +84,16 @@ RewriteRule ^(en|de)(/(.*))?$ /$3 [L,R=302]
   ExpiresByType application/javascript "access plus 1 year"
   ExpiresByType font/woff2 "access plus 1 year"
 </IfModule>
+
+# Content-Type pour /.well-known/api-catalog (RFC 9727)
+<Files "api-catalog">
+  Header set Content-Type "application/linkset+json"
+</Files>
+
+# Content-Type pour les fichiers .well-known sans extension
+<FilesMatch "^(server-card|index)$">
+  Header set Content-Type "application/json"
+</FilesMatch>
 
 # Cache-Control immutable pour les assets fingerprintés générés par Astro
 <IfModule mod_headers.c>

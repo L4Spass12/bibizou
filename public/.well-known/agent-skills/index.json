@@ -1,0 +1,19 @@
+{
+  "$schema": "https://agentskills.io/schema/v0.2.0/index.json",
+  "skills": [
+    {
+      "name": "browse-catalog",
+      "type": "link",
+      "description": "Browse Bibizou's full baby play mat catalog — puzzle mats, activity mats, foam mats and accessories, with product variants and pricing.",
+      "url": "https://bibizou.com/tapis-de-jeu",
+      "sha256": "18e3b50a6f2ed909d3b88baedc10c57f1d9af30176243277ac240770ca14ae67"
+    },
+    {
+      "name": "read-blog",
+      "type": "link",
+      "description": "Read Bibizou's blog — buying guides, safety tips and activity ideas for baby play mats and early childhood development.",
+      "url": "https://bibizou.com/blog",
+      "sha256": "b18a6da60885811167b4e098db208bd06c623b4343e85ae856b10f39d91248d9"
+    }
+  ]
+}

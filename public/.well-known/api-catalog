@@ -1,0 +1,13 @@
+{
+  "linkset": [
+    {
+      "anchor": "https://bibizou.com",
+      "service-doc": [
+        { "href": "https://bibizou.com/sitemap-index.xml", "type": "application/xml" }
+      ],
+      "describedby": [
+        { "href": "https://bibizou.com/sitemap-index.xml", "type": "application/xml" }
+      ]
+    }
+  ]
+}
